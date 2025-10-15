@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>学科交叉——岩石相关数据下载</title>
-    <url>/2025/10/15/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="数据集网站"><a href="#数据集网站" class="headerlink" title="数据集网站"></a>数据集网站</h1><p><a href="https://digitalporousmedia.org/published-datasets/">TACC网站</a>拥有大量的相关数据集，小于2GB可随意下载，大于2GB暂时无法下载，需要有注册账号权限，目前还未研究彻底获取方式。</p>
-<p><strong>关于CT数据和论文关键词推荐：coal CT vein</strong><br><strong>关于裂缝演化形成过程关键词推荐：Rock; DIC</strong></p>
-<h2 id="CV（图像数据）"><a href="#CV（图像数据）" class="headerlink" title="CV（图像数据）"></a>CV（图像数据）</h2><p>Paper: <a href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/2017WR021032">Suzuki A, Watanabe N, Li K, et al. Fracture network created by 3‐D printer and its validation using CT images[J]. Water Resources Research, 2017, 53(7): 6330-6339.</a></p>
-<p>数据集：<a href="https://digitalporousmedia.org/published-datasets/tapis/projects/drp.project.published/drp.project.published.DRP-213/Artificial%20fracture%20network/">Artificial fracture network</a></p>
-<p>简介： 3D打印和CT扫描数据</p>
-<p>目的：了解<strong>裂隙介质中的流动机制</strong>对于地质科学研究和地质开发行业至关重要。本研究使用3D打印的裂隙网络来<strong>控制样品内部裂隙分布</strong>的性质。通过使用X射线CT扫描仪研究了3D打印机创建样品的准确性和适当性。CT扫描图像表明，3D打印机可以控制样品内部的裂隙分布。D打印机能够复制复杂的三-裂缝网络的三维空间分布，印刷后使用正己烷是一种有效的除蜡后处理方法，局部渗透率由立方定律得到，并用于计算整体平均值，渗透率的实验值介于算术平均值和几何平均值之间的数值结果，这是与传统的研究是一致的。这种方法的基础上3-D打印的裂缝网络可以帮助<strong>验证现有的流动建模和数值方法</strong>。</p>
-]]></content>
-      <categories>
-        <category>学科交叉</category>
-      </categories>
-      <tags>
-        <tag>Rock</tag>
-        <tag>Datasets</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>学科交叉——岩石工程各方向参考</title>
     <url>/2025/10/15/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E5%9C%9F%E5%B7%A5%E7%A8%8B%E5%90%84%E6%96%B9%E5%90%91%E5%8F%82%E8%80%83/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="利用基于虚拟相机的数据增强推进时空岩石裂缝预测"><a href="#利用基于虚拟相机的数据增强推进时空岩石裂缝预测" class="headerlink" title="利用基于虚拟相机的数据增强推进时空岩石裂缝预测"></a>利用基于虚拟相机的数据增强推进时空岩石裂缝预测</h1><blockquote>
@@ -50,6 +32,24 @@
       </tags>
   </entry>
   <entry>
+    <title>学科交叉——岩石相关数据下载</title>
+    <url>/2025/10/15/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="数据集网站"><a href="#数据集网站" class="headerlink" title="数据集网站"></a>数据集网站</h1><p><a href="https://digitalporousmedia.org/published-datasets/">TACC网站</a>拥有大量的相关数据集，小于2GB可随意下载，大于2GB暂时无法下载，需要有注册账号权限，目前还未研究彻底获取方式。</p>
+<p><strong>关于CT数据和论文关键词推荐：coal CT vein</strong><br><strong>关于裂缝演化形成过程关键词推荐：Rock; DIC</strong></p>
+<h2 id="CV（图像数据）"><a href="#CV（图像数据）" class="headerlink" title="CV（图像数据）"></a>CV（图像数据）</h2><p>Paper: <a href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/2017WR021032">Suzuki A, Watanabe N, Li K, et al. Fracture network created by 3‐D printer and its validation using CT images[J]. Water Resources Research, 2017, 53(7): 6330-6339.</a></p>
+<p>数据集：<a href="https://digitalporousmedia.org/published-datasets/tapis/projects/drp.project.published/drp.project.published.DRP-213/Artificial%20fracture%20network/">Artificial fracture network</a></p>
+<p>简介： 3D打印和CT扫描数据</p>
+<p>目的：了解<strong>裂隙介质中的流动机制</strong>对于地质科学研究和地质开发行业至关重要。本研究使用3D打印的裂隙网络来<strong>控制样品内部裂隙分布</strong>的性质。通过使用X射线CT扫描仪研究了3D打印机创建样品的准确性和适当性。CT扫描图像表明，3D打印机可以控制样品内部的裂隙分布。D打印机能够复制复杂的三-裂缝网络的三维空间分布，印刷后使用正己烷是一种有效的除蜡后处理方法，局部渗透率由立方定律得到，并用于计算整体平均值，渗透率的实验值介于算术平均值和几何平均值之间的数值结果，这是与传统的研究是一致的。这种方法的基础上3-D打印的裂缝网络可以帮助<strong>验证现有的流动建模和数值方法</strong>。</p>
+]]></content>
+      <categories>
+        <category>学科交叉</category>
+      </categories>
+      <tags>
+        <tag>Rock</tag>
+        <tag>Datasets</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>学科交叉——岩石裂缝生成与分割</title>
     <url>/2025/10/14/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E8%A3%82%E7%BC%9D%E7%94%9F%E6%88%90%E4%B8%8E%E5%88%86%E5%89%B2/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Dataset-目前可用数据集"><a href="#Dataset-目前可用数据集" class="headerlink" title="Dataset 目前可用数据集"></a>Dataset 目前可用数据集</h1><h2 id="生成任务"><a href="#生成任务" class="headerlink" title="生成任务"></a>生成任务</h2><h3 id="1-基于GAN生成背景单一的裂缝数据（√）"><a href="#1-基于GAN生成背景单一的裂缝数据（√）" class="headerlink" title="1.基于GAN生成背景单一的裂缝数据（√）"></a>1.基于GAN生成<strong>背景单一</strong>的裂缝数据（<em>√</em>）</h3><p>数据名称：<a href="https://github.com/ehsankhani/Rock-Porosity-GAN?tab=readme-ov-file">Kaggle Dataset: Porous Media CT Scan Dataset</a></p>
@@ -69,13 +69,12 @@
 <p>意义：在民用基础设施检查的自动化裂缝检测方面，裂缝数据稀缺。为了更好的做这方面的裂缝检测任务，需收集和注释大型高质量数据集，因此用生成模型来试图突破数据稀缺的瓶颈。</p>
 </blockquote>
 <p>Paper：<a href="https://www.sciencedirect.com/science/article/pii/S014102962501819X">Xie J, Chen B, Giacomini A, et al. A versatile synthetic data generation framework for crack detection[J]. Engineering Structures, 2025, 344: 121428.</a><br>Wechat: <a href="https://mp.weixin.qq.com/s/ze3sHoDAvbtHCzawPfMlIg">【新论文】CrackGen：融合控制扩散与物理机理的数据合成方法</a><br>Dataset and Code: <a href="https://github.com/GEO-ATLAS/CrackGen">CrackTree260</a><br>训练样本数据示例：</p>
-<center class="half">
-
-<img src="https://share.note.youdao.com/yws/api/personal/file/WEB9509fa2ba0a689688f7646ac786eeee9?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" alt='Raw' width=300/>
-<img src="https://share.note.youdao.com/yws/api/personal/file/WEB440bd0460da3641e5bcbdf1c8e01073d?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" alt='Label' width=300/>
-
-<p>训练样本&ensp;&nbsp;&emsp;  &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp;标签 <!--&ensp;&nbsp;&emsp; 空格--></p>
-</center>
+<table>
+    <tr>
+        <td ><center><img src="https://share.note.youdao.com/yws/api/personal/file/WEB9509fa2ba0a689688f7646ac786eeee9?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" width=420>训练样本 </center></td>
+        <td ><center><img src="https://share.note.youdao.com/yws/api/personal/file/WEB440bd0460da3641e5bcbdf1c8e01073d?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" width=460>标签</center></td>
+    </tr>
+</table>
 
 
 <h2 id="分割任务"><a href="#分割任务" class="headerlink" title="分割任务"></a>分割任务</h2><h3 id="1-基于Swin-Transformer对复合岩石材料进行多类别材料的语义分割（√）"><a href="#1-基于Swin-Transformer对复合岩石材料进行多类别材料的语义分割（√）" class="headerlink" title="1.基于Swin Transformer对复合岩石材料进行多类别材料的语义分割（√）"></a>1.基于Swin Transformer对复合岩石材料进行多类别材料的语义分割（<em>√</em>）</h3><blockquote>
@@ -85,12 +84,14 @@
 <p>例如：提取识别岩块样本的成分，从而可以让后来者分析其强度，判断开挖矿场的时候会不会裂开、崩塌</p>
 </blockquote>
 <p>Paper: <a href="https://www.nature.com/articles/s41597-023-02734-7">Chen, H., Cao, X., Zhang, X. et al. Automatic segmentation framework of X-Ray tomography data for multi-phase rock using Swin Transformer approach. Sci Data 10, 812 (2023). https://doi.org/10.1038/s41597-023-02734-7</a><br>Dataset and Code: <a href="https://github.com/Chall513032/CoalSegmentation">河南省金岭煤矿采集的原煤样品</a><br>数据样本示例：</p>
-<center class="half">
-<img src="https://share.note.youdao.com/yws/api/personal/file/WEB14c0f970493460a9580eb06f0a6860af?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" alt='Raw' width=250/>
-<img src="https://share.note.youdao.com/yws/api/personal/file/WEB6e3f07a5be86420814f2c46ec5bca090?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" alt='Label' width=400/>
+<table>
+    <tr>
+        <td ><center><img src="https://share.note.youdao.com/yws/api/personal/file/WEB14c0f970493460a9580eb06f0a6860af?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" width=370>Raw </center></td>
+        <td ><center><img src="https://share.note.youdao.com/yws/api/personal/file/WEB6e3f07a5be86420814f2c46ec5bca090?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" width=420>Label</center></td>
+    </tr>
+</table>
 
-<p>训练样本&ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 标签 <!--&ensp;&nbsp;&emsp; 空格--></p>
-</center>
+
 
 <p>四类分割，裂缝、煤、黄铁矿、煤和黄铁矿分量被分为四类</p>
 <h2 id="Think"><a href="#Think" class="headerlink" title="Think"></a>Think</h2><blockquote>
