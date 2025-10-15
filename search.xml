@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>学科交叉——岩石相关数据下载</title>
+    <url>/2025/10/14/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      <categories>
+        <category>学科交叉</category>
+      </categories>
+      <tags>
+        <tag>Rock</tag>
+        <tag>Datasets</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>学科交叉——岩石裂缝生成与分割</title>
     <url>/2025/10/14/%E5%B2%A9%E7%9F%B3%E8%A3%82%E7%BC%9D%E7%94%9F%E6%88%90/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Dataset-目前可用数据集"><a href="#Dataset-目前可用数据集" class="headerlink" title="Dataset 目前可用数据集"></a>Dataset 目前可用数据集</h1><h2 id="生成任务"><a href="#生成任务" class="headerlink" title="生成任务"></a>生成任务</h2><h3 id="1-基于GAN生成背景单一的裂缝数据（√）"><a href="#1-基于GAN生成背景单一的裂缝数据（√）" class="headerlink" title="1.基于GAN生成背景单一的裂缝数据（√）"></a>1.基于GAN生成<strong>背景单一</strong>的裂缝数据（<em>√</em>）</h3><p>数据名称：<a href="https://github.com/ehsankhani/Rock-Porosity-GAN?tab=readme-ov-file">Kaggle Dataset: Porous Media CT Scan Dataset</a></p>
@@ -62,10 +74,11 @@
 <h2 id="下一步"><a href="#下一步" class="headerlink" title="下一步"></a>下一步</h2><p>还有声发射数据、时频域数据可以去了解</p>
 ]]></content>
       <categories>
-        <category>Rock</category>
+        <category>学科交叉</category>
       </categories>
       <tags>
         <tag>Rock</tag>
+        <tag>Datasets</tag>
         <tag>Generator</tag>
       </tags>
   </entry>
