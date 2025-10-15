@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2025/10/10/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>test</category>
-      </categories>
-      <tags>
-        <tag>test</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>学科交叉——岩石工程各方向参考</title>
     <url>/2025/10/15/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E5%9C%9F%E5%B7%A5%E7%A8%8B%E5%90%84%E6%96%B9%E5%90%91%E5%8F%82%E8%80%83/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="利用基于虚拟相机的数据增强推进时空岩石裂缝预测"><a href="#利用基于虚拟相机的数据增强推进时空岩石裂缝预测" class="headerlink" title="利用基于虚拟相机的数据增强推进时空岩石裂缝预测"></a>利用基于虚拟相机的数据增强推进时空岩石裂缝预测</h1><blockquote>
@@ -40,12 +16,30 @@
 </blockquote>
 <p>数据集基准已整合成npy数据格式，原文预览如下:</p>
 <center> 
-<img src="学科交叉——岩土工程各方向参考/diagram.png" alt= '裂缝预测 ' width="800" />
+<img src="https://share.note.youdao.com/yws/api/personal/file/WEBdcde30a6201d8950a022895028c0d6f2?method=download&shareKey=460dd7cd577f09063c024513275de6da" alt= '裂缝预测 ' width="800" />
 
 <p>未开挖区域裂缝预测，开挖区域裂缝数据预览</p>
 </center>
 
 <p><strong>结论：预测方向可以考虑，但该数据集属性复杂，行外人无法理解（例如为何裂缝线条像划痕，像直线裂缝，图中Rock mass区域岩块层次分明，这是什么岩石？），暂不考虑</strong></p>
+]]></content>
+      <categories>
+        <category>学科交叉</category>
+      </categories>
+      <tags>
+        <tag>Rock</tag>
+        <tag>Datasets</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学科交叉——岩石相关数据下载</title>
+    <url>/2025/10/15/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="数据集网站"><a href="#数据集网站" class="headerlink" title="数据集网站"></a>数据集网站</h1><p><a href="https://digitalporousmedia.org/published-datasets/">TACC网站</a>拥有大量的相关数据集，小于2GB可随意下载，大于2GB暂时无法下载，需要有注册账号权限，目前还未研究彻底获取方式。</p>
+<p><strong>关于CT数据和论文关键词推荐：coal CT vein</strong><br><strong>关于裂缝演化形成过程关键词推荐：Rock; DIC</strong></p>
+<h2 id="CV（图像数据）"><a href="#CV（图像数据）" class="headerlink" title="CV（图像数据）"></a>CV（图像数据）</h2><p>Paper: <a href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/2017WR021032">Suzuki A, Watanabe N, Li K, et al. Fracture network created by 3‐D printer and its validation using CT images[J]. Water Resources Research, 2017, 53(7): 6330-6339.</a></p>
+<p>数据集：<a href="https://digitalporousmedia.org/published-datasets/tapis/projects/drp.project.published/drp.project.published.DRP-213/Artificial%20fracture%20network/">Artificial fracture network</a></p>
+<p>简介： 3D打印和CT扫描数据</p>
+<p>目的：了解<strong>裂隙介质中的流动机制</strong>对于地质科学研究和地质开发行业至关重要。本研究使用3D打印的裂隙网络来<strong>控制样品内部裂隙分布</strong>的性质。通过使用X射线CT扫描仪研究了3D打印机创建样品的准确性和适当性。CT扫描图像表明，3D打印机可以控制样品内部的裂隙分布。D打印机能够复制复杂的三-裂缝网络的三维空间分布，印刷后使用正己烷是一种有效的除蜡后处理方法，局部渗透率由立方定律得到，并用于计算整体平均值，渗透率的实验值介于算术平均值和几何平均值之间的数值结果，这是与传统的研究是一致的。这种方法的基础上3-D打印的裂缝网络可以帮助<strong>验证现有的流动建模和数值方法</strong>。</p>
 ]]></content>
       <categories>
         <category>学科交叉</category>
@@ -64,10 +58,10 @@
 </blockquote>
 <p>示例：</p>
 <center> 
-<img src="./学科交叉——岩石裂缝生成与分割/comparison_grid.png" alt= 'GAN单一背景裂缝生成 ' width="800" />
+<img src="https://share.note.youdao.com/yws/api/personal/file/WEB3a631cb3cd791fadb26b5eca3a2687fe?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" alt= 'GAN单一背景裂缝生成 ' width="800" />
 
 <p>GAN单一背景裂缝生成</p>
-<!-- <img src="/2025/10/14/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E8%A3%82%E7%BC%9D%E7%94%9F%E6%88%90%E4%B8%8E%E5%88%86%E5%89%B2/comparison_grid.png" class="" title="GAN单一背景裂缝生成 width&#x3D;800"> -->
+<!-- <img src="2025/10/14/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E8%A3%82%E7%BC%9D%E7%94%9F%E6%88%90%E4%B8%8E%E5%88%86%E5%89%B2/comparison_grid.png" class="" title="GAN单一背景裂缝生成 width&#x3D;800"> -->
 </center>
 
 
@@ -77,8 +71,8 @@
 <p>Paper：<a href="https://www.sciencedirect.com/science/article/pii/S014102962501819X">Xie J, Chen B, Giacomini A, et al. A versatile synthetic data generation framework for crack detection[J]. Engineering Structures, 2025, 344: 121428.</a><br>Wechat: <a href="https://mp.weixin.qq.com/s/ze3sHoDAvbtHCzawPfMlIg">【新论文】CrackGen：融合控制扩散与物理机理的数据合成方法</a><br>Dataset and Code: <a href="https://github.com/GEO-ATLAS/CrackGen">CrackTree260</a><br>训练样本数据示例：</p>
 <center class="half">
 
-<img src="./学科交叉——岩石裂缝生成与分割/6192.jpg" alt='Raw' width=400/>
-<img src="./学科交叉——岩石裂缝生成与分割/6192.bmp" alt='Label' width=400/>
+<img src="https://share.note.youdao.com/yws/api/personal/file/WEB9509fa2ba0a689688f7646ac786eeee9?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" alt='Raw' width=350/>
+<img src="https://share.note.youdao.com/yws/api/personal/file/WEB440bd0460da3641e5bcbdf1c8e01073d?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" alt='Label' width=350/>
 
 <p>训练样本&ensp;&nbsp;&emsp;  &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp;标签 <!--&ensp;&nbsp;&emsp; 空格--></p>
 </center>
@@ -92,8 +86,8 @@
 </blockquote>
 <p>Paper: <a href="https://www.nature.com/articles/s41597-023-02734-7">Chen, H., Cao, X., Zhang, X. et al. Automatic segmentation framework of X-Ray tomography data for multi-phase rock using Swin Transformer approach. Sci Data 10, 812 (2023). https://doi.org/10.1038/s41597-023-02734-7</a><br>Dataset and Code: <a href="https://github.com/Chall513032/CoalSegmentation">河南省金岭煤矿采集的原煤样品</a><br>数据样本示例：</p>
 <center class="half">
-<img src="./学科交叉——岩石裂缝生成与分割/001.png" alt='Raw' width=350/>
-<img src="./学科交叉——岩石裂缝生成与分割/mask_visualized.png" alt='Label' width=500/>
+<img src="https://share.note.youdao.com/yws/api/personal/file/WEB14c0f970493460a9580eb06f0a6860af?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" alt='Raw' width=300/>
+<img src="https://share.note.youdao.com/yws/api/personal/file/WEB6e3f07a5be86420814f2c46ec5bca090?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" alt='Label' width=450/>
 
 <p>训练样本&ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp; &ensp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 标签 <!--&ensp;&nbsp;&emsp; 空格--></p>
 </center>
@@ -128,21 +122,27 @@
       </tags>
   </entry>
   <entry>
-    <title>学科交叉——岩石相关数据下载</title>
-    <url>/2025/10/15/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="数据集网站"><a href="#数据集网站" class="headerlink" title="数据集网站"></a>数据集网站</h1><p><a href="https://digitalporousmedia.org/published-datasets/">TACC网站</a>拥有大量的相关数据集，小于2GB可随意下载，大于2GB暂时无法下载，需要有注册账号权限，目前还未研究彻底获取方式。</p>
-<p><strong>关于CT数据和论文关键词推荐：coal CT vein</strong><br><strong>关于裂缝演化形成过程关键词推荐：Rock; DIC</strong></p>
-<h2 id="CV（图像数据）"><a href="#CV（图像数据）" class="headerlink" title="CV（图像数据）"></a>CV（图像数据）</h2><p>Paper: <a href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/2017WR021032">Suzuki A, Watanabe N, Li K, et al. Fracture network created by 3‐D printer and its validation using CT images[J]. Water Resources Research, 2017, 53(7): 6330-6339.</a></p>
-<p>数据集：<a href="https://digitalporousmedia.org/published-datasets/tapis/projects/drp.project.published/drp.project.published.DRP-213/Artificial%20fracture%20network/">Artificial fracture network</a></p>
-<p>简介： 3D打印和CT扫描数据</p>
-<p>目的：了解<strong>裂隙介质中的流动机制</strong>对于地质科学研究和地质开发行业至关重要。本研究使用3D打印的裂隙网络来<strong>控制样品内部裂隙分布</strong>的性质。通过使用X射线CT扫描仪研究了3D打印机创建样品的准确性和适当性。CT扫描图像表明，3D打印机可以控制样品内部的裂隙分布。D打印机能够复制复杂的三-裂缝网络的三维空间分布，印刷后使用正己烷是一种有效的除蜡后处理方法，局部渗透率由立方定律得到，并用于计算整体平均值，渗透率的实验值介于算术平均值和几何平均值之间的数值结果，这是与传统的研究是一致的。这种方法的基础上3-D打印的裂缝网络可以帮助<strong>验证现有的流动建模和数值方法</strong>。</p>
-<h3 id="关于CT数据和论文关键词推荐："><a href="#关于CT数据和论文关键词推荐：" class="headerlink" title="关于CT数据和论文关键词推荐："></a>关于CT数据和论文关键词推荐：</h3>]]></content>
+    <title>Hello World</title>
+    <url>/2025/10/10/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
       <categories>
-        <category>学科交叉</category>
+        <category>test</category>
       </categories>
       <tags>
-        <tag>Rock</tag>
-        <tag>Datasets</tag>
+        <tag>test</tag>
       </tags>
   </entry>
 </search>
