@@ -35,11 +35,12 @@
     <title>学科交叉——岩石相关数据下载</title>
     <url>/2025/10/15/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="数据集网站"><a href="#数据集网站" class="headerlink" title="数据集网站"></a>数据集网站</h1><p><a href="https://digitalporousmedia.org/published-datasets/">TACC网站</a>拥有大量的相关数据集，小于2GB可随意下载，大于2GB暂时无法下载，需要有注册账号权限，目前还未研究彻底获取方式。</p>
+<p><strong>关于CT数据和论文关键词推荐：coal CT vein</strong><br><strong>关于裂缝演化形成过程关键词推荐：Rock; DIC</strong></p>
 <h2 id="CV（图像数据）"><a href="#CV（图像数据）" class="headerlink" title="CV（图像数据）"></a>CV（图像数据）</h2><p>Paper: <a href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/2017WR021032">Suzuki A, Watanabe N, Li K, et al. Fracture network created by 3‐D printer and its validation using CT images[J]. Water Resources Research, 2017, 53(7): 6330-6339.</a></p>
 <p>数据集：<a href="https://digitalporousmedia.org/published-datasets/tapis/projects/drp.project.published/drp.project.published.DRP-213/Artificial%20fracture%20network/">Artificial fracture network</a></p>
 <p>简介： 3D打印和CT扫描数据</p>
 <p>目的：了解<strong>裂隙介质中的流动机制</strong>对于地质科学研究和地质开发行业至关重要。本研究使用3D打印的裂隙网络来<strong>控制样品内部裂隙分布</strong>的性质。通过使用X射线CT扫描仪研究了3D打印机创建样品的准确性和适当性。CT扫描图像表明，3D打印机可以控制样品内部的裂隙分布。D打印机能够复制复杂的三-裂缝网络的三维空间分布，印刷后使用正己烷是一种有效的除蜡后处理方法，局部渗透率由立方定律得到，并用于计算整体平均值，渗透率的实验值介于算术平均值和几何平均值之间的数值结果，这是与传统的研究是一致的。这种方法的基础上3-D打印的裂缝网络可以帮助<strong>验证现有的流动建模和数值方法</strong>。</p>
-]]></content>
+<h3 id="关于CT数据和论文关键词推荐："><a href="#关于CT数据和论文关键词推荐：" class="headerlink" title="关于CT数据和论文关键词推荐："></a>关于CT数据和论文关键词推荐：</h3>]]></content>
       <categories>
         <category>学科交叉</category>
       </categories>
