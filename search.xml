@@ -1,31 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2025/10/14/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>学科交叉——岩石裂缝形成演化</title>
+    <url>/2025/10/16/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E8%A3%82%E7%BC%9D%E5%BD%A2%E6%88%90%E6%BC%94%E5%8C%96/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>观测岩石损伤破裂的全过程，使岩石内部像玻璃一样透明可见，是科学家们孜孜以求的梦想。<br>2018年的报道：中国科学院地质与地球物理研究所李晓研究员领衔，中国科学院高能物理研究所和北京交通大学等单位研究人员共同组成的科研团队，成功研制出世界第一台具有完全自主知识产权的高能加速器CT可旋转式岩石力学刚性伺服试验机，揭开了岩石破裂演进之谜。<br>“只有将岩石破裂的过程看得明明白白，才能揭示岩石内部裂缝形成发展、聚集破坏的机理与规律，这对于地质工程设计至关重要。”</p>
+</blockquote>
+<h2 id="方向参考：使用算法训练模型，预测岩石损伤破裂全过程"><a href="#方向参考：使用算法训练模型，预测岩石损伤破裂全过程" class="headerlink" title="方向参考：使用算法训练模型，预测岩石损伤破裂全过程"></a>方向参考：使用算法训练模型，预测岩石损伤破裂全过程</h2><blockquote>
+<p>意义：通过算法预测岩石损伤破裂过程，从而利于揭示岩石内部裂缝形成发展、聚集破坏的机理与规律</p>
+</blockquote>
+<ul>
+<li>训练输入：</li>
+</ul>
+<ol>
+<li>损伤时序图像样本，从无损失到损伤形成的全过程数据集<br>（<strong>学习岩石损伤破裂全过程</strong>）</li>
+<li>外部物理参数：造成损伤的外力</li>
+<li>内部物理参数：图像样本内部岩性的构成</li>
+</ol>
+<ul>
+<li>输出：</li>
+</ul>
+<ol>
+<li>损伤的动态形成过程，对比预测结果和实际结果</li>
+</ol>
+<ul>
+<li>测试输入：</li>
+</ul>
+<ol>
+<li>损伤前图像样本 or （损伤前图像样本，损伤后图像样本）对</li>
+<li>外部物理参数：造成损伤的外力</li>
+<li>内部物理参数：图像样本内部岩性的构成</li>
+</ol>
+<ul>
+<li>输出：</li>
+</ul>
+<ol>
+<li>损伤的动态形成过程，对比预测结果和实际结果</li>
+</ol>
 ]]></content>
       <categories>
-        <category>test</category>
+        <category>学科交叉</category>
       </categories>
       <tags>
-        <tag>test</tag>
+        <tag>Rock</tag>
+        <tag>Datasets</tag>
       </tags>
   </entry>
   <entry>
-    <title>学科交叉——岩石工程各方向参考</title>
+    <title>学科交叉——岩土工程各方向参考</title>
     <url>/2025/10/15/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E5%9C%9F%E5%B7%A5%E7%A8%8B%E5%90%84%E6%96%B9%E5%90%91%E5%8F%82%E8%80%83/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="利用基于虚拟相机的数据增强推进时空岩石裂缝预测"><a href="#利用基于虚拟相机的数据增强推进时空岩石裂缝预测" class="headerlink" title="利用基于虚拟相机的数据增强推进时空岩石裂缝预测"></a>利用基于虚拟相机的数据增强推进时空岩石裂缝预测</h1><blockquote>
 <p>意义：预测未开挖区域的岩石裂缝是岩土工程项目中一个关键而又具有挑战性的方面。这项任务涉及使用已开挖岩石面的序列预测未开挖岩石面的裂缝映射序列，这非常适合时空深度学习技术。</p>
@@ -77,6 +99,15 @@
 <li>1.收集不同岩石裂纹数据集，可发展<strong>裂纹分类</strong>方向，但做分类的意义还需进一步思考。 </li>
 <li>2.利用AI算法预测裂纹扩展，可解决裂纹扩展过程观测困难的问题。</li>
 </ul>
+<h1 id="基于声发射和DIC特征的层状复合岩石力学损伤试验与模型研究"><a href="#基于声发射和DIC特征的层状复合岩石力学损伤试验与模型研究" class="headerlink" title="基于声发射和DIC特征的层状复合岩石力学损伤试验与模型研究"></a>基于声发射和DIC特征的层状复合岩石力学损伤试验与模型研究</h1><p>Paper: <a href="https://onlinelibrary.wiley.com/doi/full/10.1155/2022/6568588">Qi X, Yang Z, Wang S, et al. Mechanical damage test and model study of layered composite rock based on acoustic emission and DIC characteristics[J]. Shock and Vibration, 2022, 2022(1): 6568588.</a></p>
+<blockquote>
+<p>Abstract:<br>为了研究层状复合岩石的力学损伤特征，以深层致密储层砂岩、泥岩为研究对象，通过相似材料模型试验制备了层状复合类岩石，进行了单轴压缩试验，并辅以声发射（声发射）系统和DIC（数字图像相关）系统，获得了层状复合岩石的强度、弹性模量等物理力学参数。声发射振铃计数与岩石损伤的对应规律将层状复合岩石在单轴载荷作用下的损伤过程分为<strong>初始损伤、稳定损伤发展和损伤加速</strong>3个阶段。<br>通过对<strong>DIC系统应变云图</strong>的分析，揭示了层状复合岩石在单轴条件下的变形特征主要为拉剪滑移损伤，基于声发射的内部损伤演化特征和DIC的表面损伤演化特征，建立了基于双损伤因子表征的层状复合岩石损伤本构模型，合理地揭示了层状复合岩石在单轴压缩条件下内部结构发展和外部裂纹萌生、扩展、贯通的损伤演化机理。</p>
+</blockquote>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="Learn-1"><a href="#Learn-1" class="headerlink" title="Learn"></a>Learn</h3><ul>
+<li>相关研究方向和术语：破裂过程中的能量耗散和裂纹特征；力学损伤模型；类材料（材料获取困难，故制作相似材料代替研究）；应变场（？）；DIC视应变分析；损伤演化方程；表观和内部损伤演化、机理</li>
+<li>声发射：</li>
+<li>DIC(Digital Image Correlation)</li>
+</ul>
 ]]></content>
       <categories>
         <category>学科交叉</category>
@@ -95,52 +126,6 @@
 <p>数据集：<a href="https://digitalporousmedia.org/published-datasets/tapis/projects/drp.project.published/drp.project.published.DRP-213/Artificial%20fracture%20network/">Artificial fracture network</a></p>
 <p>简介： 3D打印和CT扫描数据</p>
 <p>目的：了解<strong>裂隙介质中的流动机制</strong>对于地质科学研究和地质开发行业至关重要。本研究使用3D打印的裂隙网络来<strong>控制样品内部裂隙分布</strong>的性质。通过使用X射线CT扫描仪研究了3D打印机创建样品的准确性和适当性。CT扫描图像表明，3D打印机可以控制样品内部的裂隙分布。D打印机能够复制复杂的三-裂缝网络的三维空间分布，印刷后使用正己烷是一种有效的除蜡后处理方法，局部渗透率由立方定律得到，并用于计算整体平均值，渗透率的实验值介于算术平均值和几何平均值之间的数值结果，这是与传统的研究是一致的。这种方法的基础上3-D打印的裂缝网络可以帮助<strong>验证现有的流动建模和数值方法</strong>。</p>
-]]></content>
-      <categories>
-        <category>学科交叉</category>
-      </categories>
-      <tags>
-        <tag>Rock</tag>
-        <tag>Datasets</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>学科交叉——岩石裂缝形成演化</title>
-    <url>/2025/10/16/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E8%A3%82%E7%BC%9D%E5%BD%A2%E6%88%90%E6%BC%94%E5%8C%96/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>观测岩石损伤破裂的全过程，使岩石内部像玻璃一样透明可见，是科学家们孜孜以求的梦想。<br>2018年的报道：中国科学院地质与地球物理研究所李晓研究员领衔，中国科学院高能物理研究所和北京交通大学等单位研究人员共同组成的科研团队，成功研制出世界第一台具有完全自主知识产权的高能加速器CT可旋转式岩石力学刚性伺服试验机，揭开了岩石破裂演进之谜。<br>“只有将岩石破裂的过程看得明明白白，才能揭示岩石内部裂缝形成发展、聚集破坏的机理与规律，这对于地质工程设计至关重要。”</p>
-</blockquote>
-<h2 id="方向参考：使用算法训练模型，预测岩石损伤破裂全过程"><a href="#方向参考：使用算法训练模型，预测岩石损伤破裂全过程" class="headerlink" title="方向参考：使用算法训练模型，预测岩石损伤破裂全过程"></a>方向参考：使用算法训练模型，预测岩石损伤破裂全过程</h2><blockquote>
-<p>意义：通过算法预测岩石损伤破裂过程，从而利于揭示岩石内部裂缝形成发展、聚集破坏的机理与规律</p>
-</blockquote>
-<ul>
-<li>训练输入：</li>
-</ul>
-<ol>
-<li>损伤时序图像样本，从无损失到损伤形成的全过程数据集<br>（<strong>学习岩石损伤破裂全过程</strong>）</li>
-<li>外部物理参数：造成损伤的外力</li>
-<li>内部物理参数：图像样本内部岩性的构成</li>
-</ol>
-<ul>
-<li>输出：</li>
-</ul>
-<ol>
-<li>损伤的动态形成过程，对比预测结果和实际结果</li>
-</ol>
-<ul>
-<li>测试输入：</li>
-</ul>
-<ol>
-<li>损伤前图像样本 or （损伤前图像样本，损伤后图像样本）对</li>
-<li>外部物理参数：造成损伤的外力</li>
-<li>内部物理参数：图像样本内部岩性的构成</li>
-</ol>
-<ul>
-<li>输出：</li>
-</ul>
-<ol>
-<li>损伤的动态形成过程，对比预测结果和实际结果</li>
-</ol>
 ]]></content>
       <categories>
         <category>学科交叉</category>
@@ -216,6 +201,30 @@
         <tag>Rock</tag>
         <tag>Datasets</tag>
         <tag>Generator</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2025/10/14/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
       </tags>
   </entry>
 </search>
