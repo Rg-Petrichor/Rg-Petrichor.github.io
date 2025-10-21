@@ -1,207 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2025/10/14/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>test</category>
-      </categories>
-      <tags>
-        <tag>test</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>学科交叉——岩土工程各方向参考</title>
-    <url>/2025/10/15/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E5%9C%9F%E5%B7%A5%E7%A8%8B%E5%90%84%E6%96%B9%E5%90%91%E5%8F%82%E8%80%83/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="利用基于虚拟相机的数据增强推进时空岩石裂缝预测"><a href="#利用基于虚拟相机的数据增强推进时空岩石裂缝预测" class="headerlink" title="利用基于虚拟相机的数据增强推进时空岩石裂缝预测"></a>利用基于虚拟相机的数据增强推进时空岩石裂缝预测</h1><blockquote>
-<p>意义：预测未开挖区域的岩石裂缝是岩土工程项目中一个关键而又具有挑战性的方面。这项任务涉及使用已开挖岩石面的序列预测未开挖岩石面的裂缝映射序列，这非常适合时空深度学习技术。</p>
+    <title>声发射</title>
+    <url>/2025/10/21/%E5%A3%B0%E5%8F%91%E5%B0%84/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>声发射数据是指材料或结构在受力、变形或损伤过程中释放能量时产生的<strong>弹性波信号</strong>，以及对这些信号进行采集、处理后得到的各类信息的统称。</p>
 </blockquote>
-<p>Paper: <a href="https://www.sciencedirect.com/science/article/pii/S0886779825000380">Xie J, Chen B, Huang J, et al. Advancing spatial-temporal rock fracture prediction with virtual camera-based data augmentation[J]. Tunnelling and Underground Space Technology, 2025, 158: 106400.</a><br>Code: <a href="https://github.com/GEO-ATLAS/Rock-Camera">https://github.com/GEO-ATLAS/Rock-Camera</a><br>数据集是用生成的，这里的生成应该是根据物理参数随机生成（较为复杂）<br>基准：<a href="https://github.com/GEO-ATLAS/Rock-Camera">RockCaptures数据集</a></p>
-<p>原文译文如下：</p>
-<blockquote>
-<p>考虑到对岩石断裂数据库增强的广泛需求，本研究提供了一个开源的，基于Python的软件包“Rock-Camera”，可在GitHub上获得。它包括两个部分：第一种是能够基于任何现场裂缝分布创建DFN的改进的3D DFN生成器。第二种是基于VCT从DFN创建捕获的光生成器，这两个模块的组合形成了一个强大的工具，可以自由地生成任何所需的岩石表面照片数据集。</p>
-</blockquote>
-<blockquote>
-<p>此外，为了帮助研究人员构建和比较时空深度学习模型，基于该工具提供了一个开源基准“RockCaptures”数据库。该数据库包括五个子数据集，其复杂性逐渐增加。为了展示该框架的实用性，空间-时间深度学习模型PredRNN已用于预测基准数据库中未挖掘位置的岩石断裂。评估指标均方误差（MSE）和结构相似性指数（SSIM）作为模型评价指标。最后，详细讨论了如何以多模式方式使用数据库来提高模型性能，并提供了“Rock-Camera”软件包的附加功能。</p>
-</blockquote>
-<p>数据集基准已整合成npy数据格式，原文预览如下:</p>
-<center> 
-<img src="https://share.note.youdao.com/yws/api/personal/file/WEBdcde30a6201d8950a022895028c0d6f2?method=download&shareKey=460dd7cd577f09063c024513275de6da" alt= '裂缝预测 ' width="800" />
-
-<p>未开挖区域裂缝预测，开挖区域裂缝数据预览</p>
-</center>
-
-<p><strong>结论：预测方向可以考虑，但该数据集属性复杂，行外人无法理解（例如为何裂缝线条像划痕，像直线裂缝，图中Rock mass区域岩块层次分明，这是什么岩石？），暂不考虑</strong></p>
-<h1 id="岩石三维表面裂纹扩展机理数值模拟研究"><a href="#岩石三维表面裂纹扩展机理数值模拟研究" class="headerlink" title="岩石三维表面裂纹扩展机理数值模拟研究"></a>岩石三维表面裂纹扩展机理数值模拟研究</h1><p>Paper: <a href="https://www.cgejournal.com/cn/article/pdf/preview/14211.pdf">梁正召, 李连崇, 唐世斌, 等. 岩石三维表面裂纹扩展机理数值模拟研究[J]. 岩土工程学报, 2011, 33(10): 1615-1622.</a></p>
-<h4 id="Learn"><a href="#Learn" class="headerlink" title="Learn"></a>Learn</h4><ul>
-<li><p>1.岩石裂纹也分多类，如：Ⅰ、Ⅱ、III 型裂纹（扩展模式？）；次生裂纹；壳体裂纹；翼型裂纹。二维裂纹、三维裂纹。</p>
 <ul>
-<li>Think: 裂纹分类在这篇论文没有说明，不同学者对裂纹的定义似乎也有歧义。</li>
-<li>Q: 那么是否可以做裂纹分类，做分类的意义是？</li>
+<li>声发射数据主要包含两类关键信息，分别对应信号本身特征和采集环境参数。<ul>
+<li>信号特征参数：是数据的核心部分，用于描述弹性波的属性。<ul>
+<li><strong>幅度</strong>：指信号的最大振动幅值，反映能量释放的强弱。</li>
+<li><strong>计数</strong>：指信号超过设定阈值的次数，可体现信号的活跃程度。</li>
+<li><strong>持续时间</strong>：指信号从起始到结束的时间长度，与损伤类型相关。</li>
+<li><strong>能量</strong>：通过信号积分计算得出，直接对应材料释放的能量大小。</li>
 </ul>
 </li>
-<li><p>2.在岩体力学中，裂隙岩体内部裂隙的<strong>产状、走向以及分布</strong>通常决定着岩体变形与强度</p>
-<ul>
-<li>因此计算机做裂隙的形成演化预测具备一定的意义</li>
-</ul>
-</li>
-<li><p>3.裂纹形成的二维研究（more）、三维研究，常用<strong>数值计算方法</strong>模拟非均匀性岩石中的三维裂纹扩展过程。</p>
-<ul>
-<li>这说明地质学中有自己的裂纹演化模拟。如何区别出通过AI训练<em>推演</em>、<em>预测</em>裂纹形成过程？</li>
-</ul>
-</li>
-<li><p>4.由于岩石的不透明性给内置三维裂纹的扩展研究带来了极大困难。为了便于观测，许多学者采用玻璃、树脂等透明均匀特性的相似材料来<strong>模拟三维裂纹的扩展机理</strong>。然而，由于岩石内部非均匀性的存在，三维裂纹的扩展机理与模式与均匀材料相差甚远。为了观测内部裂纹扩展问题，很多学者不得不尝试<strong>CT技术、声发射技术或者红外热像技术</strong>来观测分析内部微裂隙的扩展过程。</p>
-<ul>
-<li><strong>观测分析内部微裂隙的扩展过程</strong>，学者们想要的是观测试验样本的裂隙扩展过程，从而分析扩展机理。</li>
-<li>但<strong>观测困难！！！！</strong></li>
-<li><strong>因此</strong>AI算法预测，可以基于一定的样本训练后，只用（输入裂隙扩展前和扩展后的图像样本对），模拟出扩展过程，提高<strong>观测效率！！！</strong></li>
+<li>采集关键参数：用于追溯数据的采集背景，保证数据的可追溯性和有效性。<ul>
+<li>采集时间：记录信号产生的具体时刻，便于分析损伤发展的时序。</li>
+<li>传感器位置：标记接收信号的传感器在被检测对象上的坐标，确定损伤位置。</li>
+<li>阈值设定：记录采集时设定的信号触发阈值，影响数据的采集范围。</li>
 </ul>
 </li>
 </ul>
-<p><strong>结论：</strong></p>
-<ul>
-<li>1.收集不同岩石裂纹数据集，可发展<strong>裂纹分类</strong>方向，但做分类的意义还需进一步思考。 </li>
-<li>2.利用AI算法预测裂纹扩展，可解决裂纹扩展过程观测困难的问题。</li>
-</ul>
-<h1 id="基于声发射和DIC特征的层状复合岩石力学损伤试验与模型研究"><a href="#基于声发射和DIC特征的层状复合岩石力学损伤试验与模型研究" class="headerlink" title="基于声发射和DIC特征的层状复合岩石力学损伤试验与模型研究"></a>基于声发射和DIC特征的层状复合岩石力学损伤试验与模型研究</h1><p>Paper: <a href="https://onlinelibrary.wiley.com/doi/full/10.1155/2022/6568588">Qi X, Yang Z, Wang S, et al. Mechanical damage test and model study of layered composite rock based on acoustic emission and DIC characteristics[J]. Shock and Vibration, 2022, 2022(1): 6568588.</a></p>
-<blockquote>
-<p>Abstract:<br>为了研究层状复合岩石的力学损伤特征，以深层致密储层砂岩、泥岩为研究对象，通过相似材料模型试验制备了层状复合类岩石，进行了单轴压缩试验，并辅以声发射（声发射）系统和DIC（数字图像相关）系统，获得了层状复合岩石的强度、弹性模量等物理力学参数。声发射振铃计数与岩石损伤的对应规律将层状复合岩石在单轴载荷作用下的损伤过程分为<strong>初始损伤、稳定损伤发展和损伤加速</strong>3个阶段。<br>通过对<strong>DIC系统应变云图</strong>的分析，揭示了层状复合岩石在单轴条件下的变形特征主要为拉剪滑移损伤，基于声发射的内部损伤演化特征和DIC的表面损伤演化特征，建立了基于双损伤因子表征的层状复合岩石损伤本构模型，合理地揭示了层状复合岩石在单轴压缩条件下内部结构发展和外部裂纹萌生、扩展、贯通的损伤演化机理。</p>
-</blockquote>
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="Learn-1"><a href="#Learn-1" class="headerlink" title="Learn"></a>Learn</h3><ul>
-<li>相关研究方向和术语：破裂过程中的能量耗散和裂纹特征；力学损伤模型；类材料（材料获取困难，故制作相似材料代替研究）；应变场（？）；DIC视应变分析；损伤演化方程；表观和内部损伤演化、机理</li>
-<li>声发射：</li>
-<li>DIC(Digital Image Correlation)</li>
+</li>
 </ul>
 ]]></content>
       <categories>
         <category>学科交叉</category>
       </categories>
       <tags>
-        <tag>Rock</tag>
-        <tag>Datasets</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>学科交叉——岩石相关数据下载</title>
-    <url>/2025/10/15/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="数据集网站"><a href="#数据集网站" class="headerlink" title="数据集网站"></a>数据集网站</h1><p><a href="https://digitalporousmedia.org/published-datasets/">TACC网站</a>拥有大量的相关数据集，小于2GB可随意下载，大于2GB暂时无法下载，需要有注册账号权限，目前还未研究彻底获取方式。</p>
-<p><strong>关于CT数据和论文关键词推荐：coal CT vein</strong><br><strong>关于裂缝演化形成过程关键词推荐：Rock; DIC</strong></p>
-<h2 id="CV（图像数据）"><a href="#CV（图像数据）" class="headerlink" title="CV（图像数据）"></a>CV（图像数据）</h2><p>Paper: <a href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/2017WR021032">Suzuki A, Watanabe N, Li K, et al. Fracture network created by 3‐D printer and its validation using CT images[J]. Water Resources Research, 2017, 53(7): 6330-6339.</a></p>
-<p>数据集：<a href="https://digitalporousmedia.org/published-datasets/tapis/projects/drp.project.published/drp.project.published.DRP-213/Artificial%20fracture%20network/">Artificial fracture network</a></p>
-<p>简介： 3D打印和CT扫描数据</p>
-<p>目的：了解<strong>裂隙介质中的流动机制</strong>对于地质科学研究和地质开发行业至关重要。本研究使用3D打印的裂隙网络来<strong>控制样品内部裂隙分布</strong>的性质。通过使用X射线CT扫描仪研究了3D打印机创建样品的准确性和适当性。CT扫描图像表明，3D打印机可以控制样品内部的裂隙分布。D打印机能够复制复杂的三-裂缝网络的三维空间分布，印刷后使用正己烷是一种有效的除蜡后处理方法，局部渗透率由立方定律得到，并用于计算整体平均值，渗透率的实验值介于算术平均值和几何平均值之间的数值结果，这是与传统的研究是一致的。这种方法的基础上3-D打印的裂缝网络可以帮助<strong>验证现有的流动建模和数值方法</strong>。</p>
-]]></content>
-      <categories>
-        <category>学科交叉</category>
-      </categories>
-      <tags>
-        <tag>Rock</tag>
-        <tag>Datasets</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>学科交叉——岩石裂缝形成演化</title>
-    <url>/2025/10/16/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E8%A3%82%E7%BC%9D%E5%BD%A2%E6%88%90%E6%BC%94%E5%8C%96/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="f01964bc5f8900f7f8d26ef6c26aa434da78c833f6d1faa12b900389ad76971d">cfefb2acf26edfcfdff93258a3a03a06efffe0affc5e2d9ed8b72f1b6a5d5d74575ab2f6e5d28dab65c49d6d96cee94c814939543200e9d3d2b488b5ac326d3c20e763258f27cf37ba7f90b767eaa2ec69abb49020933e174e89bb2bfa42568fc4d8e67177d68d76cf53febe706e80fb6afdece9056dcbcacae1aa6013807746b471e364c3c9a55f8574667ba0d46a722ae31589a686b7793b77f5053545e214aa933bffbab741fc12fe1ef5dae87531e0e75595ebc5ce54111ffb50f520a0209e87e5810d7f9b6d9cff2ca925de801e0a973d7fcc89ef17166956ca0c559be2859ec532fb90a0c3b5104abeabd303667adec6a94b5efd133747996de2432f987158f8d04d227f5aafceeea80b9298adbbee502480e4f216720543d4f8083d7d4cf7fe0cd766229accf91f3f262a1b6d57d1ff549b43df97f0b8bbd46cf17041cc57f3e608db8ab8e211dea988420394ae045d3f52b13c9a2be33177d6c07e97e80cd78abba2a71dd9f2ee5dc31defc4c3293b5e44092c80e7cc31b0cefa766c8ee6e9b869c618c788a66c3eb47a63a605dfefa6145f0c7f623f1528b87a8aed880dde464bf6a493e4347c3a9b6148c196b00e309a6cc46e526e23c8f3cb4cd79be1b23b4b5848f6c2cf16865c2ba7bdebc1f827616dc80642f98a9f49077182714a336612c0049ff4b201223a547a6d49d3e7cfab6cf4d3c440eb83401a184222174c154e17c80f7e8c43290eac4d26b73036ed47dc41e21b2cff00e33ec33f9f0cbe2adba3e1330824968c056724894153677341b0d61fce5126ee6e76bb9c1518b4a3afebb047ee643b2f6bad29971b2740c2a8a474cde1e6dcf0d2dd7ffb1d8f719985524de29e47bcb9b7b12cf45dfcb849b4e3dc7606b9a1a8aa68b3f7beec8cc493b6dc744d404f192fcde24981d2620371e2a3c8618f89f351528ae18ada6f35c8f37b840b740993934793d5432a984129ca8647b3a4ff69bc4decd6fa935211512ae6d78f9dba7aab0234e7cd47b5a6ff41223ddd67fffe24339d965ffd8b96cfbb52e6b8a2856f28a60b0387dcbe617915e01ff8a1f4d1ae3d6b9bb9c0f5758741d0a8af24002e9c49053d4b1ceb827e21030082e4f14a36bb976109acadcc1068ce311af8c908f01f47f4cb15e7921edde89d9438f7c431efabb4b41027de261b16e206224eef625277bce2f28bf7ef947039744b620cb7fbf7ae399e725366a0f4a1e3116c40a3e611fce65eedc184324b8a82fc1284c6478c3ebda012a71f8a1491d14803976b89af30a4b31d5633d228a4fb4d1ec535df1d1dd99e0305904fe8015d673636c64e31f3828cbddf7178487e29244233ab279f07b85348adffea1279de187cbf9643dac37196023c4bcc2a0e2a8780402026b021a4667e8c2e44a230fd77945621bd1a0776cbf0b02a5b94571637692903420d32f2b8fe6ab16f197b21017bbdac6b84b8000a12d0b8213dda969bc8323da45e79f3066c6889dd93343eb535fdedb782523cdeb1b22ceae17677d02ba644a09e52e702359516397ad083915e9846e76e450c7a659fda6e3c81e32b55253360ff597ef5bda98455567353b1fb10e95bb9cb7d87e62cfe136019d885779d145c41301b0b7bfb01d3cad92943e2e29a0573beb7a6cfef61f65b1347bb28ffc8167de831b33270ef0627fa36795ca56d3575a646845f00adbd4bb7569b21742037a6001f88de41feeb53b6794c92a906f49c2f2875cc82ab0d120775d12ac7df6f6c1ef3fe3b8877f6c39c6930795ff02ba833e9759453463738d971d224ea07b70269a0be3c9e363cb936478172a0a18a12be894cfb4403a53b21dcdeab33abdd9d0e3d94f0d6b5e8fe5bd1bfe7bc028c90288aec8ccddcefa180d87e16cea18e62d862938c170a5a1119bb6a72895bee7316b57a975812f89fbb098d857d007133d0de6d415b04682bb7839f8e0c74464f04618ec65dd8c3377f655846f6e79fa75122c3e1b071c500f8b3f457c3761cbb8a3faa948216b5c71673f44473dfe23e206a2963acb5d654644a9a9440d54f0d5d1a895706f6f4e9153f29bb583453779b8a016f05b4b5240796a933e8b24b1635cc46a65fb4cc274359ca80a950b2610832b631574ed3f7ff4e99a14cd5906b5fe999c6b3f7ba2a18bea60454f237194602e18061dbbab380dbb830678e9df8baf21ab989dfbe597c75dc114df42fe2b0aed724b962cb51c599eb16ea75f72049cc310d9697c4a57a1df6b36809a58be9f09283b2628f54ed4fc5e9fa085c685ebae1e52cf11d4984d2e5d0c703dd9387966964b4b8b255e6e95e5f05b8e70e91155550854cc82488f7783d298b837e6372b8b7a4d83501a0955553befb2e83ab2c4eda1cfa02f9c4e772fea4ed3f27d8efdbb37fee3328a944c9e4c4617200d49d8bf42ba3320415cc3e1454efe431af96d83dd2ff813b15328c26ec78664b905429e22cedcbc93ee0e1b44a22cb166077c61e9f603d217a9f1b88cbf14166283c20ce1128a573b202d1dab8fa440ce2cc24b4efd45edab92e3e4aa901a50434ce77b6f96c9b1f728b1507d550f4e0b17b6bfb9a8cd8c5018135db65ed8b39002241e27eb3a5bf63c5fa6c0198a8e72c7c64246181303ca900108c07776226dc30598dedcd3eec3a1971ef42a55bc289b0ec486719379b8195586f7dd9e5ba8553820e30616b6ad3f3e5caebe5873289fa9a0aa5032e179b6a387a69631e0b6e9abcaa35d9a6f2b4e515d07699664f88035bbdc8f4109f3579861793f94f05ffdb51e394422c50b383ac2aa473088dda18151c70a68739642f65a695cf3b52af00bf1f52bcd82b94223b5446dc1d48ea06b9ee68a967e31be421772007a5de5f65783772d31011ea2c0439c87fad563d3c9cf84971542cea9ffe182e6a83e9d0a58bf2b013724bd04ea12b64f058d2c50039678b6408c7196beab30f3370b0508cae99e607e995aa6118efd5af78ec5c05248d204d497550ca86382838f9766a751b81dbe9f0b0a7e77ba648034aa60e90d5982c87888ed5dff97ab7358a1118090cd5b4e460ab1fad54e5e4a95e8a055879c71a1bd01a5f44dc17d3ba519a69cc4d7a62b6ad5c3fc5430d003ee222b3a9d26a51e639670bfa30ba5984643b9d5b9c074724df9d99522612303c562b96</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>学科交叉</category>
-      </categories>
-      <tags>
-        <tag>Rock</tag>
-        <tag>Datasets</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>学科交叉——岩石裂缝生成与分割</title>
-    <url>/2025/10/14/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E8%A3%82%E7%BC%9D%E7%94%9F%E6%88%90%E4%B8%8E%E5%88%86%E5%89%B2/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Dataset-目前可用数据集"><a href="#Dataset-目前可用数据集" class="headerlink" title="Dataset 目前可用数据集"></a>Dataset 目前可用数据集</h1><h2 id="生成任务"><a href="#生成任务" class="headerlink" title="生成任务"></a>生成任务</h2><h3 id="1-基于GAN生成背景单一的裂缝数据（√）"><a href="#1-基于GAN生成背景单一的裂缝数据（√）" class="headerlink" title="1.基于GAN生成背景单一的裂缝数据（√）"></a>1.基于GAN生成<strong>背景单一</strong>的裂缝数据（<em>√</em>）</h3><p>数据名称：<a href="https://github.com/ehsankhani/Rock-Porosity-GAN?tab=readme-ov-file">Kaggle Dataset: Porous Media CT Scan Dataset</a></p>
-<blockquote>
-<p>意义：该模型以固体岩石图像（Raw）和孔隙度分割图(Label)为输入，生成逼真的多孔岩石结构，从而推进先进的材料表征和数字岩石物理分析。</p>
-</blockquote>
-<p>示例：</p>
-<center> 
-<img src="https://share.note.youdao.com/yws/api/personal/file/WEB3a631cb3cd791fadb26b5eca3a2687fe?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" alt= 'GAN单一背景裂缝生成 ' width="800" />
-
-<p>GAN单一背景裂缝生成</p>
-<!-- <img src="2025/10/14/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E8%A3%82%E7%BC%9D%E7%94%9F%E6%88%90%E4%B8%8E%E5%88%86%E5%89%B2/comparison_grid.png" class="" title="GAN单一背景裂缝生成 width&#x3D;800"> -->
-</center>
-
-
-<h3 id="2-基于Stable-diffusion-and-Controlnet生成多样化背景的裂缝（×）"><a href="#2-基于Stable-diffusion-and-Controlnet生成多样化背景的裂缝（×）" class="headerlink" title="2.基于Stable diffusion and Controlnet生成多样化背景的裂缝（×）"></a>2.基于Stable diffusion and Controlnet生成<strong>多样化背景</strong>的裂缝（<em>×</em>）</h3><blockquote>
-<p>意义：在民用基础设施检查的自动化裂缝检测方面，裂缝数据稀缺。为了更好的做这方面的裂缝检测任务，需收集和注释大型高质量数据集，因此用生成模型来试图突破数据稀缺的瓶颈。</p>
-</blockquote>
-<p>Paper：<a href="https://www.sciencedirect.com/science/article/pii/S014102962501819X">Xie J, Chen B, Giacomini A, et al. A versatile synthetic data generation framework for crack detection[J]. Engineering Structures, 2025, 344: 121428.</a><br>Wechat: <a href="https://mp.weixin.qq.com/s/ze3sHoDAvbtHCzawPfMlIg">【新论文】CrackGen：融合控制扩散与物理机理的数据合成方法</a><br>Dataset and Code: <a href="https://github.com/GEO-ATLAS/CrackGen">CrackTree260</a><br>训练样本数据示例：</p>
-<table>
-    <tr>
-        <td ><center><img src="https://share.note.youdao.com/yws/api/personal/file/WEB9509fa2ba0a689688f7646ac786eeee9?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" width=420>训练样本 </center></td>
-        <td ><center><img src="https://share.note.youdao.com/yws/api/personal/file/WEB440bd0460da3641e5bcbdf1c8e01073d?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" width=460>标签</center></td>
-    </tr>
-</table>
-
-
-<h2 id="分割任务"><a href="#分割任务" class="headerlink" title="分割任务"></a>分割任务</h2><h3 id="1-基于Swin-Transformer对复合岩石材料进行多类别材料的语义分割（√）"><a href="#1-基于Swin-Transformer对复合岩石材料进行多类别材料的语义分割（√）" class="headerlink" title="1.基于Swin Transformer对复合岩石材料进行多类别材料的语义分割（√）"></a>1.基于Swin Transformer对复合岩石材料进行多类别材料的语义分割（<em>√</em>）</h3><blockquote>
-<p>意义：识别煤、混凝土、大理石等复合岩石材料的不同特征和相态，一方面可以<em>深入了解三维细观结构对损伤和破坏模式的影响，揭示煤、混凝土、大理石等复合岩石材料的破坏条件（至关重要）</em>。另一方面<em>可以根据破坏机理合理地数值预测复杂载荷条件下复合岩石的力学性质、破坏条件和防治机理</em>。 </p>
-</blockquote>
-<blockquote>
-<p>例如：提取识别岩块样本的成分，从而可以让后来者分析其强度，判断开挖矿场的时候会不会裂开、崩塌</p>
-</blockquote>
-<p>Paper: <a href="https://www.nature.com/articles/s41597-023-02734-7">Chen, H., Cao, X., Zhang, X. et al. Automatic segmentation framework of X-Ray tomography data for multi-phase rock using Swin Transformer approach. Sci Data 10, 812 (2023). https://doi.org/10.1038/s41597-023-02734-7</a><br>Dataset and Code: <a href="https://github.com/Chall513032/CoalSegmentation">河南省金岭煤矿采集的原煤样品</a><br>数据样本示例：</p>
-<table>
-    <tr>
-        <td ><center><img src="https://share.note.youdao.com/yws/api/personal/file/WEB14c0f970493460a9580eb06f0a6860af?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" width=370>Raw </center></td>
-        <td ><center><img src="https://share.note.youdao.com/yws/api/personal/file/WEB6e3f07a5be86420814f2c46ec5bca090?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" width=420>Label</center></td>
-    </tr>
-</table>
-
-
-
-<p>四类分割，裂缝、煤、黄铁矿、煤和黄铁矿分量被分为四类</p>
-<h2 id="Think"><a href="#Think" class="headerlink" title="Think"></a>Think</h2><blockquote>
-<p>1.生成是为了什么？目标？</p>
-<blockquote>
-<p>（1）矿场岩石样本数据量很少，样本是经过自己施加压力产生裂缝的嘛？<br>Yes</p>
-<blockquote>
-<p>（2）不利于后续学者对裂缝矿物质进行分析<br>（3）生成更多样本，是为了让后续学者可以根据样本进行<strong>岩性机理分析</strong>：对矿场受力会产生怎样的崩塌；对煤岩的裂缝形成进行分析<br>（4）<strong>更好的做分割任务</strong><br>（5）进一步分析裂缝受力形成的过程，从而保障开挖过程的安全：比如说<strong>煤杂质如何影响裂缝的形成</strong></p>
-</blockquote>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>Q：但有一个问题，就是生成的时候必须考虑物理杂质分布和裂缝的位置关系<br>虽然生成模型已经把一些物理参数和分布纳入考虑，但生成的内容无法彻底说明其是否符合物理性质<br>而且：生成的内容（不可信？谁会用到生成的数据进行分析，分析结果不可信）是否符合岩性（岩石的物理性质）</p>
-</blockquote>
-<h2 id="下一步"><a href="#下一步" class="headerlink" title="下一步"></a>下一步</h2><p>还有声发射数据、时频域数据可以去了解</p>
-]]></content>
-      <categories>
-        <category>学科交叉</category>
-      </categories>
-      <tags>
-        <tag>Rock</tag>
-        <tag>Datasets</tag>
-        <tag>Generator</tag>
+        <tag>人工智能</tag>
+        <tag>声发射</tag>
       </tags>
   </entry>
   <entry>
@@ -336,7 +165,7 @@
 <blockquote>
 <p>2.1参数假设：</p>
 <blockquote>
-<p>地层分层3层（覆盖层、完整围岩、破碎带）<br>每一层的初始波速：覆盖层 (V_p&#x3D;2000 , \text{m&#x2F;s})，完整围岩 (V_p&#x3D;4000 , \text{m&#x2F;s})，破碎带 (V_p&#x3D;2500 , \text{m&#x2F;s})<br>层厚范围：覆盖层 0-5 米，完整围岩 5-40 米，破碎带 40-50 米。</p>
+<p>地层分层3层（覆盖层、完整围岩、破碎带）<br>每一层的初始波速：覆盖层 $V_p&#x3D;2000 , \text{m&#x2F;s}$，完整围岩 $V_p&#x3D;4000 , \text{m&#x2F;s}$，破碎带 $V_p&#x3D;2500 , \text{m&#x2F;s}$<br>层厚范围：覆盖层 0-5 米，完整围岩 5-40 米，破碎带 40-50 米。</p>
 </blockquote>
 </blockquote>
 </blockquote>
@@ -344,7 +173,7 @@
 <blockquote>
 <p>2.2约束条件：</p>
 <blockquote>
-<p>波速上下限：(V_p \in [1500, 5000] , \text{m&#x2F;s})（根据区域地质资料）层厚非负：各层厚度≥0 米</p>
+<p>波速上下限：$V_p \in [1500, 5000] , \text{m&#x2F;s}$（根据区域地质资料）层厚非负：各层厚度≥0 米</p>
 </blockquote>
 </blockquote>
 </blockquote>
@@ -352,7 +181,7 @@
 <blockquote>
 <p>2.3 算法选择和优化<br>2.4 反演结果</p>
 <blockquote>
-<p>波速模型输出<br>0-5 米：覆盖层 (V_p&#x3D;1800 , \text{m&#x2F;s})（与钻孔一致）<br>5-38 米：完整围岩 (V_p&#x3D;3950 , \text{m&#x2F;s})（误差 1.25%）<br>38-50 米：破碎带 (V_p&#x3D;2600 , \text{m&#x2F;s})（与设计参数吻合）</p>
+<p>波速模型输出<br>0-5 米：覆盖层 $V_p&#x3D;1800 , \text{m&#x2F;s}$（与钻孔一致）<br>5-38 米：完整围岩 $V_p&#x3D;3950 , \text{m&#x2F;s}$（误差 1.25%）<br>38-50 米：破碎带 $V_p&#x3D;2600 , \text{m&#x2F;s}$（与设计参数吻合）</p>
 <blockquote>
 <blockquote>
 <p>三维可视化模型：<br>异常区范围：横向宽度 6 米，纵向延伸 12 米（与后续开挖结果对比误差＜5%）。</p>
@@ -370,7 +199,7 @@
 </li>
 <li>方法较多，如CNN回归、模糊逻辑、神经模糊算法、混合遗传算法、模式搜索技术<ul>
 <li>集合机器学习模型VeIProfES：利用钻井测井数据有效地预测剪切波速度剖面。<a href="https://www.sciencedirect.com/science/article/pii/S0267726123006693">Joshi A, Raman B, Mohan CK, Cenkeramaddi LR. A new machine learning approach for estimating shear wave velocity profile using borelog data. Soil Dynam Earthq Eng. 2024;177, 108424.</a></li>
-<li>数据库：1101个测站的钻孔测井和剪切波速度信息数据集，并通过CTGAN生成10510个测站的合成钻孔测井数据</li>
+<li>数据库：1101个测站的钻孔测井和剪切波速度信息数据集，并通过<strong>CTGAN生成10510个测站的合成钻孔测井数据</strong></li>
 </ul>
 </li>
 <li>数据参考：伊朗油田Asmari地层的1640个数据点；</li>
@@ -387,36 +216,207 @@
       </tags>
   </entry>
   <entry>
-    <title>声发射</title>
-    <url>/2025/10/21/%E5%A3%B0%E5%8F%91%E5%B0%84/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>声发射数据是指材料或结构在受力、变形或损伤过程中释放能量时产生的<strong>弹性波信号</strong>，以及对这些信号进行采集、处理后得到的各类信息的统称。</p>
+    <title>学科交叉——岩石裂缝形成演化</title>
+    <url>/2025/10/16/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E8%A3%82%E7%BC%9D%E5%BD%A2%E6%88%90%E6%BC%94%E5%8C%96/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="f01964bc5f8900f7f8d26ef6c26aa434da78c833f6d1faa12b900389ad76971d">cfefb2acf26edfcfdff93258a3a03a06efffe0affc5e2d9ed8b72f1b6a5d5d74575ab2f6e5d28dab65c49d6d96cee94c814939543200e9d3d2b488b5ac326d3c20e763258f27cf37ba7f90b767eaa2ec69abb49020933e174e89bb2bfa42568fc4d8e67177d68d76cf53febe706e80fb6afdece9056dcbcacae1aa6013807746b471e364c3c9a55f8574667ba0d46a722ae31589a686b7793b77f5053545e214aa933bffbab741fc12fe1ef5dae87531e0e75595ebc5ce54111ffb50f520a0209e87e5810d7f9b6d9cff2ca925de801e0a973d7fcc89ef17166956ca0c559be2859ec532fb90a0c3b5104abeabd303667adec6a94b5efd133747996de2432f987158f8d04d227f5aafceeea80b9298adbbee502480e4f216720543d4f8083d7d4cf7fe0cd766229accf91f3f262a1b6d57d1ff549b43df97f0b8bbd46cf17041cc57f3e608db8ab8e211dea988420394ae045d3f52b13c9a2be33177d6c07e97e80cd78abba2a71dd9f2ee5dc31defc4c3293b5e44092c80e7cc31b0cefa766c8ee6e9b869c618c788a66c3eb47a63a605dfefa6145f0c7f623f1528b87a8aed880dde464bf6a493e4347c3a9b6148c196b00e309a6cc46e526e23c8f3cb4cd79be1b23b4b5848f6c2cf16865c2ba7bdebc1f827616dc80642f98a9f49077182714a336612c0049ff4b201223a547a6d49d3e7cfab6cf4d3c440eb83401a184222174c154e17c80f7e8c43290eac4d26b73036ed47dc41e21b2cff00e33ec33f9f0cbe2adba3e1330824968c056724894153677341b0d61fce5126ee6e76bb9c1518b4a3afebb047ee643b2f6bad29971b2740c2a8a474cde1e6dcf0d2dd7ffb1d8f719985524de29e47bcb9b7b12cf45dfcb849b4e3dc7606b9a1a8aa68b3f7beec8cc493b6dc744d404f192fcde24981d2620371e2a3c8618f89f351528ae18ada6f35c8f37b840b740993934793d5432a984129ca8647b3a4ff69bc4decd6fa935211512ae6d78f9dba7aab0234e7cd47b5a6ff41223ddd67fffe24339d965ffd8b96cfbb52e6b8a2856f28a60b0387dcbe617915e01ff8a1f4d1ae3d6b9bb9c0f5758741d0a8af24002e9c49053d4b1ceb827e21030082e4f14a36bb976109acadcc1068ce311af8c908f01f47f4cb15e7921edde89d9438f7c431efabb4b41027de261b16e206224eef625277bce2f28bf7ef947039744b620cb7fbf7ae399e725366a0f4a1e3116c40a3e611fce65eedc184324b8a82fc1284c6478c3ebda012a71f8a1491d14803976b89af30a4b31d5633d228a4fb4d1ec535df1d1dd99e0305904fe8015d673636c64e31f3828cbddf7178487e29244233ab279f07b85348adffea1279de187cbf9643dac37196023c4bcc2a0e2a8780402026b021a4667e8c2e44a230fd77945621bd1a0776cbf0b02a5b94571637692903420d32f2b8fe6ab16f197b21017bbdac6b84b8000a12d0b8213dda969bc8323da45e79f3066c6889dd93343eb535fdedb782523cdeb1b22ceae17677d02ba644a09e52e702359516397ad083915e9846e76e450c7a659fda6e3c81e32b55253360ff597ef5bda98455567353b1fb10e95bb9cb7d87e62cfe136019d885779d145c41301b0b7bfb01d3cad92943e2e29a0573beb7a6cfef61f65b1347bb28ffc8167de831b33270ef0627fa36795ca56d3575a646845f00adbd4bb7569b21742037a6001f88de41feeb53b6794c92a906f49c2f2875cc82ab0d120775d12ac7df6f6c1ef3fe3b8877f6c39c6930795ff02ba833e9759453463738d971d224ea07b70269a0be3c9e363cb936478172a0a18a12be894cfb4403a53b21dcdeab33abdd9d0e3d94f0d6b5e8fe5bd1bfe7bc028c90288aec8ccddcefa180d87e16cea18e62d862938c170a5a1119bb6a72895bee7316b57a975812f89fbb098d857d007133d0de6d415b04682bb7839f8e0c74464f04618ec65dd8c3377f655846f6e79fa75122c3e1b071c500f8b3f457c3761cbb8a3faa948216b5c71673f44473dfe23e206a2963acb5d654644a9a9440d54f0d5d1a895706f6f4e9153f29bb583453779b8a016f05b4b5240796a933e8b24b1635cc46a65fb4cc274359ca80a950b2610832b631574ed3f7ff4e99a14cd5906b5fe999c6b3f7ba2a18bea60454f237194602e18061dbbab380dbb830678e9df8baf21ab989dfbe597c75dc114df42fe2b0aed724b962cb51c599eb16ea75f72049cc310d9697c4a57a1df6b36809a58be9f09283b2628f54ed4fc5e9fa085c685ebae1e52cf11d4984d2e5d0c703dd9387966964b4b8b255e6e95e5f05b8e70e91155550854cc82488f7783d298b837e6372b8b7a4d83501a0955553befb2e83ab2c4eda1cfa02f9c4e772fea4ed3f27d8efdbb37fee3328a944c9e4c4617200d49d8bf42ba3320415cc3e1454efe431af96d83dd2ff813b15328c26ec78664b905429e22cedcbc93ee0e1b44a22cb166077c61e9f603d217a9f1b88cbf14166283c20ce1128a573b202d1dab8fa440ce2cc24b4efd45edab92e3e4aa901a50434ce77b6f96c9b1f728b1507d550f4e0b17b6bfb9a8cd8c5018135db65ed8b39002241e27eb3a5bf63c5fa6c0198a8e72c7c64246181303ca900108c07776226dc30598dedcd3eec3a1971ef42a55bc289b0ec486719379b8195586f7dd9e5ba8553820e30616b6ad3f3e5caebe5873289fa9a0aa5032e179b6a387a69631e0b6e9abcaa35d9a6f2b4e515d07699664f88035bbdc8f4109f3579861793f94f05ffdb51e394422c50b383ac2aa473088dda18151c70a68739642f65a695cf3b52af00bf1f52bcd82b94223b5446dc1d48ea06b9ee68a967e31be421772007a5de5f65783772d31011ea2c0439c87fad563d3c9cf84971542cea9ffe182e6a83e9d0a58bf2b013724bd04ea12b64f058d2c50039678b6408c7196beab30f3370b0508cae99e607e995aa6118efd5af78ec5c05248d204d497550ca86382838f9766a751b81dbe9f0b0a7e77ba648034aa60e90d5982c87888ed5dff97ab7358a1118090cd5b4e460ab1fad54e5e4a95e8a055879c71a1bd01a5f44dc17d3ba519a69cc4d7a62b6ad5c3fc5430d003ee222b3a9d26a51e639670bfa30ba5984643b9d5b9c074724df9d99522612303c562b96</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>学科交叉</category>
+      </categories>
+      <tags>
+        <tag>Rock</tag>
+        <tag>Datasets</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学科交叉——岩土工程各方向参考</title>
+    <url>/2025/10/15/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E5%9C%9F%E5%B7%A5%E7%A8%8B%E5%90%84%E6%96%B9%E5%90%91%E5%8F%82%E8%80%83/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="利用基于虚拟相机的数据增强推进时空岩石裂缝预测"><a href="#利用基于虚拟相机的数据增强推进时空岩石裂缝预测" class="headerlink" title="利用基于虚拟相机的数据增强推进时空岩石裂缝预测"></a>利用基于虚拟相机的数据增强推进时空岩石裂缝预测</h1><blockquote>
+<p>意义：预测未开挖区域的岩石裂缝是岩土工程项目中一个关键而又具有挑战性的方面。这项任务涉及使用已开挖岩石面的序列预测未开挖岩石面的裂缝映射序列，这非常适合时空深度学习技术。</p>
 </blockquote>
+<p>Paper: <a href="https://www.sciencedirect.com/science/article/pii/S0886779825000380">Xie J, Chen B, Huang J, et al. Advancing spatial-temporal rock fracture prediction with virtual camera-based data augmentation[J]. Tunnelling and Underground Space Technology, 2025, 158: 106400.</a><br>Code: <a href="https://github.com/GEO-ATLAS/Rock-Camera">https://github.com/GEO-ATLAS/Rock-Camera</a><br>数据集是用生成的，这里的生成应该是根据物理参数随机生成（较为复杂）<br>基准：<a href="https://github.com/GEO-ATLAS/Rock-Camera">RockCaptures数据集</a></p>
+<p>原文译文如下：</p>
+<blockquote>
+<p>考虑到对岩石断裂数据库增强的广泛需求，本研究提供了一个开源的，基于Python的软件包“Rock-Camera”，可在GitHub上获得。它包括两个部分：第一种是能够基于任何现场裂缝分布创建DFN的改进的3D DFN生成器。第二种是基于VCT从DFN创建捕获的光生成器，这两个模块的组合形成了一个强大的工具，可以自由地生成任何所需的岩石表面照片数据集。</p>
+</blockquote>
+<blockquote>
+<p>此外，为了帮助研究人员构建和比较时空深度学习模型，基于该工具提供了一个开源基准“RockCaptures”数据库。该数据库包括五个子数据集，其复杂性逐渐增加。为了展示该框架的实用性，空间-时间深度学习模型PredRNN已用于预测基准数据库中未挖掘位置的岩石断裂。评估指标均方误差（MSE）和结构相似性指数（SSIM）作为模型评价指标。最后，详细讨论了如何以多模式方式使用数据库来提高模型性能，并提供了“Rock-Camera”软件包的附加功能。</p>
+</blockquote>
+<p>数据集基准已整合成npy数据格式，原文预览如下:</p>
+<center> 
+<img src="https://share.note.youdao.com/yws/api/personal/file/WEBdcde30a6201d8950a022895028c0d6f2?method=download&shareKey=460dd7cd577f09063c024513275de6da" alt= '裂缝预测 ' width="800" />
+
+<p>未开挖区域裂缝预测，开挖区域裂缝数据预览</p>
+</center>
+
+<p><strong>结论：预测方向可以考虑，但该数据集属性复杂，行外人无法理解（例如为何裂缝线条像划痕，像直线裂缝，图中Rock mass区域岩块层次分明，这是什么岩石？），暂不考虑</strong></p>
+<h1 id="岩石三维表面裂纹扩展机理数值模拟研究"><a href="#岩石三维表面裂纹扩展机理数值模拟研究" class="headerlink" title="岩石三维表面裂纹扩展机理数值模拟研究"></a>岩石三维表面裂纹扩展机理数值模拟研究</h1><p>Paper: <a href="https://www.cgejournal.com/cn/article/pdf/preview/14211.pdf">梁正召, 李连崇, 唐世斌, 等. 岩石三维表面裂纹扩展机理数值模拟研究[J]. 岩土工程学报, 2011, 33(10): 1615-1622.</a></p>
+<h4 id="Learn"><a href="#Learn" class="headerlink" title="Learn"></a>Learn</h4><ul>
+<li><p>1.岩石裂纹也分多类，如：Ⅰ、Ⅱ、III 型裂纹（扩展模式？）；次生裂纹；壳体裂纹；翼型裂纹。二维裂纹、三维裂纹。</p>
 <ul>
-<li>声发射数据主要包含两类关键信息，分别对应信号本身特征和采集环境参数。<ul>
-<li>信号特征参数：是数据的核心部分，用于描述弹性波的属性。<ul>
-<li><strong>幅度</strong>：指信号的最大振动幅值，反映能量释放的强弱。</li>
-<li><strong>计数</strong>：指信号超过设定阈值的次数，可体现信号的活跃程度。</li>
-<li><strong>持续时间</strong>：指信号从起始到结束的时间长度，与损伤类型相关。</li>
-<li><strong>能量</strong>：通过信号积分计算得出，直接对应材料释放的能量大小。</li>
+<li>Think: 裂纹分类在这篇论文没有说明，不同学者对裂纹的定义似乎也有歧义。</li>
+<li>Q: 那么是否可以做裂纹分类，做分类的意义是？</li>
 </ul>
 </li>
-<li>采集关键参数：用于追溯数据的采集背景，保证数据的可追溯性和有效性。<ul>
-<li>采集时间：记录信号产生的具体时刻，便于分析损伤发展的时序。</li>
-<li>传感器位置：标记接收信号的传感器在被检测对象上的坐标，确定损伤位置。</li>
-<li>阈值设定：记录采集时设定的信号触发阈值，影响数据的采集范围。</li>
+<li><p>2.在岩体力学中，裂隙岩体内部裂隙的<strong>产状、走向以及分布</strong>通常决定着岩体变形与强度</p>
+<ul>
+<li>因此计算机做裂隙的形成演化预测具备一定的意义</li>
+</ul>
+</li>
+<li><p>3.裂纹形成的二维研究（more）、三维研究，常用<strong>数值计算方法</strong>模拟非均匀性岩石中的三维裂纹扩展过程。</p>
+<ul>
+<li>这说明地质学中有自己的裂纹演化模拟。如何区别出通过AI训练<em>推演</em>、<em>预测</em>裂纹形成过程？</li>
+</ul>
+</li>
+<li><p>4.由于岩石的不透明性给内置三维裂纹的扩展研究带来了极大困难。为了便于观测，许多学者采用玻璃、树脂等透明均匀特性的相似材料来<strong>模拟三维裂纹的扩展机理</strong>。然而，由于岩石内部非均匀性的存在，三维裂纹的扩展机理与模式与均匀材料相差甚远。为了观测内部裂纹扩展问题，很多学者不得不尝试<strong>CT技术、声发射技术或者红外热像技术</strong>来观测分析内部微裂隙的扩展过程。</p>
+<ul>
+<li><strong>观测分析内部微裂隙的扩展过程</strong>，学者们想要的是观测试验样本的裂隙扩展过程，从而分析扩展机理。</li>
+<li>但<strong>观测困难！！！！</strong></li>
+<li><strong>因此</strong>AI算法预测，可以基于一定的样本训练后，只用（输入裂隙扩展前和扩展后的图像样本对），模拟出扩展过程，提高<strong>观测效率！！！</strong></li>
 </ul>
 </li>
 </ul>
-</li>
+<p><strong>结论：</strong></p>
+<ul>
+<li>1.收集不同岩石裂纹数据集，可发展<strong>裂纹分类</strong>方向，但做分类的意义还需进一步思考。 </li>
+<li>2.利用AI算法预测裂纹扩展，可解决裂纹扩展过程观测困难的问题。</li>
+</ul>
+<h1 id="基于声发射和DIC特征的层状复合岩石力学损伤试验与模型研究"><a href="#基于声发射和DIC特征的层状复合岩石力学损伤试验与模型研究" class="headerlink" title="基于声发射和DIC特征的层状复合岩石力学损伤试验与模型研究"></a>基于声发射和DIC特征的层状复合岩石力学损伤试验与模型研究</h1><p>Paper: <a href="https://onlinelibrary.wiley.com/doi/full/10.1155/2022/6568588">Qi X, Yang Z, Wang S, et al. Mechanical damage test and model study of layered composite rock based on acoustic emission and DIC characteristics[J]. Shock and Vibration, 2022, 2022(1): 6568588.</a></p>
+<blockquote>
+<p>Abstract:<br>为了研究层状复合岩石的力学损伤特征，以深层致密储层砂岩、泥岩为研究对象，通过相似材料模型试验制备了层状复合类岩石，进行了单轴压缩试验，并辅以声发射（声发射）系统和DIC（数字图像相关）系统，获得了层状复合岩石的强度、弹性模量等物理力学参数。声发射振铃计数与岩石损伤的对应规律将层状复合岩石在单轴载荷作用下的损伤过程分为<strong>初始损伤、稳定损伤发展和损伤加速</strong>3个阶段。<br>通过对<strong>DIC系统应变云图</strong>的分析，揭示了层状复合岩石在单轴条件下的变形特征主要为拉剪滑移损伤，基于声发射的内部损伤演化特征和DIC的表面损伤演化特征，建立了基于双损伤因子表征的层状复合岩石损伤本构模型，合理地揭示了层状复合岩石在单轴压缩条件下内部结构发展和外部裂纹萌生、扩展、贯通的损伤演化机理。</p>
+</blockquote>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="Learn-1"><a href="#Learn-1" class="headerlink" title="Learn"></a>Learn</h3><ul>
+<li>相关研究方向和术语：破裂过程中的能量耗散和裂纹特征；力学损伤模型；类材料（材料获取困难，故制作相似材料代替研究）；应变场（？）；DIC视应变分析；损伤演化方程；表观和内部损伤演化、机理</li>
+<li>声发射：</li>
+<li>DIC(Digital Image Correlation)</li>
 </ul>
 ]]></content>
       <categories>
         <category>学科交叉</category>
       </categories>
       <tags>
-        <tag>人工智能</tag>
-        <tag>声发射</tag>
+        <tag>Rock</tag>
+        <tag>Datasets</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学科交叉——岩石相关数据下载</title>
+    <url>/2025/10/15/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="数据集网站"><a href="#数据集网站" class="headerlink" title="数据集网站"></a>数据集网站</h1><p><a href="https://digitalporousmedia.org/published-datasets/">TACC网站</a>拥有大量的相关数据集，小于2GB可随意下载，大于2GB暂时无法下载，需要有注册账号权限，目前还未研究彻底获取方式。</p>
+<p><strong>关于CT数据和论文关键词推荐：coal CT vein</strong><br><strong>关于裂缝演化形成过程关键词推荐：Rock; DIC</strong></p>
+<h2 id="CV（图像数据）"><a href="#CV（图像数据）" class="headerlink" title="CV（图像数据）"></a>CV（图像数据）</h2><p>Paper: <a href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/2017WR021032">Suzuki A, Watanabe N, Li K, et al. Fracture network created by 3‐D printer and its validation using CT images[J]. Water Resources Research, 2017, 53(7): 6330-6339.</a></p>
+<p>数据集：<a href="https://digitalporousmedia.org/published-datasets/tapis/projects/drp.project.published/drp.project.published.DRP-213/Artificial%20fracture%20network/">Artificial fracture network</a></p>
+<p>简介： 3D打印和CT扫描数据</p>
+<p>目的：了解<strong>裂隙介质中的流动机制</strong>对于地质科学研究和地质开发行业至关重要。本研究使用3D打印的裂隙网络来<strong>控制样品内部裂隙分布</strong>的性质。通过使用X射线CT扫描仪研究了3D打印机创建样品的准确性和适当性。CT扫描图像表明，3D打印机可以控制样品内部的裂隙分布。D打印机能够复制复杂的三-裂缝网络的三维空间分布，印刷后使用正己烷是一种有效的除蜡后处理方法，局部渗透率由立方定律得到，并用于计算整体平均值，渗透率的实验值介于算术平均值和几何平均值之间的数值结果，这是与传统的研究是一致的。这种方法的基础上3-D打印的裂缝网络可以帮助<strong>验证现有的流动建模和数值方法</strong>。</p>
+]]></content>
+      <categories>
+        <category>学科交叉</category>
+      </categories>
+      <tags>
+        <tag>Rock</tag>
+        <tag>Datasets</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学科交叉——岩石裂缝生成与分割</title>
+    <url>/2025/10/14/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E8%A3%82%E7%BC%9D%E7%94%9F%E6%88%90%E4%B8%8E%E5%88%86%E5%89%B2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Dataset-目前可用数据集"><a href="#Dataset-目前可用数据集" class="headerlink" title="Dataset 目前可用数据集"></a>Dataset 目前可用数据集</h1><h2 id="生成任务"><a href="#生成任务" class="headerlink" title="生成任务"></a>生成任务</h2><h3 id="1-基于GAN生成背景单一的裂缝数据（√）"><a href="#1-基于GAN生成背景单一的裂缝数据（√）" class="headerlink" title="1.基于GAN生成背景单一的裂缝数据（√）"></a>1.基于GAN生成<strong>背景单一</strong>的裂缝数据（<em>√</em>）</h3><p>数据名称：<a href="https://github.com/ehsankhani/Rock-Porosity-GAN?tab=readme-ov-file">Kaggle Dataset: Porous Media CT Scan Dataset</a></p>
+<blockquote>
+<p>意义：该模型以固体岩石图像（Raw）和孔隙度分割图(Label)为输入，生成逼真的多孔岩石结构，从而推进先进的材料表征和数字岩石物理分析。</p>
+</blockquote>
+<p>示例：</p>
+<center> 
+<img src="https://share.note.youdao.com/yws/api/personal/file/WEB3a631cb3cd791fadb26b5eca3a2687fe?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" alt= 'GAN单一背景裂缝生成 ' width="800" />
+
+<p>GAN单一背景裂缝生成</p>
+<!-- <img src="2025/10/14/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E8%A3%82%E7%BC%9D%E7%94%9F%E6%88%90%E4%B8%8E%E5%88%86%E5%89%B2/comparison_grid.png" class="" title="GAN单一背景裂缝生成 width&#x3D;800"> -->
+</center>
+
+
+<h3 id="2-基于Stable-diffusion-and-Controlnet生成多样化背景的裂缝（×）"><a href="#2-基于Stable-diffusion-and-Controlnet生成多样化背景的裂缝（×）" class="headerlink" title="2.基于Stable diffusion and Controlnet生成多样化背景的裂缝（×）"></a>2.基于Stable diffusion and Controlnet生成<strong>多样化背景</strong>的裂缝（<em>×</em>）</h3><blockquote>
+<p>意义：在民用基础设施检查的自动化裂缝检测方面，裂缝数据稀缺。为了更好的做这方面的裂缝检测任务，需收集和注释大型高质量数据集，因此用生成模型来试图突破数据稀缺的瓶颈。</p>
+</blockquote>
+<p>Paper：<a href="https://www.sciencedirect.com/science/article/pii/S014102962501819X">Xie J, Chen B, Giacomini A, et al. A versatile synthetic data generation framework for crack detection[J]. Engineering Structures, 2025, 344: 121428.</a><br>Wechat: <a href="https://mp.weixin.qq.com/s/ze3sHoDAvbtHCzawPfMlIg">【新论文】CrackGen：融合控制扩散与物理机理的数据合成方法</a><br>Dataset and Code: <a href="https://github.com/GEO-ATLAS/CrackGen">CrackTree260</a><br>训练样本数据示例：</p>
+<table>
+    <tr>
+        <td ><center><img src="https://share.note.youdao.com/yws/api/personal/file/WEB9509fa2ba0a689688f7646ac786eeee9?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" width=420>训练样本 </center></td>
+        <td ><center><img src="https://share.note.youdao.com/yws/api/personal/file/WEB440bd0460da3641e5bcbdf1c8e01073d?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" width=460>标签</center></td>
+    </tr>
+</table>
+
+
+<h2 id="分割任务"><a href="#分割任务" class="headerlink" title="分割任务"></a>分割任务</h2><h3 id="1-基于Swin-Transformer对复合岩石材料进行多类别材料的语义分割（√）"><a href="#1-基于Swin-Transformer对复合岩石材料进行多类别材料的语义分割（√）" class="headerlink" title="1.基于Swin Transformer对复合岩石材料进行多类别材料的语义分割（√）"></a>1.基于Swin Transformer对复合岩石材料进行多类别材料的语义分割（<em>√</em>）</h3><blockquote>
+<p>意义：识别煤、混凝土、大理石等复合岩石材料的不同特征和相态，一方面可以<em>深入了解三维细观结构对损伤和破坏模式的影响，揭示煤、混凝土、大理石等复合岩石材料的破坏条件（至关重要）</em>。另一方面<em>可以根据破坏机理合理地数值预测复杂载荷条件下复合岩石的力学性质、破坏条件和防治机理</em>。 </p>
+</blockquote>
+<blockquote>
+<p>例如：提取识别岩块样本的成分，从而可以让后来者分析其强度，判断开挖矿场的时候会不会裂开、崩塌</p>
+</blockquote>
+<p>Paper: <a href="https://www.nature.com/articles/s41597-023-02734-7">Chen, H., Cao, X., Zhang, X. et al. Automatic segmentation framework of X-Ray tomography data for multi-phase rock using Swin Transformer approach. Sci Data 10, 812 (2023). https://doi.org/10.1038/s41597-023-02734-7</a><br>Dataset and Code: <a href="https://github.com/Chall513032/CoalSegmentation">河南省金岭煤矿采集的原煤样品</a><br>数据样本示例：</p>
+<table>
+    <tr>
+        <td ><center><img src="https://share.note.youdao.com/yws/api/personal/file/WEB14c0f970493460a9580eb06f0a6860af?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" width=370>Raw </center></td>
+        <td ><center><img src="https://share.note.youdao.com/yws/api/personal/file/WEB6e3f07a5be86420814f2c46ec5bca090?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" width=420>Label</center></td>
+    </tr>
+</table>
+
+
+
+<p>四类分割，裂缝、煤、黄铁矿、煤和黄铁矿分量被分为四类</p>
+<h2 id="Think"><a href="#Think" class="headerlink" title="Think"></a>Think</h2><blockquote>
+<p>1.生成是为了什么？目标？</p>
+<blockquote>
+<p>（1）矿场岩石样本数据量很少，样本是经过自己施加压力产生裂缝的嘛？<br>Yes</p>
+<blockquote>
+<p>（2）不利于后续学者对裂缝矿物质进行分析<br>（3）生成更多样本，是为了让后续学者可以根据样本进行<strong>岩性机理分析</strong>：对矿场受力会产生怎样的崩塌；对煤岩的裂缝形成进行分析<br>（4）<strong>更好的做分割任务</strong><br>（5）进一步分析裂缝受力形成的过程，从而保障开挖过程的安全：比如说<strong>煤杂质如何影响裂缝的形成</strong></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>Q：但有一个问题，就是生成的时候必须考虑物理杂质分布和裂缝的位置关系<br>虽然生成模型已经把一些物理参数和分布纳入考虑，但生成的内容无法彻底说明其是否符合物理性质<br>而且：生成的内容（不可信？谁会用到生成的数据进行分析，分析结果不可信）是否符合岩性（岩石的物理性质）</p>
+</blockquote>
+<h2 id="下一步"><a href="#下一步" class="headerlink" title="下一步"></a>下一步</h2><p>还有声发射数据、时频域数据可以去了解</p>
+]]></content>
+      <categories>
+        <category>学科交叉</category>
+      </categories>
+      <tags>
+        <tag>Rock</tag>
+        <tag>Datasets</tag>
+        <tag>Generator</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2025/10/14/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
       </tags>
   </entry>
 </search>

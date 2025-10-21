@@ -242,7 +242,7 @@
 <blockquote>
 <p>2.1参数假设：</p>
 <blockquote>
-<p>地层分层3层（覆盖层、完整围岩、破碎带）<br>每一层的初始波速：覆盖层 (V_p&#x3D;2000 , \text{m&#x2F;s})，完整围岩 (V_p&#x3D;4000 , \text{m&#x2F;s})，破碎带 (V_p&#x3D;2500 , \text{m&#x2F;s})<br>层厚范围：覆盖层 0-5 米，完整围岩 5-40 米，破碎带 40-50 米。</p>
+<p>地层分层3层（覆盖层、完整围岩、破碎带）<br>每一层的初始波速：覆盖层 $V_p&#x3D;2000 , \text{m&#x2F;s}$，完整围岩 $V_p&#x3D;4000 , \text{m&#x2F;s}$，破碎带 $V_p&#x3D;2500 , \text{m&#x2F;s}$<br>层厚范围：覆盖层 0-5 米，完整围岩 5-40 米，破碎带 40-50 米。</p>
 </blockquote>
 </blockquote>
 </blockquote>
@@ -250,7 +250,7 @@
 <blockquote>
 <p>2.2约束条件：</p>
 <blockquote>
-<p>波速上下限：(V_p \in [1500, 5000] , \text{m&#x2F;s})（根据区域地质资料）层厚非负：各层厚度≥0 米</p>
+<p>波速上下限：$V_p \in [1500, 5000] , \text{m&#x2F;s}$（根据区域地质资料）层厚非负：各层厚度≥0 米</p>
 </blockquote>
 </blockquote>
 </blockquote>
@@ -258,7 +258,7 @@
 <blockquote>
 <p>2.3 算法选择和优化<br>2.4 反演结果</p>
 <blockquote>
-<p>波速模型输出<br>0-5 米：覆盖层 (V_p&#x3D;1800 , \text{m&#x2F;s})（与钻孔一致）<br>5-38 米：完整围岩 (V_p&#x3D;3950 , \text{m&#x2F;s})（误差 1.25%）<br>38-50 米：破碎带 (V_p&#x3D;2600 , \text{m&#x2F;s})（与设计参数吻合）</p>
+<p>波速模型输出<br>0-5 米：覆盖层 $V_p&#x3D;1800 , \text{m&#x2F;s}$（与钻孔一致）<br>5-38 米：完整围岩 $V_p&#x3D;3950 , \text{m&#x2F;s}$（误差 1.25%）<br>38-50 米：破碎带 $V_p&#x3D;2600 , \text{m&#x2F;s}$（与设计参数吻合）</p>
 <blockquote>
 <blockquote>
 <p>三维可视化模型：<br>异常区范围：横向宽度 6 米，纵向延伸 12 米（与后续开挖结果对比误差＜5%）。</p>
@@ -276,7 +276,7 @@
 </li>
 <li>方法较多，如CNN回归、模糊逻辑、神经模糊算法、混合遗传算法、模式搜索技术<ul>
 <li>集合机器学习模型VeIProfES：利用钻井测井数据有效地预测剪切波速度剖面。<a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0267726123006693">Joshi A, Raman B, Mohan CK, Cenkeramaddi LR. A new machine learning approach for estimating shear wave velocity profile using borelog data. Soil Dynam Earthq Eng. 2024;177, 108424.</a></li>
-<li>数据库：1101个测站的钻孔测井和剪切波速度信息数据集，并通过CTGAN生成10510个测站的合成钻孔测井数据</li>
+<li>数据库：1101个测站的钻孔测井和剪切波速度信息数据集，并通过<strong>CTGAN生成10510个测站的合成钻孔测井数据</strong></li>
 </ul>
 </li>
 <li>数据参考：伊朗油田Asmari地层的1640个数据点；</li>
