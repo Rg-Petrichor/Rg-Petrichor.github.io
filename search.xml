@@ -212,7 +212,7 @@
 <p>摘要：人工智能（Artificial Intelligence，AI）通过解决岩石力学的<strong>各向异性、非线性、不连续性和多相性</strong>等内在复杂性，具有巨大的潜力，本文综述了人工智能从BP模型等基本神经网络到Transformers等高级结构的发展，以及人工智能在<strong>岩石微观结构重构、力学参数预测、岩石力学参数预测、岩石以及应对岩爆预测和隧道变形等</strong>工程挑战。机器学习技术，特别是卷积神经网络（CNN）和生成对抗网络（GAN），在<strong>自动化裂缝检测</strong>和高效<strong>生成3D数字岩石模型</strong>等任务方面至关重要。然而，人工智能在岩石力学中的有效性受到<strong>数据稀缺和对高质量数据集的需求的限制</strong>。混合方法，例如将物理信息神经网络（PINN）与传统数值方法相结合，为求解控制方程提供了有前途的解决方案。此外，大型语言模型（LLM）正在成为代码生成和决策支持的重要工具。尽管取得了这些进展，但挑战仍然存在，包括可重复性，模型可解释性，并使人工智能模型适应特定领域。未来的进展将<strong>取决于改进数据集的可用性</strong>，更大的跨学科合作，以及空间智能框架的整合，以弥合人工智能的理论潜力与其在岩石工程中的实际应用之间的差距。</p>
 </blockquote>
 <center> 
-<img src="https://mmbiz.qpic.cn/mmbiz_png/WsHIqUZYB9I9VK9dr5Ao0S35ibjdicIGwKq8R0VrWfr0a2bcT9TvujPsSbovdxdFtplib1BAsqjibyqsmYW2vYTBZw/640?wx_fmt=png&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=1" alt= 'AI发展及其在岩石力学中应用的时间轴' width="800" />
+<img src="https://share.note.youdao.com/yws/api/personal/file/WEB1e3d4799aa552a86f4c2840b0198adaf?method=download&shareKey=52fa29421c81265d257cbd025968fb4c" alt= 'AI发展及其在岩石力学中应用的时间轴' width="800" />
 
 <p>AI发展及其在岩石力学中应用的时间轴</p>
 </center>
@@ -225,7 +225,7 @@
 <li>5.Transformers使用爆破后图像识别爆破后的岩石碎片。</li>
 </ul>
 <h3 id="交叉期刊"><a href="#交叉期刊" class="headerlink" title="交叉期刊"></a>交叉期刊</h3><center> 
-<img src="https://mmbiz.qpic.cn/mmbiz_png/WsHIqUZYB9I9VK9dr5Ao0S35ibjdicIGwKdNA4M6O5dHtgOXJ2AUCPlgS8sLpjMajtcJqZGuA1SZOwpbdIU0G7GQ/640?wx_fmt=png&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=2" alt= 'AI发展及其在岩石力学中应用的时间轴' width="800" />
+<img src="https://share.note.youdao.com/yws/api/personal/file/WEBf3b35b64aadf7757f15dc4e0c0035d4f?method=download&shareKey=52fa29421c81265d257cbd025968fb4c" alt= 'AI发展及其在岩石力学中应用的时间轴' width="800" />
 
 <p>17种岩石力学相关期刊中AI论文的发表数量统计</p>
 </center>
@@ -236,16 +236,18 @@
 <li>3.岩体中<strong>裂隙网络的明确表征</strong>是困难的，这使得<strong>估计其力学性质</strong>具有挑战性。这反过来又使实际工程应用中的<strong>变形预测</strong>和<strong>潜在危害评估</strong>复杂化。应对：参数估计，微观岩石模型重建，宏观节理网络表示，岩爆预测。</li>
 <li>4.然而，人工智能在该领域的应用面临着持续的争论，特别是由于可用数据的限制。人工智能的有效性在很大程度上取决于高质量的大型数据集，这些数据集在岩石工程实践中通常很稀缺，为验证和更广泛的应用创造了障碍。</li>
 </ul>
-<h2 id="Instances"><a href="#Instances" class="headerlink" title="Instances"></a>Instances</h2><h3 id="几何重建"><a href="#几何重建" class="headerlink" title="几何重建"></a>几何重建</h3><h4 id="微观层面重建"><a href="#微观层面重建" class="headerlink" title="微观层面重建"></a>微观层面重建</h4><ul>
+<h2 id="Instances"><a href="#Instances" class="headerlink" title="Instances"></a>Instances</h2><h3 id="1-几何重建"><a href="#1-几何重建" class="headerlink" title="1. 几何重建"></a>1. 几何重建</h3><h4 id="微观层面重建"><a href="#微观层面重建" class="headerlink" title="微观层面重建"></a>微观层面重建</h4><ul>
 <li>数据：X-ray CT</li>
 <li>目标：构建（生成）3D数字岩石</li>
+<li>原因：岩石的几何形状、特征对促进岩石力学行为建模有重要作用，方便观察分析岩石机制，例如单轴拉伸强度的应变率依赖性。核心是通过可视化、数字化岩石的微观结构（如<strong>孔隙、颗粒、微裂缝</strong>等），建立 “微观结构 - 宏观性能” 的关联。</li>
 <li>输入：2D（切片）– 3D配对数据集</li>
 <li>方法：<ul>
 <li>模拟退火（SA）</li>
 <li>深度学习：<ul>
-<li>（a）条件生成对抗网络（CGAN）<a href="https://www.sciencedirect.com/science/article/pii/S0045782520302279">Feng J，Teng Q，Li B，He X，Chen H，Li Y. An end-to-end three-dimensional reconstruction framework of porous media from a single two-dimensional image based on deep learning. Comput Methods Appl Mech Eng. 2020;368，113043.</a></li>
-<li>变分自动编码器（VAE）深度学习模型用于岩石的几何重建：<a href="https://www.sciencedirect.com/science/article/pii/S0013795221002465">Shi JJ, Zhang W, Wang W, et al. Randomly generating three-dimensional realistic schistous sand particles using deep learning: variational autoencoder implementation. Eng Geol. 2021;291, 106235.</a></li>
-<li></li>
+<li>(a) 条件生成对抗网络（CGAN）<a href="https://www.sciencedirect.com/science/article/pii/S0045782520302279">Feng J，Teng Q，Li B，He X，Chen H，Li Y. An end-to-end three-dimensional reconstruction framework of porous media from a single two-dimensional image based on deep learning. Comput Methods Appl Mech Eng. 2020;368，113043.</a></li>
+<li>(b) 变分自动编码器（VAE）深度学习模型用于岩石的几何重建：<a href="https://www.sciencedirect.com/science/article/pii/S0013795221002465">Shi JJ, Zhang W, Wang W, et al. Randomly generating three-dimensional realistic schistous sand particles using deep learning: variational autoencoder implementation. Eng Geol. 2021;291, 106235.</a></li>
+<li>(c) 基于体素(3D空间的像素)的3D GAN来<em>生成</em>迄今为止饱和、部分冷冻颗粒状材料的最大多相3D图像. <a href="https://www.sciencedirect.com/science/article/pii/S0266352X24001836">Argilaga A, Zhao C, Li H, Lei L. Synthesising microstructures of a partially frozen salty sand using voxel-based 3D generative adversarial networks. Comput Geotech. 2024;170, 106247.</a></li>
+<li>(d) DeburGAN被用于花岗岩的3D真彩色重建. <a href="https://www.sciencedirect.com/science/article/pii/S1365160924003691">Zhao GF, Wu YH, Wei XD. A high-fidelity digital rock representation based on digital grinding combined with deep learning for four-dimensional lattice spring model. Int J Rock Mech Min Sci. 2025;186, 106004.</a></li>
 </ul>
 </li>
 <li>说明：生成的结果可能在物理一致性方面存在局部偏差</li>
@@ -253,10 +255,128 @@
 </li>
 </ul>
 <center> 
-<img src="https://mmbiz.qpic.cn/mmbiz_png/WsHIqUZYB9I9VK9dr5Ao0S35ibjdicIGwKtKoiaOFxO0e3O8eve362xlce2NkRr0ticiblkLvkX2mZBcq1xLedibogqg/640?wx_fmt=png&from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=4" alt= '用于岩石微观结构重构的深度学习应用实例' width="800" />
+<img src="https://share.note.youdao.com/yws/api/personal/file/WEB037664ed91f6ef3a48b710c388d29886?method=download&shareKey=52fa29421c81265d257cbd025968fb4c" alt= '用于岩石微观结构重构的深度学习应用实例' width="800" />
 
-<p>[（a）条件生成对抗网络（CGAN）]<br>，（b）变分自动编码器（VAE），（c）基于体素的3D GAN，和（d）DefurGAN</p>
-</center>]]></content>
+<p>用于岩石微观结构重构的深度学习应用实例</p>
+</center>
+
+<h2 id="2-岩石裂缝提取"><a href="#2-岩石裂缝提取" class="headerlink" title="2. 岩石裂缝提取"></a>2. 岩石裂缝提取</h2><ul>
+<li>数据：裂缝图像（要求背景不能太复杂，对比度不能太低）；点云数据</li>
+<li>原因：岩石裂缝的形成机制、扩展规律是岩石力学的核心研究内容，提取裂缝是<strong>揭示岩石力学特性</strong>的重要手段。</li>
+<li>目标：岩石裂缝的自动分割和量化（量化指代的是？）</li>
+<li>方法：<ul>
+<li>(a-1)FraSegNet: <a href="https://www.sciencedirect.com/science/article/pii/S1365160921001313">Chen J, Zhou M, Huang H, Zhang D, Peng Z. Automated extraction and evaluation of fracture trace maps from rock tunnel face images via deep learning. Int J Rock Mech Min Sci. 2021;142, 104745.</a>.<ul>
+<li>数据库：3000个岩石隧道裂缝图像</li>
+</ul>
+</li>
+<li>(a-2)PaddleSeg(DeepLab V3+ and UNet3+)：<a href="https://link.springer.com/article/10.1007/s00603-024-03824-7">Lei J, Fan Y. Rock CT image fracture segmentation based on convolutional neural networks. Rock Mech Rock Eng. 2024;57(8):5883–5898.</a><ul>
+<li>数据库：0.7 μm的火成岩CT图像</li>
+</ul>
+</li>
+<li>(b)堆叠集成机器学习模型,识别被喷射混凝土和挖掘剖面掩盖的隧道面中的不连续性。<a href="">Peng X, Lin P, Xia Q, Yu L, Wang M. A new method for recognizing discontinuities from 3D point clouds in tunnel construction environments. Tunn Undergr Space Technol. 2024;152, 105955.</a><ul>
+<li>数据库：3D点云数据（西北某隧道工程激光扫描的数据）</li>
+</ul>
+</li>
+<li>(c-1)DeepLab V3+ : 3D岩石裂缝重建。<a href="">Pan D, Li Y, Wang X, Xu Z. Intelligent image-based identification and 3-D reconstruction of rock fractures: implementation and application. Tunn Undergr Space Technol. 2024;145, 105582.</a><ul>
+<li>数据库：岩石裂缝图像的不同数据集；</li>
+</ul>
+</li>
+<li>(c-2)确定性-随机识别和建模（DSIM）. <a href="">Pan D, Li S, Xu Z, Zhang Y, Lin P, Li H. A deterministic-stochastic identification and modelling method of discrete fracture networks using laser scanning: development and case study. Eng Geol. 2019;262, 105310.</a><ul>
+<li>数据库：点云数据，广西黑井石灰石矿</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<center> 
+<img src="https://share.note.youdao.com/yws/api/personal/file/WEBad70bc8c13d3c4947286018be22dad9a?method=download&shareKey=52fa29421c81265d257cbd025968fb4c" alt= '用于岩石裂隙提取的深度学习方法' width="800" />
+
+<p>用于岩石裂隙提取的深度学习方法</p>
+</center>
+  
+<h2 id="3-岩石强度预测"><a href="#3-岩石强度预测" class="headerlink" title="3. 岩石强度预测"></a>3. 岩石强度预测</h2><ul>
+<li>目标：用易于测量的岩石力学或物理参数之间的关系，分析预测岩石强度</li>
+<li>数据：多变量数值数据（施密特锤回弹数、P波速度、点载荷指数、无侧限抗压强度(UCS)等等）</li>
+<li>方法较多，以数据为基准参考：<ul>
+<li>马拉西亚登革遗址的砂岩块：108个案例，使用ANN网络预测. <a href="https://www.sciencedirect.com/science/article/abs/pii/S1365160916300454"> 28. Jahed Armaghani D, Mohd Amin MF, Yagiz S, Faradonbeh RS, Abdullah RA. Prediction of the uniaxial compressive strength of sandstone using various modeling techniques. Int J Rock Mech Min Sci. 2016;85:174–186.</a></li>
+<li>将脉冲速度、施密特锤回谭舒、有效孔隙度、花岗岩UCS等参数作为输入的274个数据集，ANN模型. <a href="https://link.springer.com/article/10.1007/s00603-022-03046-9">Skentou AD, Bardhan A, Mamou A, et al. Closed-form equation for estimating unconfined compressive strength of granite from three non-destructive tests using soft computing models. Rock Mech Rock Eng. 2023;56(1):487–514.</a></li>
+<li>367个数据集. <a href="https://link.springer.com/article/10.1007/s00603-022-02992-8">Le TT, Skentou AD, Mamou A, Asteris PG. Correlating the unconfined compressive strength of rock with the compressional wave velocity effective porosity and schmidt hammer rebound number using artificial neural networks. Rock Mech Rock Eng. 2022;55(11):6805–6840.</a></li>
+<li>四种岩石类型的199个实验数据集36. <a href="https://link.springer.com/article/10.1007/s00603-024-04012-3">Han D, Xue X. Machine learning-based prediction of shear strength parameters of rock materials. Rock Mech Rock Eng. 2024;57(10):8795–8819.</a></li>
+</ul>
+</li>
+</ul>
+<center> 
+<img src="https://share.note.youdao.com/yws/api/personal/file/WEB61094149fca6c40ea337f2b615a99343?method=download&shareKey=52fa29421c81265d257cbd025968fb4c" alt= '用于岩石强度预测的人工神经网络' width="800" />
+
+<p>用于岩石强度预测的人工神经网络</p>
+</center>
+
+<h2 id="4-岩石弹性模量估算"><a href="#4-岩石弹性模量估算" class="headerlink" title="4. 岩石弹性模量估算"></a>4. 岩石弹性模量估算</h2><blockquote>
+<p>岩石弹性模量: 描述<strong>岩石抵抗弹性变形能力</strong>的参数，<strong>值越大表示岩石越难被压缩或拉伸</strong>；</p>
+</blockquote>
+<ul>
+<li><p>目标：估算通常依赖与弹性模量相关的易测参数，例如通过声波测井得到的纵波速度、岩石的密度，或通过图像分析得到的孔隙率等，再结合经验公式、机器学习模型等方法推导得出。</p>
+</li>
+<li><p>原因：</p>
+<ul>
+<li>弹性模量是岩石力学本构模型（描述岩石力学行为的数学模型）的核心输入参数，估算方法的优化能推动理论研究发展。</li>
+<li>直接测量岩石弹性模量需获取岩芯并进行实验室试验，耗时耗力且成本高，估算能有效解决这一痛点。</li>
+</ul>
+</li>
+<li><p>数据：多变量数值数据</p>
+</li>
+<li><p>方法较多，多元回归分析、随机森林、有限元方法、向量回归SVR、ANN、SVM、GPR等</p>
+</li>
+</ul>
+<h2 id="5-波速反演"><a href="#5-波速反演" class="headerlink" title="5. 波速反演"></a>5. 波速反演</h2><blockquote>
+<p>波速反演是指通过观测到的波动信号（如地震波、声波、超声波）及其传播特征，反向推算出介质（如岩石、地层）内部不同位置波速分布的过程。其核心逻辑是 “从结果推原因”—— 已知波动在介质中传播的观测数据，反推介质的波速参数（波速是介质力学、物理性质的直接反映），区别于 “已知介质参数推传播结果” 的正演过程。</p>
+</blockquote>
+<blockquote>
+<p>举例：<br>1.直接观测、采集、记录的数据及特征：波速、直达波到时、发射波振幅、频率成分、密度、弹性模量、孔隙度等间接参数。<br>2.初始模型构建：</p>
+<blockquote>
+<p>2.1参数假设：</p>
+<blockquote>
+<p>地层分层3层（覆盖层、完整围岩、破碎带）<br>每一层的初始波速：覆盖层 (V_p&#x3D;2000 , \text{m&#x2F;s})，完整围岩 (V_p&#x3D;4000 , \text{m&#x2F;s})，破碎带 (V_p&#x3D;2500 , \text{m&#x2F;s})<br>层厚范围：覆盖层 0-5 米，完整围岩 5-40 米，破碎带 40-50 米。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>2.2约束条件：</p>
+<blockquote>
+<p>波速上下限：(V_p \in [1500, 5000] , \text{m&#x2F;s})（根据区域地质资料）层厚非负：各层厚度≥0 米</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>2.3 算法选择和优化<br>2.4 反演结果</p>
+<blockquote>
+<p>波速模型输出<br>0-5 米：覆盖层 (V_p&#x3D;1800 , \text{m&#x2F;s})（与钻孔一致）<br>5-38 米：完整围岩 (V_p&#x3D;3950 , \text{m&#x2F;s})（误差 1.25%）<br>38-50 米：破碎带 (V_p&#x3D;2600 , \text{m&#x2F;s})（与设计参数吻合）</p>
+<blockquote>
+<blockquote>
+<p>三维可视化模型：<br>异常区范围：横向宽度 6 米，纵向延伸 12 米（与后续开挖结果对比误差＜5%）。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<ul>
+<li>数据：多变量数值数据</li>
+<li>原因：<ul>
+<li>滑坡、崩塌、地震等地质灾害的发生，往往伴随岩石或地层结构的变化（如裂隙发育、岩层松动），而波速是反映结构稳定性的敏感指标.</li>
+<li>波速是介质力学性质（如弹性模量、密度、孔隙率）的 “桥梁参数”，波速反演的研究能深化对岩石与地层特性的认知.</li>
+</ul>
+</li>
+<li>方法较多，如CNN回归、模糊逻辑、神经模糊算法、混合遗传算法、模式搜索技术<ul>
+<li>集合机器学习模型VeIProfES：利用钻井测井数据有效地预测剪切波速度剖面。<a href="https://www.sciencedirect.com/science/article/pii/S0267726123006693">Joshi A, Raman B, Mohan CK, Cenkeramaddi LR. A new machine learning approach for estimating shear wave velocity profile using borelog data. Soil Dynam Earthq Eng. 2024;177, 108424.</a></li>
+<li>数据库：1101个测站的钻孔测井和剪切波速度信息数据集，并通过CTGAN生成10510个测站的合成钻孔测井数据</li>
+</ul>
+</li>
+<li>数据参考：伊朗油田Asmari地层的1640个数据点；</li>
+</ul>
+<p><strong>综合3、4和5，按照类似的方法，机器学习技术也可以应用于预测其他机械性能，例如岩石断裂韧性、土壤-水特征曲线、泊松比和渗透率等</strong></p>
+]]></content>
       <categories>
         <category>学科交叉</category>
       </categories>
@@ -264,6 +384,39 @@
         <tag>Rock</tag>
         <tag>人工智能</tag>
         <tag>综述</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>声发射</title>
+    <url>/2025/10/21/%E5%A3%B0%E5%8F%91%E5%B0%84/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>声发射数据是指材料或结构在受力、变形或损伤过程中释放能量时产生的<strong>弹性波信号</strong>，以及对这些信号进行采集、处理后得到的各类信息的统称。</p>
+</blockquote>
+<ul>
+<li>声发射数据主要包含两类关键信息，分别对应信号本身特征和采集环境参数。<ul>
+<li>信号特征参数：是数据的核心部分，用于描述弹性波的属性。<ul>
+<li><strong>幅度</strong>：指信号的最大振动幅值，反映能量释放的强弱。</li>
+<li><strong>计数</strong>：指信号超过设定阈值的次数，可体现信号的活跃程度。</li>
+<li><strong>持续时间</strong>：指信号从起始到结束的时间长度，与损伤类型相关。</li>
+<li><strong>能量</strong>：通过信号积分计算得出，直接对应材料释放的能量大小。</li>
+</ul>
+</li>
+<li>采集关键参数：用于追溯数据的采集背景，保证数据的可追溯性和有效性。<ul>
+<li>采集时间：记录信号产生的具体时刻，便于分析损伤发展的时序。</li>
+<li>传感器位置：标记接收信号的传感器在被检测对象上的坐标，确定损伤位置。</li>
+<li>阈值设定：记录采集时设定的信号触发阈值，影响数据的采集范围。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>学科交叉</category>
+      </categories>
+      <tags>
+        <tag>人工智能</tag>
+        <tag>声发射</tag>
       </tags>
   </entry>
 </search>
