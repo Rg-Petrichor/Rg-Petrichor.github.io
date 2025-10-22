@@ -46,7 +46,7 @@
         }
       </style>
     <link rel="alternate" href="atom.xml" title="Zore" type="application/atom+xml">
-</head>
+<link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head>
   </html>
 </html>
 
@@ -113,10 +113,14 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="利用基于虚拟相机的数据增强推进时空岩石裂缝预测"><a href="#利用基于虚拟相机的数据增强推进时空岩石裂缝预测" class="headerlink" title="利用基于虚拟相机的数据增强推进时空岩石裂缝预测"></a>利用基于虚拟相机的数据增强推进时空岩石裂缝预测</h1><blockquote>
+  <h1>利用基于虚拟相机的数据增强推进时空岩石裂缝预测</h1>
+<blockquote>
 <p>意义：预测未开挖区域的岩石裂缝是岩土工程项目中一个关键而又具有挑战性的方面。这项任务涉及使用已开挖岩石面的序列预测未开挖岩石面的裂缝映射序列，这非常适合时空深度学习技术。</p>
 </blockquote>
-<p>Paper: <a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0886779825000380">Xie J, Chen B, Huang J, et al. Advancing spatial-temporal rock fracture prediction with virtual camera-based data augmentation[J]. Tunnelling and Underground Space Technology, 2025, 158: 106400.</a><br>Code: <a target="_blank" rel="noopener" href="https://github.com/GEO-ATLAS/Rock-Camera">https://github.com/GEO-ATLAS/Rock-Camera</a><br>数据集是用生成的，这里的生成应该是根据物理参数随机生成（较为复杂）<br>基准：<a target="_blank" rel="noopener" href="https://github.com/GEO-ATLAS/Rock-Camera">RockCaptures数据集</a></p>
+<p>Paper: <a target="_blank" rel="noopener" href="https://www.sciencedirect.com/science/article/pii/S0886779825000380">Xie J, Chen B, Huang J, et al. Advancing spatial-temporal rock fracture prediction with virtual camera-based data augmentation[J]. Tunnelling and Underground Space Technology, 2025, 158: 106400.</a><br>
+Code: <a target="_blank" rel="noopener" href="https://github.com/GEO-ATLAS/Rock-Camera">https://github.com/GEO-ATLAS/Rock-Camera</a><br>
+数据集是用生成的，这里的生成应该是根据物理参数随机生成（较为复杂）<br>
+基准：<a target="_blank" rel="noopener" href="https://github.com/GEO-ATLAS/Rock-Camera">RockCaptures数据集</a></p>
 <p>原文译文如下：</p>
 <blockquote>
 <p>考虑到对岩石断裂数据库增强的广泛需求，本研究提供了一个开源的，基于Python的软件包“Rock-Camera”，可在GitHub上获得。它包括两个部分：第一种是能够基于任何现场裂缝分布创建DFN的改进的3D DFN生成器。第二种是基于VCT从DFN创建捕获的光生成器，这两个模块的组合形成了一个强大的工具，可以自由地生成任何所需的岩石表面照片数据集。</p>
@@ -127,30 +131,34 @@
 <p>数据集基准已整合成npy数据格式，原文预览如下:</p>
 <center> 
 <img src="https://share.note.youdao.com/yws/api/personal/file/WEBdcde30a6201d8950a022895028c0d6f2?method=download&shareKey=460dd7cd577f09063c024513275de6da" alt= '裂缝预测 ' width="800" />
-
 <p>未开挖区域裂缝预测，开挖区域裂缝数据预览</p>
 </center>
-
 <p><strong>结论：预测方向可以考虑，但该数据集属性复杂，行外人无法理解（例如为何裂缝线条像划痕，像直线裂缝，图中Rock mass区域岩块层次分明，这是什么岩石？），暂不考虑</strong></p>
-<h1 id="岩石三维表面裂纹扩展机理数值模拟研究"><a href="#岩石三维表面裂纹扩展机理数值模拟研究" class="headerlink" title="岩石三维表面裂纹扩展机理数值模拟研究"></a>岩石三维表面裂纹扩展机理数值模拟研究</h1><p>Paper: <a target="_blank" rel="noopener" href="https://www.cgejournal.com/cn/article/pdf/preview/14211.pdf">梁正召, 李连崇, 唐世斌, 等. 岩石三维表面裂纹扩展机理数值模拟研究[J]. 岩土工程学报, 2011, 33(10): 1615-1622.</a></p>
-<h4 id="Learn"><a href="#Learn" class="headerlink" title="Learn"></a>Learn</h4><ul>
-<li><p>1.岩石裂纹也分多类，如：Ⅰ、Ⅱ、III 型裂纹（扩展模式？）；次生裂纹；壳体裂纹；翼型裂纹。二维裂纹、三维裂纹。</p>
+<h1>岩石三维表面裂纹扩展机理数值模拟研究</h1>
+<p>Paper: <a target="_blank" rel="noopener" href="https://www.cgejournal.com/cn/article/pdf/preview/14211.pdf">梁正召, 李连崇, 唐世斌, 等. 岩石三维表面裂纹扩展机理数值模拟研究[J]. 岩土工程学报, 2011, 33(10): 1615-1622.</a></p>
+<h4 id="learn">Learn</h4>
+<ul>
+<li>
+<p>1.岩石裂纹也分多类，如：Ⅰ、Ⅱ、III 型裂纹（扩展模式？）；次生裂纹；壳体裂纹；翼型裂纹。二维裂纹、三维裂纹。</p>
 <ul>
 <li>Think: 裂纹分类在这篇论文没有说明，不同学者对裂纹的定义似乎也有歧义。</li>
 <li>Q: 那么是否可以做裂纹分类，做分类的意义是？</li>
 </ul>
 </li>
-<li><p>2.在岩体力学中，裂隙岩体内部裂隙的<strong>产状、走向以及分布</strong>通常决定着岩体变形与强度</p>
+<li>
+<p>2.在岩体力学中，裂隙岩体内部裂隙的<strong>产状、走向以及分布</strong>通常决定着岩体变形与强度</p>
 <ul>
 <li>因此计算机做裂隙的形成演化预测具备一定的意义</li>
 </ul>
 </li>
-<li><p>3.裂纹形成的二维研究（more）、三维研究，常用<strong>数值计算方法</strong>模拟非均匀性岩石中的三维裂纹扩展过程。</p>
+<li>
+<p>3.裂纹形成的二维研究（more）、三维研究，常用<strong>数值计算方法</strong>模拟非均匀性岩石中的三维裂纹扩展过程。</p>
 <ul>
 <li>这说明地质学中有自己的裂纹演化模拟。如何区别出通过AI训练<em>推演</em>、<em>预测</em>裂纹形成过程？</li>
 </ul>
 </li>
-<li><p>4.由于岩石的不透明性给内置三维裂纹的扩展研究带来了极大困难。为了便于观测，许多学者采用玻璃、树脂等透明均匀特性的相似材料来<strong>模拟三维裂纹的扩展机理</strong>。然而，由于岩石内部非均匀性的存在，三维裂纹的扩展机理与模式与均匀材料相差甚远。为了观测内部裂纹扩展问题，很多学者不得不尝试<strong>CT技术、声发射技术或者红外热像技术</strong>来观测分析内部微裂隙的扩展过程。</p>
+<li>
+<p>4.由于岩石的不透明性给内置三维裂纹的扩展研究带来了极大困难。为了便于观测，许多学者采用玻璃、树脂等透明均匀特性的相似材料来<strong>模拟三维裂纹的扩展机理</strong>。然而，由于岩石内部非均匀性的存在，三维裂纹的扩展机理与模式与均匀材料相差甚远。为了观测内部裂纹扩展问题，很多学者不得不尝试<strong>CT技术、声发射技术或者红外热像技术</strong>来观测分析内部微裂隙的扩展过程。</p>
 <ul>
 <li><strong>观测分析内部微裂隙的扩展过程</strong>，学者们想要的是观测试验样本的裂隙扩展过程，从而分析扩展机理。</li>
 <li>但<strong>观测困难！！！！</strong></li>
@@ -160,14 +168,19 @@
 </ul>
 <p><strong>结论：</strong></p>
 <ul>
-<li>1.收集不同岩石裂纹数据集，可发展<strong>裂纹分类</strong>方向，但做分类的意义还需进一步思考。 </li>
+<li>1.收集不同岩石裂纹数据集，可发展<strong>裂纹分类</strong>方向，但做分类的意义还需进一步思考。</li>
 <li>2.利用AI算法预测裂纹扩展，可解决裂纹扩展过程观测困难的问题。</li>
 </ul>
-<h1 id="基于声发射和DIC特征的层状复合岩石力学损伤试验与模型研究"><a href="#基于声发射和DIC特征的层状复合岩石力学损伤试验与模型研究" class="headerlink" title="基于声发射和DIC特征的层状复合岩石力学损伤试验与模型研究"></a>基于声发射和DIC特征的层状复合岩石力学损伤试验与模型研究</h1><p>Paper: <a target="_blank" rel="noopener" href="https://onlinelibrary.wiley.com/doi/full/10.1155/2022/6568588">Qi X, Yang Z, Wang S, et al. Mechanical damage test and model study of layered composite rock based on acoustic emission and DIC characteristics[J]. Shock and Vibration, 2022, 2022(1): 6568588.</a></p>
+<h1>基于声发射和DIC特征的层状复合岩石力学损伤试验与模型研究</h1>
+<p>Paper: <a target="_blank" rel="noopener" href="https://onlinelibrary.wiley.com/doi/full/10.1155/2022/6568588">Qi X, Yang Z, Wang S, et al. Mechanical damage test and model study of layered composite rock based on acoustic emission and DIC characteristics[J]. Shock and Vibration, 2022, 2022(1): 6568588.</a></p>
 <blockquote>
-<p>Abstract:<br>为了研究层状复合岩石的力学损伤特征，以深层致密储层砂岩、泥岩为研究对象，通过相似材料模型试验制备了层状复合类岩石，进行了单轴压缩试验，并辅以声发射（声发射）系统和DIC（数字图像相关）系统，获得了层状复合岩石的强度、弹性模量等物理力学参数。声发射振铃计数与岩石损伤的对应规律将层状复合岩石在单轴载荷作用下的损伤过程分为<strong>初始损伤、稳定损伤发展和损伤加速</strong>3个阶段。<br>通过对<strong>DIC系统应变云图</strong>的分析，揭示了层状复合岩石在单轴条件下的变形特征主要为拉剪滑移损伤，基于声发射的内部损伤演化特征和DIC的表面损伤演化特征，建立了基于双损伤因子表征的层状复合岩石损伤本构模型，合理地揭示了层状复合岩石在单轴压缩条件下内部结构发展和外部裂纹萌生、扩展、贯通的损伤演化机理。</p>
+<p>Abstract:<br>
+为了研究层状复合岩石的力学损伤特征，以深层致密储层砂岩、泥岩为研究对象，通过相似材料模型试验制备了层状复合类岩石，进行了单轴压缩试验，并辅以声发射（声发射）系统和DIC（数字图像相关）系统，获得了层状复合岩石的强度、弹性模量等物理力学参数。声发射振铃计数与岩石损伤的对应规律将层状复合岩石在单轴载荷作用下的损伤过程分为<strong>初始损伤、稳定损伤发展和损伤加速</strong>3个阶段。<br>
+通过对<strong>DIC系统应变云图</strong>的分析，揭示了层状复合岩石在单轴条件下的变形特征主要为拉剪滑移损伤，基于声发射的内部损伤演化特征和DIC的表面损伤演化特征，建立了基于双损伤因子表征的层状复合岩石损伤本构模型，合理地揭示了层状复合岩石在单轴压缩条件下内部结构发展和外部裂纹萌生、扩展、贯通的损伤演化机理。</p>
 </blockquote>
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="Learn-1"><a href="#Learn-1" class="headerlink" title="Learn"></a>Learn</h3><ul>
+<h3 id="none"></h3>
+<h3 id="learn">Learn</h3>
+<ul>
 <li>相关研究方向和术语：破裂过程中的能量耗散和裂纹特征；力学损伤模型；类材料（材料获取困难，故制作相似材料代替研究）；应变场（？）；DIC视应变分析；损伤演化方程；表观和内部损伤演化、机理</li>
 <li>声发射：</li>
 <li>DIC(Digital Image Correlation)</li>
@@ -598,9 +611,40 @@
     viewer_init()
 </script> 
 <!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
 
 <!-- Katex -->
-
+ 
+    
+        <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.15.1/katex.min.css">
+        <script src="https://cdn.staticfile.org/KaTeX/0.15.1/katex.min.js"></script>
+        <script src="https://cdn.staticfile.org/KaTeX/0.15.1/contrib/auto-render.min.js"></script>
+        
+    
+ 
 <!-- busuanzi  -->
  
 <script src="../../../../js/busuanzi-2.3.pure.min.js"></script>

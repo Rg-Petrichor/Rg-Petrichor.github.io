@@ -46,7 +46,7 @@
         }
       </style>
     <link rel="alternate" href="atom.xml" title="Zore" type="application/atom+xml">
-</head>
+<link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head>
   </html>
 </html>
 
@@ -115,15 +115,18 @@
 <p>声发射数据是指材料或结构在受力、变形或损伤过程中释放能量时产生的<strong>弹性波信号</strong>，以及对这些信号进行采集、处理后得到的各类信息的统称。</p>
 </blockquote>
 <ul>
-<li>声发射数据主要包含两类关键信息，分别对应信号本身特征和采集环境参数。<ul>
-<li>信号特征参数：是数据的核心部分，用于描述弹性波的属性。<ul>
+<li>声发射数据主要包含两类关键信息，分别对应信号本身特征和采集环境参数。
+<ul>
+<li>信号特征参数：是数据的核心部分，用于描述弹性波的属性。
+<ul>
 <li><strong>幅度</strong>：指信号的最大振动幅值，反映能量释放的强弱。</li>
 <li><strong>计数</strong>：指信号超过设定阈值的次数，可体现信号的活跃程度。</li>
 <li><strong>持续时间</strong>：指信号从起始到结束的时间长度，与损伤类型相关。</li>
 <li><strong>能量</strong>：通过信号积分计算得出，直接对应材料释放的能量大小。</li>
 </ul>
 </li>
-<li>采集关键参数：用于追溯数据的采集背景，保证数据的可追溯性和有效性。<ul>
+<li>采集关键参数：用于追溯数据的采集背景，保证数据的可追溯性和有效性。
+<ul>
 <li>采集时间：记录信号产生的具体时刻，便于分析损伤发展的时序。</li>
 <li>传感器位置：标记接收信号的传感器在被检测对象上的坐标，确定损伤位置。</li>
 <li>阈值设定：记录采集时设定的信号触发阈值，影响数据的采集范围。</li>
@@ -549,9 +552,40 @@
     viewer_init()
 </script> 
 <!-- MathJax -->
+ <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+  });
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/MathJax.js"></script>
+<script src="https://cdn.staticfile.org/mathjax/2.7.7/config/TeX-AMS-MML_HTMLorMML-full.js"></script>
+<script>
+  var ayerConfig = {
+    mathjax: true,
+  };
+</script>
 
 <!-- Katex -->
-
+ 
+    
+        <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.15.1/katex.min.css">
+        <script src="https://cdn.staticfile.org/KaTeX/0.15.1/katex.min.js"></script>
+        <script src="https://cdn.staticfile.org/KaTeX/0.15.1/contrib/auto-render.min.js"></script>
+        
+    
+ 
 <!-- busuanzi  -->
  
 <script src="../../../../js/busuanzi-2.3.pure.min.js"></script>
