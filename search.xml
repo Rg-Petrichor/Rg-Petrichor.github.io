@@ -26,60 +26,28 @@
       </tags>
   </entry>
   <entry>
-    <title>学科交叉——岩石相关数据下载</title>
-    <url>/2025/10/15/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>数据集网站</h1>
-<p><a href="https://digitalporousmedia.org/published-datasets/">TACC网站</a>拥有大量的相关数据集，小于2GB可随意下载，大于2GB暂时无法下载，需要有注册账号权限，目前还未研究彻底获取方式。</p>
-<p><strong>关于CT数据和论文关键词推荐：coal CT vein</strong><br>
-<strong>关于裂缝演化形成过程关键词推荐：Rock; DIC</strong></p>
-<h2 id="cv-图像数据">CV（图像数据）</h2>
-<p>Paper: <a href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/2017WR021032">Suzuki A, Watanabe N, Li K, et al. Fracture network created by 3‐D printer and its validation using CT images[J]. Water Resources Research, 2017, 53(7): 6330-6339.</a></p>
-<p>数据集：<a href="https://digitalporousmedia.org/published-datasets/tapis/projects/drp.project.published/drp.project.published.DRP-213/Artificial%20fracture%20network/">Artificial fracture network</a></p>
-<p>简介： 3D打印和CT扫描数据</p>
-<p>目的：了解<strong>裂隙介质中的流动机制</strong>对于地质科学研究和地质开发行业至关重要。本研究使用3D打印的裂隙网络来<strong>控制样品内部裂隙分布</strong>的性质。通过使用X射线CT扫描仪研究了3D打印机创建样品的准确性和适当性。CT扫描图像表明，3D打印机可以控制样品内部的裂隙分布。D打印机能够复制复杂的三-裂缝网络的三维空间分布，印刷后使用正己烷是一种有效的除蜡后处理方法，局部渗透率由立方定律得到，并用于计算整体平均值，渗透率的实验值介于算术平均值和几何平均值之间的数值结果，这是与传统的研究是一致的。这种方法的基础上3-D打印的裂缝网络可以帮助<strong>验证现有的流动建模和数值方法</strong>。</p>
-]]></content>
+    <title>前沿论文</title>
+    <url>/2025/10/29/%E5%89%8D%E6%B2%BF%E8%AE%BA%E6%96%87/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="0b2b9530e726b27d6bbf7a1f2ad30af5cc4dafde1b4895848176c91665565fe6">cfefb2acf26edfcfdff93258a3a03a06efffe0affc5e2d9ed8b72f1b6a5d5d74575ab2f6e5d28dab65c49d6d96cee94c814939543200e9d3d2b488b5ac326d3c20e763258f27cf37ba7f90b767eaa2ec69abb49020933e174e89bb2bfa42568fc4d8e67177d68d76cf53febe706e80fb6afdece9056dcbcacae1aa6013807746b471e364c3c9a55f8574667ba0d46a722ae31589a686b7793b77f5053545e214aa933bffbab741fc12fe1ef5dae87531e0e75595ebc5ce54111ffb50f520a0209e87e5810d7f9b6d9cff2ca925de801eb7e029db8e7ad345597ac7b9042791415fc9c00514e34e8dc12e29affd98fe8f975dd6a0041de61c205427cedef7d469a1df938a1af00ab70e4ac6163711c54410d3f6026eb7ecccfc47d18c8fa2a2d4b062323add9d8ff9efd73dc7903aef3cdfacc7cf9e985967135dd3a00ee4a1a527d586ee9e97326f00e7cc9bbc8c022313417491d939a026d7e3f8cc7f74f8b8d51b17849ad3376276c6c35c01dac20360f912c94861fec587108178face9310176232dbb6c232129b58136c5b614db3d72236fc0d12f34c2ed4c0dab794724489639f890682dd63be5fbf8fb85d3ec31f9ce7c02768915de188214ecd9ef4f4bfeaeb9fc3e64b9f12a9889c49359ae2c368e695980e5de45a2adfd42517ad44de94351860a32abfe0c7a57274a8a7475256cb7f5207ec2e68ac23e459acf4d82eb55c56708deadb9bc0ac386311cd4e5d6ae268cd4916de6afacca4a4aa80825deee4280dd2de5ab41f60b21558fe4bda53a90d7eaa6df0e8789981a640f00b8c5a3fb65c600c050a42c4613d8ffc630ec271a6a933c8e67165556a9cda2ad243ce1c6d3c8a8d2a926bec724abf1c13df61cf155b46c96dc60058567d4f7bdf85320d5703557b0284a0e6d20f3a02199f1f297aeab61e40a7805b399ebeb74d55caa072d9008352b32fb1e7e7835ab32d6571fdf13069c348291e2523cc34795294081615ac7c82b70f435415dabfc81b19ff0373bc01e8f62d8c9e61b84be804931b2632ad2d59518ad95d153994506556f82bb83c77c382551403d9e8169f1174db92186e877efd7133e1bc735e3891856ba73bb075d44ac67fbec8ac881a8e502b1f5aeea4d7caf4952510f61f98500c2c9603d1d9f206cc8a9e49c7177ac532deef15d21b2c7a655398ce9abdf136996ec70ef67b1101603d490b9c99edb8e75bf4fbd4ee793d4afab454ecaaf0e08e68daffd284c593ced28ba07d962f8c1ceb870d6519ff5d635cf6cd1ddb2a0c304eb5120f685c9c120ad3dd81c841f0704dba72ca1e90ba8fcd9d3ea541f1e1e5d727b31ad73baff922c761b9f6b04bba139f7aa7fc4cf12c4cc1dff41818</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
-        <category>学科交叉</category>
+        <category>Learning</category>
       </categories>
       <tags>
         <tag>Rock</tag>
-        <tag>Datasets</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>声发射</title>
-    <url>/2025/10/21/%E5%A3%B0%E5%8F%91%E5%B0%84/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>声发射数据是指材料或结构在受力、变形或损伤过程中释放能量时产生的<strong>弹性波信号</strong>，以及对这些信号进行采集、处理后得到的各类信息的统称。</p>
-</blockquote>
-<ul>
-<li>声发射数据主要包含两类关键信息，分别对应信号本身特征和采集环境参数。
-<ul>
-<li>信号特征参数：是数据的核心部分，用于描述弹性波的属性。
-<ul>
-<li><strong>幅度</strong>：指信号的最大振动幅值，反映能量释放的强弱。</li>
-<li><strong>计数</strong>：指信号超过设定阈值的次数，可体现信号的活跃程度。</li>
-<li><strong>持续时间</strong>：指信号从起始到结束的时间长度，与损伤类型相关。</li>
-<li><strong>能量</strong>：通过信号积分计算得出，直接对应材料释放的能量大小。</li>
-</ul>
-</li>
-<li>采集关键参数：用于追溯数据的采集背景，保证数据的可追溯性和有效性。
-<ul>
-<li>采集时间：记录信号产生的具体时刻，便于分析损伤发展的时序。</li>
-<li>传感器位置：标记接收信号的传感器在被检测对象上的坐标，确定损伤位置。</li>
-<li>阈值设定：记录采集时设定的信号触发阈值，影响数据的采集范围。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>学科交叉</category>
-      </categories>
-      <tags>
-        <tag>声发射</tag>
-        <tag>人工智能</tag>
+        <tag>CV</tag>
+        <tag>AI</tag>
+        <tag>Paper</tag>
       </tags>
   </entry>
   <entry>
@@ -96,9 +64,6 @@ Code: <a href="https://github.com/GEO-ATLAS/Rock-Camera">https://github.com/GEO-
 <p>原文译文如下：</p>
 <blockquote>
 <p>考虑到对岩石断裂数据库增强的广泛需求，本研究提供了一个开源的，基于Python的软件包“Rock-Camera”，可在GitHub上获得。它包括两个部分：第一种是能够基于任何现场裂缝分布创建DFN的改进的3D DFN生成器。第二种是基于VCT从DFN创建捕获的光生成器，这两个模块的组合形成了一个强大的工具，可以自由地生成任何所需的岩石表面照片数据集。</p>
-</blockquote>
-<blockquote>
-<p>此外，为了帮助研究人员构建和比较时空深度学习模型，基于该工具提供了一个开源基准“RockCaptures”数据库。该数据库包括五个子数据集，其复杂性逐渐增加。为了展示该框架的实用性，空间-时间深度学习模型PredRNN已用于预测基准数据库中未挖掘位置的岩石断裂。评估指标均方误差（MSE）和结构相似性指数（SSIM）作为模型评价指标。最后，详细讨论了如何以多模式方式使用数据库来提高模型性能，并提供了“Rock-Camera”软件包的附加功能。</p>
 </blockquote>
 <p>数据集基准已整合成npy数据格式，原文预览如下:</p>
 <center> 
@@ -153,113 +118,11 @@ Code: <a href="https://github.com/GEO-ATLAS/Rock-Camera">https://github.com/GEO-
 <h3 id="none"></h3>
 <h3 id="learn">Learn</h3>
 <ul>
-<li>相关研究方向和术语：破裂过程中的能量耗散和裂纹特征；力学损伤模型；类材料（材料获取困难，故制作相似材料代替研究）；应变场（？）；DIC视应变分析；损伤演化方程；表观和内部损伤演化、机理</li>
+<li>相关研究方向和术语：破裂过程中的能量耗散和裂纹特征；力学损伤模型；类材料（材料获取困难，故制作相似材料代替研究）；应变场（？）；DIC视应变分析；损伤演化方程；岩石表观或内部损伤演化、机理；单轴压缩条件；《工程岩体试验方法标准》</li>
 <li>声发射：</li>
 <li>DIC(Digital Image Correlation)</li>
 </ul>
 ]]></content>
-      <categories>
-        <category>学科交叉</category>
-      </categories>
-      <tags>
-        <tag>Rock</tag>
-        <tag>Datasets</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>学科交叉——岩石裂缝生成与分割</title>
-    <url>/2025/10/14/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E8%A3%82%E7%BC%9D%E7%94%9F%E6%88%90%E4%B8%8E%E5%88%86%E5%89%B2/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>Dataset 目前可用数据集</h1>
-<h2 id="生成任务">生成任务</h2>
-<h3 id="1-基于gan生成背景单一的裂缝数据">1.基于GAN生成<strong>背景单一</strong>的裂缝数据（<em>√</em>）</h3>
-<p>数据名称：<a href="https://github.com/ehsankhani/Rock-Porosity-GAN?tab=readme-ov-file">Kaggle Dataset: Porous Media CT Scan Dataset</a></p>
-<blockquote>
-<p>意义：该模型以固体岩石图像（Raw）和孔隙度分割图(Label)为输入，生成逼真的多孔岩石结构，从而推进先进的材料表征和数字岩石物理分析。</p>
-</blockquote>
-<p>示例：</p>
-<center> 
-<img src="https://share.note.youdao.com/yws/api/personal/file/WEB3a631cb3cd791fadb26b5eca3a2687fe?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" alt= 'GAN单一背景裂缝生成 ' width="800" />
-<p>GAN单一背景裂缝生成</p>
-<!-- <img src="2025/10/14/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E8%A3%82%E7%BC%9D%E7%94%9F%E6%88%90%E4%B8%8E%E5%88%86%E5%89%B2/comparison_grid.png" class="" title="GAN单一背景裂缝生成 width&#x3D;800"> -->
-</center>
-<h3 id="2-基于stable-diffusion-and-controlnet生成多样化背景的裂缝">2.基于Stable diffusion and Controlnet生成<strong>多样化背景</strong>的裂缝（<em>×</em>）</h3>
-<blockquote>
-<p>意义：在民用基础设施检查的自动化裂缝检测方面，裂缝数据稀缺。为了更好的做这方面的裂缝检测任务，需收集和注释大型高质量数据集，因此用生成模型来试图突破数据稀缺的瓶颈。</p>
-</blockquote>
-<p>Paper：<a href="https://www.sciencedirect.com/science/article/pii/S014102962501819X">Xie J, Chen B, Giacomini A, et al. A versatile synthetic data generation framework for crack detection[J]. Engineering Structures, 2025, 344: 121428.</a><br>
-Wechat: <a href="https://mp.weixin.qq.com/s/ze3sHoDAvbtHCzawPfMlIg">【新论文】CrackGen：融合控制扩散与物理机理的数据合成方法</a><br>
-Dataset and Code: <a href="https://github.com/GEO-ATLAS/CrackGen">CrackTree260</a><br>
-训练样本数据示例：</p>
-<table>
-    <tr>
-        <td ><center><img src="https://share.note.youdao.com/yws/api/personal/file/WEB9509fa2ba0a689688f7646ac786eeee9?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" width=420>训练样本 </center></td>
-        <td ><center><img src="https://share.note.youdao.com/yws/api/personal/file/WEB440bd0460da3641e5bcbdf1c8e01073d?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" width=460>标签</center></td>
-    </tr>
-</table>
-<h2 id="分割任务">分割任务</h2>
-<h3 id="1-基于swin-transformer对复合岩石材料进行多类别材料的语义分割">1.基于Swin Transformer对复合岩石材料进行多类别材料的语义分割（<em>√</em>）</h3>
-<blockquote>
-<p>意义：识别煤、混凝土、大理石等复合岩石材料的不同特征和相态，一方面可以<em>深入了解三维细观结构对损伤和破坏模式的影响，揭示煤、混凝土、大理石等复合岩石材料的破坏条件（至关重要）</em>。另一方面<em>可以根据破坏机理合理地数值预测复杂载荷条件下复合岩石的力学性质、破坏条件和防治机理</em>。</p>
-</blockquote>
-<blockquote>
-<p>例如：提取识别岩块样本的成分，从而可以让后来者分析其强度，判断开挖矿场的时候会不会裂开、崩塌</p>
-</blockquote>
-<p>Paper: <a href="https://www.nature.com/articles/s41597-023-02734-7">Chen, H., Cao, X., Zhang, X. et al. Automatic segmentation framework of X-Ray tomography data for multi-phase rock using Swin Transformer approach. Sci Data 10, 812 (2023). https://doi.org/10.1038/s41597-023-02734-7</a><br>
-Dataset and Code: <a href="https://github.com/Chall513032/CoalSegmentation">河南省金岭煤矿采集的原煤样品</a><br>
-数据样本示例：</p>
-<table>
-    <tr>
-        <td ><center><img src="https://share.note.youdao.com/yws/api/personal/file/WEB14c0f970493460a9580eb06f0a6860af?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" width=370>Raw </center></td>
-        <td ><center><img src="https://share.note.youdao.com/yws/api/personal/file/WEB6e3f07a5be86420814f2c46ec5bca090?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" width=420>Label</center></td>
-    </tr>
-</table>
-<p>四类分割，裂缝、煤、黄铁矿、煤和黄铁矿分量被分为四类</p>
-<h2 id="think">Think</h2>
-<blockquote>
-<p>1.生成是为了什么？目标？</p>
-<blockquote>
-<p>（1）矿场岩石样本数据量很少，样本是经过自己施加压力产生裂缝的嘛？<br>
-Yes</p>
-</blockquote>
-<blockquote>
-<p>（2）不利于后续学者对裂缝矿物质进行分析<br>
-（3）生成更多样本，是为了让后续学者可以根据样本进行<strong>岩性机理分析</strong>：对矿场受力会产生怎样的崩塌；对煤岩的裂缝形成进行分析<br>
-（4）<strong>更好的做分割任务</strong><br>
-（5）进一步分析裂缝受力形成的过程，从而保障开挖过程的安全：比如说<strong>煤杂质如何影响裂缝的形成</strong></p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>Q：但有一个问题，就是生成的时候必须考虑物理杂质分布和裂缝的位置关系<br>
-虽然生成模型已经把一些物理参数和分布纳入考虑，但生成的内容无法彻底说明其是否符合物理性质<br>
-而且：生成的内容（不可信？谁会用到生成的数据进行分析，分析结果不可信）是否符合岩性（岩石的物理性质）</p>
-</blockquote>
-<h2 id="下一步">下一步</h2>
-<p>还有声发射数据、时频域数据可以去了解</p>
-]]></content>
-      <categories>
-        <category>学科交叉</category>
-      </categories>
-      <tags>
-        <tag>Rock</tag>
-        <tag>Datasets</tag>
-        <tag>Generator</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>学科交叉——岩石裂缝形成演化</title>
-    <url>/2025/10/16/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E8%A3%82%E7%BC%9D%E5%BD%A2%E6%88%90%E6%BC%94%E5%8C%96/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="0800db64bf6579ce2e3af30abb41b85f6561889fa8b96cbfc6dfb620bbf6f548">cfefb2acf26edfcfdff93258a3a03a06efffe0affc5e2d9ed8b72f1b6a5d5d74575ab2f6e5d28dab65c49d6d96cee94c814939543200e9d3d2b488b5ac326d3c20e763258f27cf37ba7f90b767eaa2ec69abb49020933e174e89bb2bfa42568fc4d8e67177d68d76cf53febe706e80fb6afdece9056dcbcacae1aa6013807746b471e364c3c9a55f8574667ba0d46a722ae31589a686b7793b77f5053545e214aa933bffbab741fc12fe1ef5dae87531e0e75595ebc5ce54111ffb50f520a0209e87e5810d7f9b6d9cff2ca925de801e0a973d7fcc89ef17166956ca0c559be2859ec532fb90a0c3b5104abeabd303667adec6a94b5efd133747996de2432f987158f8d04d227f5aafceeea80b9298adbbee502480e4f216720543d4f8083d7d4cf7fe0cd766229accf91f3f262a1b6d57d1ff549b43df97f0b8bbd46cf17041cc57f3e608db8ab8e211dea988420394ae045d3f52b13c9a2be33177d6c07e97a83a3c305f92a52d17b6634ba557e6ec90a2d885bc3744dfed05844177671f61370ed83fe8126cf4edb11db23f65cb554583e015cc0df48bc02463baf03123f578a9432a9f9a5b8e6eab3628bbbd9d65d657cd620a0b4dd775a4ee59d953298f120601a2c58b5ee356b5a672bcf5fbcdc1d0aa82623d9ccf4789365eb20abf4d815f2504db707fb48e90ca99f3159f79032d170ad3e2a38f4bbdf193f7e9ff8e7ece7a528cfc24b58039ce0eb1201377519ad9f57f2b9ada4e3bd17e2e841e6cd663e205da4561755c3b9428f3bc19531a8e91d8d27fa79b672e88ea2799d1c810f0b636d316b4c1a8e8bb59ba3d8584aadf23fa916ce995f39fdc112066a70a9b28d941eb462dcbaa7a89eca8862146919aaf74fe8a922763167feab3edea9651f5c640ffabd9e5c8449d099b51e052f460a8bc0384c2a7262b3247ca12fc1e128bbf8b4fb4d374d4d7537d6a42e3ff426fe1ca3f30b03f906722f5ab564bbaca0055979cbd0cf403d3bae08bffeabac20b1a61e8c2cedd4468e4d82460ff07bfb6f1336868fedbe13afe2db31f52f1f2207f63a94cff15f3652e604d2135cedf72bdaaefcf675daddc2d01957832f37d915759141d11d0d81ce1894d141fc1c16b86e9ae71bdcf4eb65f81e5d38e9ebc40eb05ca9c954fe258bfc070d81374412eea58230e02bab01ff50c5042955b2f57e2f1cb4eb99d1df2fbef35349b15393214357967f203d1018284bfb01b9725020ca9730297d0592f974d72c207ebe4a34ff897956788ee5e07b4f3eae92487a79b8ccf08c98ba7ee1497e04e8877b49199132f6830674883c929d3b429c4660543756d6105a0f0e9320c2a323cb18cc5bf47efbc76746c4d2dba6af4b2e3bf58ced0fcdca4fea0f9f067757a0673186ebdd1c6a7d67584d69a6f637685dbe8ec75ca92b83319392e785bf0565ce54f0eae9a1af367e6ef771edc3fadf2973728d6ff4d39614c937233646e92ef68ffd5a09ca166321ef39335428a6f5cde42f7f68ef497a46ed9c2e9d9015c89986edeaccd8a161e9ba0b98bf6eb561f656ccc7a99583858db3dce4822749e807f81075bfa07fd5f5d7413db61fdeef7b23582ed680c7bad19b691345d7275165053ccc1b23b0691f33dddfe7d208604e2328491b040868108cf1f465652d5f792e92e1aaead3d158a43ed7d357f0e14bb400ca5d451a305e5a5eb534ded8823bb5c4e2b9f7ca8435eb030ee7f5226817bb705214968d5eaf47c1e13dc89424fff152427d5d75f6ecfa97162335e81803b285e8fcf933c6482a50cead636219666b35d64db641cead3c812cb55025acbd687b3451f1fcdf55e56ac0e9b73dec54e0e54d45209b67f16b48012bad337506f8e0e8aa8259d6ec1dfacd8adc3eb8fe9a2569ebb984525b8a618ff6a5a94f6e7a63a48e5780d253c74c215baa705470c79008a1c26a00d28c9a0b5eb54335fd567960d08e8b3034e08cbac9681fb6e50ce8622e7b727545fd4f1bac1d0fb5b45dce2eb05373be74db1e678adeaf0a6317875b58d3ac4d8eb8d7799e6c504f04e41fb44a6c475fafa66e510f63474cf6a4c7ca86e7bd8bda1570b8897e31da2bd29641abb43764aab9a65afe882fe5278874cb44af1b9b205d5409f4ca5011e323f807e2bf67bac9f5ff37ce9394c5f5ef57461555f8fb6ac03db679c3192302dccf154ae968228e6da24cb8bb07f81f292ffaa5143085cccc57eed4b846c05a2ccce90a4d60c978441c2bb823e719b85d4a06148a241a27571795f75fbe714f35e7cf4f6f5bfb89a16bfc318c3c7d7d226f8c735e6b7dc024ad9846c2ab20e9b564d5c07b9171b64a18f182ece61acb89842f2839b278e037bd0b216654340655c6f38ad1b6c1462f368a4cf74be9188c0c796d0fbdef2620be57bb236f6edce56edbc8898dc0d4057b736d991183b2db7e588c7b763b50daa23b6ec83ab15f62d595d23dcd99b2bbd96936d1193a7939c6e85b3e607257a2b1f04ffba3aad78f5bbc25150cdd00a46e7934b11797448edac8012e47568881879480161f091b14a8f276897d5226c6a8eeabd9cf460180645d6747a37f2126e0f233a92ca0da001cab11686f9c7d2feab82b2c59675e0b3548455817f6988089fa471c2dd1b0b8195a69410e4db12f34ec0926a9465f64e47da8c2cd0b93fd1f1e658291970246f632401d8e494a19bd87a91abaf3fdc2237405021c3f9a4fc94709d9b3a01b1816bfce3358bd600a6684bd1ded17e93152ee4518c10417d6837cb411f9f6ab46024423f243a6fdda51b15c2d27683e691133955fe9e6f7b61da84c5fbd28fef70fb03bc34555471b095ffc4a71c609da7f8ad5d55e0c6badfb81e386076da1ed7c369159cde2aac7f72c0320e410e3b</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
         <category>学科交叉</category>
       </categories>
@@ -436,7 +299,7 @@ Wechat：<a href="https://mp.weixin.qq.com/s/tINfape4U6RHgFov9d1oog">前沿速�
 <p>2.3 算法选择和优化<br>
 2.4 反演结果</p>
 <blockquote>
-<p>波速模型输出<br>
+<p>波速模型输出:<br>
 0-5 米：覆盖层 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>p</mi></msub><mo>=</mo><mn>1800</mn><mtext> </mtext><mtext>m/s</mtext></mrow><annotation encoding="application/x-tex">V_p=1800 \, \text{m/s}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mord">8</span><span class="mord">0</span><span class="mord">0</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord text"><span class="mord">m/s</span></span></span></span></span>（与钻孔一致）<br>
 5-38 米：完整围岩 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>p</mi></msub><mo>=</mo><mn>3950</mn><mtext> </mtext><mtext>m/s</mtext></mrow><annotation encoding="application/x-tex">V_p=3950 \, \text{m/s}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">3</span><span class="mord">9</span><span class="mord">5</span><span class="mord">0</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord text"><span class="mord">m/s</span></span></span></span></span>（误差 1.25%）<br>
 38-50 米：破碎带 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>p</mi></msub><mo>=</mo><mn>2600</mn><mtext> </mtext><mtext>m/s</mtext></mrow><annotation encoding="application/x-tex">V_p=2600 \, \text{m/s}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.22222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">2</span><span class="mord">6</span><span class="mord">0</span><span class="mord">0</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord text"><span class="mord">m/s</span></span></span></span></span>（与设计参数吻合）</p>
@@ -466,6 +329,23 @@ Wechat：<a href="https://mp.weixin.qq.com/s/tINfape4U6RHgFov9d1oog">前沿速�
 <li>数据参考：伊朗油田Asmari地层的1640个数据点；</li>
 </ul>
 <p><strong>综合3、4和5，按照类似的方法，机器学习技术也可以应用于预测其他机械性能，例如岩石断裂韧性、土壤-水特征曲线、泊松比和渗透率等</strong></p>
+<h2 id="6-本构建模">6.本构建模</h2>
+<blockquote>
+<p>本构建模（本构关系建模）是指通过数学公式或数值模型，描述<strong>材料（如岩石、金属、混凝土）在外部作用（如应力、应变、温度、时间）下的力学行为响应规律</strong>，核心是建立 “输入作用” 与 “材料输出响应” 之间的定量关系，是连接材料宏观表现与微观机制的桥梁。<br>
+其中，“本构关系”（Constitutive Relation）是材料固有的力学特性描述，例如岩石在受压时的 <strong>“应力 - 应变曲线”</strong> 就是一种简单的本构关系；<br>
+而 “建模” 则是将这种复杂关系（如非线性、塑性变形、损伤破坏）通过数学方程（如弹性力学方程、损伤力学模型）或数值方法（如有限元、离散元）进行量化表达，使其可用于计算和模拟。</p>
+</blockquote>
+<p>工程案例：<br>
+隧道围岩稳定性分析：<br>
+隧道开挖后，围岩（受开挖影响而发生应力[<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mi mathvariant="normal">/</mi><msub><mi>m</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">N/m_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord">/</span><span class="mord"><span class="mord mathdefault">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>]状态改变的周围岩体）会发生变形甚至坍塌。<br>
+通过建立岩石的 “弹塑性本构模型”（如 Mohr-Coulomb 模型、Drucker-Prager 模型），可在FLAC3D、ABAQUS 等软件中模拟不同支护方案下的围岩应力分布和变形量 —— 例如预测 “采用钢拱架支护后，围岩最大位移从 10cm 降至 3cm”，从而优化支护结构参数，避免因设计保守导致成本浪费，或因设计不足引发事故。</p>
+<p>对破坏准则：不再依赖 “剪切破坏、拉伸破坏” 等预设机制，而是让算法从数据中自主识别 “何种应力组合会导致破坏”，尤其适用于传统准则难以应对的多轴、非均质岩石场景。<br>
+对本构建模：不再局限于预设的弹性、塑性阶段划分，而是用 LSTM 直接拟合 “应力 - 应变 - 时间” 的动态关系，更精准地描述岩石的复杂时序力学行为。</p>
+<p>参考：<br>
+<a href="https://www.sciencedirect.com/science/article/pii/S1365160912002316">Rafiai H, Jafari A, Mahmoudi A. Application of ANN-based failure criteria to rocks under polyaxial stress conditions. Int J Rock Mech Min Sci. 2013;59:42–49.</a></p>
+<p><a href="https://link.springer.com/article/10.1007/s00603-023-03383-3">Fathipour-Azar H. Hybrid data-driven polyaxial rock strength Meta model. Rock Mech Rock Eng. 2023;56(8):5993–6007.</a></p>
+<h2 id="7-岩体分类">7.岩体分类</h2>
+<p>综述：<a href="https://link.springer.com/article/10.1007/s00603-024-04189-7">Saadati G, Javankhoshdel S, Najm Abad JM, Mett M, Kontrus H, Schneider-Muntau B. AI-Powered geotechnics: enhancing rock mass classification for safer engineering practices. Rock Mech Rock Eng. 2024:1–31.</a></p>
 ]]></content>
       <categories>
         <category>学科交叉</category>
@@ -474,6 +354,191 @@ Wechat：<a href="https://mp.weixin.qq.com/s/tINfape4U6RHgFov9d1oog">前沿速�
         <tag>Rock</tag>
         <tag>人工智能</tag>
         <tag>综述</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学科交叉——岩石裂缝形成演化</title>
+    <url>/2025/10/16/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E8%A3%82%E7%BC%9D%E5%BD%A2%E6%88%90%E6%BC%94%E5%8C%96/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="0800db64bf6579ce2e3af30abb41b85f6561889fa8b96cbfc6dfb620bbf6f548">cfefb2acf26edfcfdff93258a3a03a06efffe0affc5e2d9ed8b72f1b6a5d5d74575ab2f6e5d28dab65c49d6d96cee94c814939543200e9d3d2b488b5ac326d3c20e763258f27cf37ba7f90b767eaa2ec69abb49020933e174e89bb2bfa42568fc4d8e67177d68d76cf53febe706e80fb6afdece9056dcbcacae1aa6013807746b471e364c3c9a55f8574667ba0d46a722ae31589a686b7793b77f5053545e214aa933bffbab741fc12fe1ef5dae87531e0e75595ebc5ce54111ffb50f520a0209e87e5810d7f9b6d9cff2ca925de801e0a973d7fcc89ef17166956ca0c559be2859ec532fb90a0c3b5104abeabd303667adec6a94b5efd133747996de2432f987158f8d04d227f5aafceeea80b9298adbbee502480e4f216720543d4f8083d7d4cf7fe0cd766229accf91f3f262a1b6d57d1ff549b43df97f0b8bbd46cf17041cc57f3e608db8ab8e211dea988420394ae045d3f52b13c9a2be33177d6c07e97a83a3c305f92a52d17b6634ba557e6ec90a2d885bc3744dfed05844177671f61370ed83fe8126cf4edb11db23f65cb554583e015cc0df48bc02463baf03123f578a9432a9f9a5b8e6eab3628bbbd9d65d657cd620a0b4dd775a4ee59d953298f120601a2c58b5ee356b5a672bcf5fbcdc1d0aa82623d9ccf4789365eb20abf4d815f2504db707fb48e90ca99f3159f79032d170ad3e2a38f4bbdf193f7e9ff8e7ece7a528cfc24b58039ce0eb1201377519ad9f57f2b9ada4e3bd17e2e841e6cd663e205da4561755c3b9428f3bc19531a8e91d8d27fa79b672e88ea2799d1c810f0b636d316b4c1a8e8bb59ba3d8584aadf23fa916ce995f39fdc112066a70a9b28d941eb462dcbaa7a89eca8862146919aaf74fe8a922763167feab3edea9651f5c640ffabd9e5c8449d099b51e052f460a8bc0384c2a7262b3247ca12fc1e128bbf8b4fb4d374d4d7537d6a42e3ff426fe1ca3f30b03f906722f5ab564bbaca0055979cbd0cf403d3bae08bffeabac20b1a61e8c2cedd4468e4d82460ff07bfb6f1336868fedbe13afe2db31f52f1f2207f63a94cff15f3652e604d2135cedf72bdaaefcf675daddc2d01957832f37d915759141d11d0d81ce1894d141fc1c16b86e9ae71bdcf4eb65f81e5d38e9ebc40eb05ca9c954fe258bfc070d81374412eea58230e02bab01ff50c5042955b2f57e2f1cb4eb99d1df2fbef35349b15393214357967f203d1018284bfb01b9725020ca9730297d0592f974d72c207ebe4a34ff897956788ee5e07b4f3eae92487a79b8ccf08c98ba7ee1497e04e8877b49199132f6830674883c929d3b429c4660543756d6105a0f0e9320c2a323cb18cc5bf47efbc76746c4d2dba6af4b2e3bf58ced0fcdca4fea0f9f067757a0673186ebdd1c6a7d67584d69a6f637685dbe8ec75ca92b83319392e785bf0565ce54f0eae9a1af367e6ef771edc3fadf2973728d6ff4d39614c937233646e92ef68ffd5a09ca166321ef39335428a6f5cde42f7f68ef497a46ed9c2e9d9015c89986edeaccd8a161e9ba0b98bf6eb561f656ccc7a99583858db3dce4822749e807f81075bfa07fd5f5d7413db61fdeef7b23582ed680c7bad19b691345d7275165053ccc1b23b0691f33dddfe7d208604e2328491b040868108cf1f465652d5f792e92e1aaead3d158a43ed7d357f0e14bb400ca5d451a305e5a5eb534ded8823bb5c4e2b9f7ca8435eb030ee7f5226817bb705214968d5eaf47c1e13dc89424fff152427d5d75f6ecfa97162335e81803b285e8fcf933c6482a50cead636219666b35d64db641cead3c812cb55025acbd687b3451f1fcdf55e56ac0e9b73dec54e0e54d45209b67f16b48012bad337506f8e0e8aa8259d6ec1dfacd8adc3eb8fe9a2569ebb984525b8a618ff6a5a94f6e7a63a48e5780d253c74c215baa705470c79008a1c26a00d28c9a0b5eb54335fd567960d08e8b3034e08cbac9681fb6e50ce8622e7b727545fd4f1bac1d0fb5b45dce2eb05373be74db1e678adeaf0a6317875b58d3ac4d8eb8d7799e6c504f04e41fb44a6c475fafa66e510f63474cf6a4c7ca86e7bd8bda1570b8897e31da2bd29641abb43764aab9a65afe882fe5278874cb44af1b9b205d5409f4ca5011e323f807e2bf67bac9f5ff37ce9394c5f5ef57461555f8fb6ac03db679c3192302dccf154ae968228e6da24cb8bb07f81f292ffaa5143085cccc57eed4b846c05a2ccce90a4d60c978441c2bb823e719b85d4a06148a241a27571795f75fbe714f35e7cf4f6f5bfb89a16bfc318c3c7d7d226f8c735e6b7dc024ad9846c2ab20e9b564d5c07b9171b64a18f182ece61acb89842f2839b278e037bd0b216654340655c6f38ad1b6c1462f368a4cf74be9188c0c796d0fbdef2620be57bb236f6edce56edbc8898dc0d4057b736d991183b2db7e588c7b763b50daa23b6ec83ab15f62d595d23dcd99b2bbd96936d1193a7939c6e85b3e607257a2b1f04ffba3aad78f5bbc25150cdd00a46e7934b11797448edac8012e47568881879480161f091b14a8f276897d5226c6a8eeabd9cf460180645d6747a37f2126e0f233a92ca0da001cab11686f9c7d2feab82b2c59675e0b3548455817f6988089fa471c2dd1b0b8195a69410e4db12f34ec0926a9465f64e47da8c2cd0b93fd1f1e658291970246f632401d8e494a19bd87a91abaf3fdc2237405021c3f9a4fc94709d9b3a01b1816bfce3358bd600a6684bd1ded17e93152ee4518c10417d6837cb411f9f6ab46024423f243a6fdda51b15c2d27683e691133955fe9e6f7b61da84c5fbd28fef70fb03bc34555471b095ffc4a71c609da7f8ad5d55e0c6badfb81e386076da1ed7c369159cde2aac7f72c0320e410e3b</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>学科交叉</category>
+      </categories>
+      <tags>
+        <tag>Rock</tag>
+        <tag>Datasets</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>研究团队与参考期刊</title>
+    <url>/2025/10/28/%E7%A0%94%E7%A9%B6%E5%9B%A2%E9%98%9F%E4%B8%8E%E5%8F%82%E8%80%83%E6%9C%9F%E5%88%8A/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="7e4bb85ce1cf91774e1c7d631aa946bd31d3c16ee26afb3416bf31a2fa273774">cfefb2acf26edfcfdff93258a3a03a06efffe0affc5e2d9ed8b72f1b6a5d5d74575ab2f6e5d28dab65c49d6d96cee94c814939543200e9d3d2b488b5ac326d3c20e763258f27cf37ba7f90b767eaa2ec69abb49020933e174e89bb2bfa42568fc4d8e67177d68d76cf53febe706e80fb6afdece9056dcbcacae1aa6013807746b471e364c3c9a55f8574667ba0d46a722ae31589a686b7793b77f5053545e214aa933bffbab741fc12fe1ef5dae87531e0e75595ebc5ce54111ffb50f520a0209e87e5810d7f9b6d9cff2ca925de801e95b6a6fd9a7a9fabc422d1ddea60edf1b60babd7686b24fb34156303dee105edf439d056e8010901abddeed4e4ddf106981439ccc2c5bebf4fee53fe68ec2e960c16bbc25610f0782fd0b4f5c9350eb011a8c12fcdcc7a62d8f4beb00746ecf0a08ac5144d6acea2d3c994ea63cb49fc0379a6b22269aaf4268b449a890b5cb2209a13e3eaf8a2e893ac59dea55ab6601eb77507861e4be8a1068102503defe626ea33f6218117e3785dc7adce796a6e8acf072f9afa800b3769311fb5a65482107370e6f5142dd1c14a8768e4977dc0686460ef78bf01c0a32e9e1a9dee075c9fd6b0be7cca5cf48f9b02e1e9a19ec639774da0a62df4440e13b01e05c979db9ba33eaa14cfecce440550192d9f0da6b61add98c441bf61483407d76e380e36d7e334f421914e6542cee233dee4c61162ceba56f8821a247412a7b8eaf0562350f75c508e73f596eba2f3de30400d37bf0d25bf8728c72867194c7869da7e15988f497156c79fb8be7445798d122539ee830cc4c9508715376f1581934fce9fffa85f27a9d3699ab71031fedfe3b6501dc52e65d7b4d3528bdf8b300de9b3de9ebb03e840e84860b421a8ebb16930c47986ed690771e26f1b2812472b787782e8083b9f9f2114c37a8628b3ad0e31d60b84c737d34d972a4aa05af5137a22b2a1f6863b554081b4a7b544455cfd5aadd8818591d73ae12e1fd31c2315c01ba649a28e6c3575df3ea1ede2c3c36f108f899376af34caff965c0d1a8ebc7eca9317dc7e74aee718b8297115c2e30cdf2bad654eae24cb86acea490212746f43829269afbb3c9636aa53c60b99f1507615838ce428aec319d09a0d623258a9e165531ece28880da914b7737dfea6aa0e06253b18145147cb9493333185bfaba03daf2f0e136670f67cb02b052ee5940a28b1707ee3be5e766ebd21bd3d9c9da11bd2188eb4a2cce655399190f4794b8281ff8647516c5b83c0356adac4ffb290a62484c1f31a113f37456c3b12128beb15e9482dbf65e99c0da64fb4d00584cb22ef550138dd8e623bfc9626940cca31ed993a753815635b4cdc08aff4cd80315b6ac72e0b1ef7576ff81ff277f9592c96c808342ca754f30dec3da0e59663f8dabc5acc49b7217f7108c875ed4ba2a173813c348eda9a98046b2a943d9cbf1d4a9009497b2d43880e211bc45cf6d5f7a3d48d21cc6e5e41864d4ab053cfa48edf8cda40890656aa095bcbe297b9e875c74ba00b215421ed4888acb459cb6eab53ea90573c966344a9044302beaec64a04764ca320e840ec8d298f6d823c67fbe529c756a41625ab5eecbd938ac288bde26d32801cf45fab435ea76717f34b1acd7ab4e3e8406819fca74c6501dfaa079262f74960a8028faca4dc6f98abee0f92949d2a73c2d77f70be4b43e8a1a82a03c717ce56e4bafc217d9b04f5aabb9af58b9ff552fc1b93db294a991b40f232c48c955272e6d906c1d4c141fb44ccaa0214090830278eb3c20f6274aad45855c43d6b120498a2b47685e4a468761cd1b93e4f71c034193baf84772b0210f1cb70ccdfcf17d291f4fdb74adb0787e40c53c8bad38e226e31b52735822a547857ff8ee6519b870f3e8454cb2818ad0cdec3cb54fb2d414e7bf03eeb122597e6775fd5c7f37a7dd35dea65bd198870d5729ff2c536225cb842eb69fd11d52182bdb0f344357cf4128bff8184d1b9441fedb84a2b2b380f13be7e0df4615c960718bf353cbd555500ede0847bacbd9f822b1f65458052e35d5ef9a7265d1af42121cf09d245aacddb2f1ed9d26c5e18de31b4631aae8e0747a7d94113763613252384665f81ee58e4628d78ac9fc92eca5c04df6ffb61dabb4c202cda5febd92dcbde331aa213088a730ffbf9e334e1623541dc9a55cdf90e0e82ae221a677c189d16e5993306668d001df24fc61e8ec3680025ea57f829b87d5deb1cd24de0fe27299fc5e247b7e385f1e6036c723bff4084e0fb6a84791378200eb3a95faf64730d73c59636c0ce6ec323e964a9bcd5734983581a738d1f2055cb95712e32f7624b1248c442c6a25ffd725037c8fa153b8abbf3b3545d2fc854dca73ae4c355d8594dfd5437e82e20e6e03e8d942b7670165e11f465c960db1ca10282f03658727dcbc66239bfdd8992a5f35ec9a6357b1e01c51cc3f88d9b76b9b0979eece1a4ed1d21669fdb121b2ad451a27cc13a58b026d22385607229dfeeab9c39eebca9d68294dd7b5d686acecc3924fc2fcf0d077ff953ab2e0b4b10644da7d45ab54a9cc426404089d551d244be3cec27160d667a902e4529f44d089bf86b1fc8dd2b650e838ede16014ffa836d5c7f51ea44245e45bed02ab4e1b251ee160043d2a6f3ffcae9b64145bbd421dbe195be908d2686692bbc817c75fd2916f1963d4dd0d4f93318e2958dfde0249e948a4ca3e8a9bc7bdaec8798d47ad791fb21aef42246376b4f69474b2db8a9de1bb3f36a1f2992ed3d546b28754dc77ca67b132bcc67f8d242a9b9f36cbbd6b576fe3b48dbc3274d3e5fbf8c9042a6accf341b2510267f5e2f6468d62e2d38de40c7b75cfcdfb1e999701629a7a6313954fafdc2ff2beb07ad2a72896a1fe59c15c92fde180e450ba9c3b65c6b70eeabb9199a90d09683efd8f666cc5e41b2e2f3d2452fbc57af3dd6de6a4707fe90f90aa66df79904e6b27470f03fa1deac3c4bbc64bbab3a59784473ced03e456fb782ef45b3fa3c178a217c7480a935b97611a1fcb527ad5e7206b7dfa623f9dce488b12837b43bc2a2121945a8bc8d4932a0b2ab2a90e5fc196195033017d419c0f335d4a068e15612639071555b569d0db3b4308e4067e0248da4505eb46b41c38ad78e4a3e5486897d449f41a9780e9fd6b10b27459184bc18cacce13c2aaa67ab2397145c9f0e1a3ef339fd141af7832fdbcdde6b57d149168b8fa8944d8bdd7d703edcfbff8977779a84308fa001810c177755cce143c52558c907588302b6764a37627c21da6e476155afbccc8d4debe816c8807e9ddb23a8006783033495dae6c05ff27bdf83d7da8b1dfa1806cfd33667868df1bd3baf04a612e9aa3855fe3606d4a32c0e72d7c9cc4ee010fac79be5319280d5bf3f304f976c2971e82f206554eb8977a91ef7207a99ed2968a8ee67a20f2bc5d7476709d1134bc1f01c53a5c0068633c5bb1508064dabc4426ed63f0025c83476481925b98313a5676732bcae0c896d564d77fe872ed8dcfaebc04ebf6005bd637a66b56ed468cc95406af6491fb2c811e7cae6632c10945fa188f789a6b8c235bff58f403fa99a10ccb23d97746f8e6a2ccd223f631ede800762545971366f8557c2d4e42901a06dfb86b762cc83840f55ad74596a79939c7c0b9050fac0e2b71d96206bec7d9916bae2314773d6dae980f3123f83cec4e24f38f7700f4aaaffb069a65346a1300465a1091fb24174a876df2493f79c0ea044770c692e2ae35681a8c86fcf97f7e24d9d9a8e2a13072ff4ea884e74503fc61afbbda2f703a67e4006ef45b10d71721beb555597610e773ceb8116e080ce60605bd8750c3058d4061d894dda51f361c21cfb81535806368df3746b369bca02e8c0528789b9a7703183c0066e4b47d52081f5a3a9ab414785a82eb1fafad058e591ffb5cc8d0d9edb5720c816e9a5f30c4ca64586ba2829883f40067f6f11d38d4d6a7517bfd94bc71760e105c8026b7342a8e74f6109d3d8359c5487f5aa22c90ba97c077e99c23a3b2fc42cad1d6e6e692ea67e821372d992d0fdf18f3abfe9ce2bbb5401e49d33e2730c5b67a18be08060bdc6468982ba1025439e034980d375a9eeb8c858f9c43f23ec05587e5f2ebf44ba7950261565f35665004b10a305af15b577a7c45ee34ca2d5399415c1c80bfd6c7f99be57062547c8abaf34ddaee48d664ca90f8c1a38d7b85428a72297d4cc4cf7cf19a731d33cd6a17611baa6415f7de4ee3f0124893893b5a921191e5fd794c558e964380bae1e6304397c93d6a3a88ceca4300f850c08559d768724b0d4022c8d793c576ac376f7ad38f8e49ba530478cbe5ceba66a5faa7574b75417fa3d9f718093aa1c5b1c8c91caf45fbbcecd6a42e0b187e3ec812afec21673b09b5a1885c64b68bde200b3526f99581bd01a9172a1ac51af5b2413e3c6651c70f7351dcdcfe6158c8e65c00561d9381a6e2ffbe4de2e1c37c98c92fcf07ab45cfdbadcad61dbaeb89d16a7f8f9e47ea9ef9a4475f13f2aebce00f0f46cfe602dd50cca5112029116fede3bd9326311be6b2e79b65730cd56010c46cb9956895763b6542db79c5819e650f66598476a5dd2c9fcc535a6cc66356a3c70b2cb52a9458e15c6ebcc58ce33ee5730ad3362bfa38fbfe5e27576d37194dc06b153c3420e26634357d2a6bbd8b15dfc2be1316be857ea7227ef681c8d0d0010017f72280d0593a8a13a661f03499026133f3bc9375c1f6c73d42fc1f9198203d6e45913ca69d285ffd8ea58341c4064501efe38e3e0a3eaa36b79c465a02fd29494081a17a04b52fa078f44302c60d9a4e60cb39009cf799609b004b54b6ccf9e2e39d3795b15d6a48b23d69c89efde3368cc607116ce621c784c96183b5952fe1329ae850da973ed7390d1d2bf1aeb0e5681e04bc89ed373b550e9b80d44869522d42b2d7d3eb8dbeaa278c5f2720a09e03bcb362af287f29d7f856202efd0f3925f0caba0015c0342d0f709ddaef0c0ff0a7dfc4577ca332359b49605fae24e9044ad9349a4671558197fbf241fd6b7dbb3c8327dd1a3542c29ccf573d9fe183eed7358e09462266a8152f53d30b122b04227785f70e3e3d2dbe3ff1885aceab30655ee88a33543166be0256d8059aee0bc877cc19199b84c4464a9c9e8bdb7576e9b3ce540b63c1d4a445de1632a79680a6946266c4f902c70495b5f50b34b4dbf3574151d05a866803ab65367b91edf8218d1b24652e91d3bd78b303ebd1e5f4429ed4847d4927fb220fb3b84b4a05f22546c54671d2f27b26978e24b7f7a24c3a17f1a1e8e291fa3631fa8a398f5eadf0a09c08d706f915daa71984027cfb102b6336b68a08daea5fa70a6830831a9791c2ddc3d1f5fb5f694d535a1b1ca79aa2da50fdc032edefd7d4436caadbb87658c42013d447e43dd682a7eda5b7e299a94ae06a46a35e73dfda368565d83efe4da710344a4906c410070d2e55cbf29dc1e63315da9861a01c97fb6b510cd0f7733e147c61b4e7329dca880923261653d92761637dff1920eb459206e21c230239cc2316300b3ea666fb4e640c1b3c72c5e2e020f1167ec2679d1ec45bd0fc3aaea76abf72d8e79b0ddfdafd90626601d52e566a6de97a34438e9aac8c8be9fca5df1e4c43373be411bef14ec006ce438b8a0315c5d1646898ca69c8a9f042519d7a800a8b6107a44341832add2a1e4f11b3862df722e</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>Learning</category>
+      </categories>
+      <tags>
+        <tag>Rock</tag>
+        <tag>CV</tag>
+        <tag>Team</tag>
+        <tag>Conference</tag>
+        <tag>Journal</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学科交叉——岩石裂缝生成与分割</title>
+    <url>/2025/10/14/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E8%A3%82%E7%BC%9D%E7%94%9F%E6%88%90%E4%B8%8E%E5%88%86%E5%89%B2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>Dataset 目前可用数据集</h1>
+<h2 id="生成任务">生成任务</h2>
+<h3 id="1-基于gan生成背景单一的裂缝数据">1.基于GAN生成<strong>背景单一</strong>的裂缝数据（<em>√</em>）</h3>
+<p>数据名称：<a href="https://github.com/ehsankhani/Rock-Porosity-GAN?tab=readme-ov-file">Kaggle Dataset: Porous Media CT Scan Dataset</a></p>
+<blockquote>
+<p>意义：该模型以固体岩石图像（Raw）和孔隙度分割图(Label)为输入，生成逼真的多孔岩石结构，从而推进先进的材料表征和数字岩石物理分析。</p>
+</blockquote>
+<p>示例：</p>
+<center> 
+<img src="https://share.note.youdao.com/yws/api/personal/file/WEB3a631cb3cd791fadb26b5eca3a2687fe?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" alt= 'GAN单一背景裂缝生成 ' width="800" />
+<p>GAN单一背景裂缝生成</p>
+<!-- <img src="2025/10/14/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E8%A3%82%E7%BC%9D%E7%94%9F%E6%88%90%E4%B8%8E%E5%88%86%E5%89%B2/comparison_grid.png" class="" title="GAN单一背景裂缝生成 width&#x3D;800"> -->
+</center>
+<h3 id="2-基于stable-diffusion-and-controlnet生成多样化背景的裂缝">2.基于Stable diffusion and Controlnet生成<strong>多样化背景</strong>的裂缝（<em>×</em>）</h3>
+<blockquote>
+<p>意义：在民用基础设施检查的自动化裂缝检测方面，裂缝数据稀缺。为了更好的做这方面的裂缝检测任务，需收集和注释大型高质量数据集，因此用生成模型来试图突破数据稀缺的瓶颈。</p>
+</blockquote>
+<p>Paper：<a href="https://www.sciencedirect.com/science/article/pii/S014102962501819X">Xie J, Chen B, Giacomini A, et al. A versatile synthetic data generation framework for crack detection[J]. Engineering Structures, 2025, 344: 121428.</a><br>
+Wechat: <a href="https://mp.weixin.qq.com/s/ze3sHoDAvbtHCzawPfMlIg">【新论文】CrackGen：融合控制扩散与物理机理的数据合成方法</a><br>
+Dataset and Code: <a href="https://github.com/GEO-ATLAS/CrackGen">CrackTree260</a><br>
+训练样本数据示例：</p>
+<table>
+    <tr>
+        <td ><center><img src="https://share.note.youdao.com/yws/api/personal/file/WEB9509fa2ba0a689688f7646ac786eeee9?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" width=420>训练样本 </center></td>
+        <td ><center><img src="https://share.note.youdao.com/yws/api/personal/file/WEB440bd0460da3641e5bcbdf1c8e01073d?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" width=460>标签</center></td>
+    </tr>
+</table>
+<h2 id="分割任务">分割任务</h2>
+<h3 id="1-基于swin-transformer对复合岩石材料进行多类别材料的语义分割">1.基于Swin Transformer对复合岩石材料进行多类别材料的语义分割（<em>√</em>）</h3>
+<blockquote>
+<p>意义：识别煤、混凝土、大理石等复合岩石材料的不同特征和相态，一方面可以<em>深入了解三维细观结构对损伤和破坏模式的影响，揭示煤、混凝土、大理石等复合岩石材料的破坏条件（至关重要）</em>。另一方面<em>可以根据破坏机理合理地数值预测复杂载荷条件下复合岩石的力学性质、破坏条件和防治机理</em>。</p>
+</blockquote>
+<blockquote>
+<p>例如：提取识别岩块样本的成分，从而可以让后来者分析其强度，判断开挖矿场的时候会不会裂开、崩塌</p>
+</blockquote>
+<p>Paper: <a href="https://www.nature.com/articles/s41597-023-02734-7">Chen, H., Cao, X., Zhang, X. et al. Automatic segmentation framework of X-Ray tomography data for multi-phase rock using Swin Transformer approach. Sci Data 10, 812 (2023). https://doi.org/10.1038/s41597-023-02734-7</a><br>
+Dataset and Code: <a href="https://github.com/Chall513032/CoalSegmentation">河南省金岭煤矿采集的原煤样品</a><br>
+数据样本示例：</p>
+<table>
+    <tr>
+        <td ><center><img src="https://share.note.youdao.com/yws/api/personal/file/WEB14c0f970493460a9580eb06f0a6860af?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" width=370>Raw </center></td>
+        <td ><center><img src="https://share.note.youdao.com/yws/api/personal/file/WEB6e3f07a5be86420814f2c46ec5bca090?method=download&shareKey=ce5c278495973a5cebbdea082e5f85c0" width=420>Label</center></td>
+    </tr>
+</table>
+<p>四类分割，裂缝、煤、黄铁矿、煤和黄铁矿分量被分为四类</p>
+<h2 id="think">Think</h2>
+<blockquote>
+<p>1.生成是为了什么？目标？</p>
+<blockquote>
+<p>（1）矿场岩石样本数据量很少，样本是经过自己施加压力产生裂缝的嘛？<br>
+Yes</p>
+</blockquote>
+<blockquote>
+<p>（2）不利于后续学者对裂缝矿物质进行分析<br>
+（3）生成更多样本，是为了让后续学者可以根据样本进行<strong>岩性机理分析</strong>：对矿场受力会产生怎样的崩塌；对煤岩的裂缝形成进行分析<br>
+（4）<strong>更好的做分割任务</strong><br>
+（5）进一步分析裂缝受力形成的过程，从而保障开挖过程的安全：比如说<strong>煤杂质如何影响裂缝的形成</strong></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>Q：但有一个问题，就是生成的时候必须考虑物理杂质分布和裂缝的位置关系<br>
+虽然生成模型已经把一些物理参数和分布纳入考虑，但生成的内容无法彻底说明其是否符合物理性质<br>
+而且：生成的内容（不可信？谁会用到生成的数据进行分析，分析结果不可信）是否符合岩性（岩石的物理性质）</p>
+</blockquote>
+<h2 id="下一步">下一步</h2>
+<p>还有声发射数据、时频域数据可以去了解</p>
+]]></content>
+      <categories>
+        <category>学科交叉</category>
+      </categories>
+      <tags>
+        <tag>Rock</tag>
+        <tag>Datasets</tag>
+        <tag>Generator</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学科交叉——岩石相关数据下载</title>
+    <url>/2025/10/15/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>数据集网站</h1>
+<p><a href="https://digitalporousmedia.org/published-datasets/">TACC网站</a>拥有大量的相关数据集，小于2GB可随意下载，大于2GB暂时无法下载，需要有注册账号权限，目前还未研究彻底获取方式。</p>
+<p><strong>关于CT数据和论文关键词推荐：coal CT vein</strong><br>
+<strong>关于裂缝演化形成过程关键词推荐：Rock; DIC</strong></p>
+<h2 id="cv-图像数据">CV（图像数据）</h2>
+<p>Paper: <a href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/2017WR021032">Suzuki A, Watanabe N, Li K, et al. Fracture network created by 3‐D printer and its validation using CT images[J]. Water Resources Research, 2017, 53(7): 6330-6339.</a></p>
+<p>数据集：<a href="https://digitalporousmedia.org/published-datasets/tapis/projects/drp.project.published/drp.project.published.DRP-213/Artificial%20fracture%20network/">Artificial fracture network</a></p>
+<p>简介： 3D打印和CT扫描数据</p>
+<p>目的：了解<strong>裂隙介质中的流动机制</strong>对于地质科学研究和地质开发行业至关重要。本研究使用3D打印的裂隙网络来<strong>控制样品内部裂隙分布</strong>的性质。通过使用X射线CT扫描仪研究了3D打印机创建样品的准确性和适当性。CT扫描图像表明，3D打印机可以控制样品内部的裂隙分布。D打印机能够复制复杂的三-裂缝网络的三维空间分布，印刷后使用正己烷是一种有效的除蜡后处理方法，局部渗透率由立方定律得到，并用于计算整体平均值，渗透率的实验值介于算术平均值和几何平均值之间的数值结果，这是与传统的研究是一致的。这种方法的基础上3-D打印的裂缝网络可以帮助<strong>验证现有的流动建模和数值方法</strong>。</p>
+]]></content>
+      <categories>
+        <category>学科交叉</category>
+      </categories>
+      <tags>
+        <tag>Rock</tag>
+        <tag>Datasets</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>声发射</title>
+    <url>/2025/10/21/%E5%A3%B0%E5%8F%91%E5%B0%84/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>声发射数据是指材料或结构在受力、变形或损伤过程中释放能量时产生的<strong>弹性波信号</strong>，以及对这些信号进行采集、处理后得到的各类信息的统称。</p>
+</blockquote>
+<ul>
+<li>声发射数据主要包含两类关键信息，分别对应信号本身特征和采集环境参数。
+<ul>
+<li>信号特征参数：是数据的核心部分，用于描述弹性波的属性。
+<ul>
+<li><strong>幅度</strong>：指信号的最大振动幅值，反映能量释放的强弱。</li>
+<li><strong>计数</strong>：指信号超过设定阈值的次数，可体现信号的活跃程度。</li>
+<li><strong>持续时间</strong>：指信号从起始到结束的时间长度，与损伤类型相关。</li>
+<li><strong>能量</strong>：通过信号积分计算得出，直接对应材料释放的能量大小。</li>
+</ul>
+</li>
+<li>采集关键参数：用于追溯数据的采集背景，保证数据的可追溯性和有效性。
+<ul>
+<li>采集时间：记录信号产生的具体时刻，便于分析损伤发展的时序。</li>
+<li>传感器位置：标记接收信号的传感器在被检测对象上的坐标，确定损伤位置。</li>
+<li>阈值设定：记录采集时设定的信号触发阈值，影响数据的采集范围。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>学科交叉</category>
+      </categories>
+      <tags>
+        <tag>人工智能</tag>
+        <tag>声发射</tag>
       </tags>
   </entry>
 </search>
