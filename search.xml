@@ -1,28 +1,380 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2025/10/14/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>PFM相场模型</title>
+    <url>/2025/11/02/PFM%E7%9B%B8%E5%9C%BA%E6%A8%A1%E5%9E%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>PFM相场模型</h1>
+<h3 id="非cv">非CV</h3>
+<ul>
+<li>一、核心输入：模型 “已知信息” 的类型与实例<br>
+输入数据需覆盖 “裂缝现状”“载体特性”“外部作用” 三类核心信息，常见类型如下：
+<ul>
+<li>裂缝几何与初始状态数据
+<ul>
+<li>具体输入：裂缝初始长度、宽度、深度、尖端坐标、走向（如与岩体节理的夹角）、是否贯通</li>
+<li>数据形式：数值（如长度 5cm、宽度 0.2mm）、坐标序列（如裂缝轮廓的 (x,y,z) 点集）、二值化图像（裂缝区域标记为 1，背景为 0）</li>
+</ul>
+</li>
+<li>岩土 / 结构力学参数数据
+<ul>
+<li>具体输入：弹性模量、抗拉强度、泊松比、断裂韧性（KIC）、岩体节理密度 / 间距、土体含水率</li>
+<li>数据形式：数值（如弹性模量 30GPa）、归一化参数（如相对含水率 0.6）、统计分布数据（如节理间距的均值 / 方差）</li>
+</ul>
+</li>
+<li>外部荷载与环境工况数据
+<ul>
+<li>具体输入：施加应力（拉 / 压 / 剪应力大小与方向）、荷载加载速率、温度变化、降雨量、施工扰动强度</li>
+<li>数据形式：时序数值（如每小时应力值序列）、恒定值（如均布压力 1MPa）、分级数值（如荷载等级 1-5 级）</li>
+</ul>
+</li>
+<li>监测时序数据（动态预测用）
+<ul>
+<li>具体输入：历史裂缝长度 / 宽度变化序列（如过去 7 天每天的测量值）、应力监测时序、位移监测数据（如裂缝尖端位移）</li>
+<li>数据形式：时间序列数组（如 [0.1mm, 0.15mm, 0.22mm]）、多维度时序矩阵（如同时包含应力 + 位移的时序）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>二、核心输出：模型 “预测结果” 的类型与实例<br>
+输出需是 “可直接应用的量化指标”，对应裂缝扩展的关键预测目标，常见类型如下：
+<ul>
+<li>扩展轨迹预测（最核心输出之一）
+<ul>
+<li>具体输出：裂缝未来延伸的坐标路径（如二维 (x,y) 或三维 (x,y,z) 序列）、扩展方向角（如与水平方向夹角 30°）</li>
+<li>应用场景：判断裂缝是否会贯通关键结构（如隧道衬砌、坝体防渗层）</li>
+</ul>
+</li>
+<li>扩展速度与时序预测
+<ul>
+<li>具体输出：单位时间裂缝长度 / 宽度增长率（如 0.3mm/h）、未来特定时间点的裂缝长度（如 72 小时后长度 8cm）、扩展阶段划分（缓慢扩展 / 快速失稳）</li>
+<li>数据形式：数值、时序数组（如未来 10 个时间步的长度预测值）、分类标签（如 “稳定”“预警”“失稳”）</li>
+</ul>
+</li>
+<li>扩展规模与极限状态预测
+<ul>
+<li>具体输出：裂缝最终稳定长度 / 宽度、是否会形成贯通裂缝（二分类：是 / 否）、极限荷载阈值（如应力达到 5MPa 时裂缝贯通）</li>
+<li>数据形式：数值、布尔值、阈值区间（如极限应力 4.5-5.2MPa）</li>
+</ul>
+</li>
+<li>失稳风险与概率预测
+<ul>
+<li>具体输出：裂缝导致岩土体 / 结构失稳的概率（如 35%）、风险等级（低 / 中 / 高）、失稳发生的时间窗口（如未来 24-48 小时）</li>
+<li>数据形式：概率值（0-1）、分类标签（3 类 / 5 类风险等级）、时间区间</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="cv">CV</h3>
+<ul>
+<li>
+<p>一、CV 场景下的核心输入（均为图像相关数据）<br>
+输入本质是 “记录裂缝当前状态 + 环境信息” 的图像或图像衍生特征，常见类型及实例：</p>
+<ul>
+<li>初始裂缝图像数据（<strong>静态预测</strong>核心输入）
+<ul>
+<li>具体形式：<strong>含裂缝的原始图像</strong>（如岩体表面 RGB 图、混凝土结构灰度图、CT 扫描切片图、无人机倾斜摄影图）、裂缝分割掩码（二值图：裂缝像素 = 1，背景 = 0）</li>
+<li>实例：256×256 像素的岩石表面 RGB 图、128×128 的 CT 切片灰度图、U-Net 分割后的裂缝掩码图</li>
+</ul>
+</li>
+<li>时序裂缝图像数据（<strong>动态预测</strong>必备输入）
+<ul>
+<li>具体形式：<strong>同一视角下的连续图像序列</strong>（如每隔 1 小时拍摄的隧道衬砌图像、加载试验中逐帧采集的岩样图像）</li>
+<li>实例：过去 5 天每天 10:00 拍摄的边坡裂缝图像序列（共 5 张）、岩石单轴压缩试验中每秒 1 帧的图像序列（共 100 帧）</li>
+</ul>
+</li>
+<li>多模态图像数据（提升预测精度）
+<ul>
+<li>具体形式：融合不同类型图像（如可见光 + 热成像图、RGB + 激光雷达点云渲染图、表面图像 + 内部 CT 切片图）</li>
+<li>实例：边坡裂缝的可见光图像 + 热成像图（识别隐蔽裂缝）、混凝土坝体的 RGB 图 + 雷达扫描成像图</li>
+</ul>
+</li>
+<li>图像提取的特征数据（轻量化输入）
+<ul>
+<li>具体形式：从图像中预处理提取的特征向量 / 矩阵（如裂缝边缘梯度特征、纹理特征、形态学参数（长度 / 宽度 / 走向）的图像编码）</li>
+<li>实例：用 CNN 提取的 256 维裂缝图像特征向量、基于霍夫变换提取的裂缝直线特征参数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>二、CV 场景下的核心输出（均为图像关联结果）<br>
+输出是 “在图像上可定位、可量化” 的裂缝扩展结果，直接对应工程需求，常见类型及实例：</p>
+<ul>
+<li>扩展轨迹输出（最核心）
+<ul>
+<li>具体形式：图像坐标系下的裂缝未来延伸路径（如二维像素坐标序列、图像中的折线 / 曲线）、扩展方向的图像标注（如箭头指示）</li>
+<li>实例：(x1,y1)→(x2,y2)→…→(xn,yn) 的像素坐标序列（对应图像上的裂缝延伸路线）、在原始图像上叠加的未来 30 天裂缝轨迹标注图</li>
+</ul>
+</li>
+<li>尺寸与时序输出（动态预测重点）
+<ul>
+<li>具体形式：图像中裂缝的长度 / 宽度增长值（像素单位或转换后的实际单位）、时序图像中每帧的裂缝尺寸预测值、图像上的尺寸变化标注</li>
+<li>实例：未来 7 天每天的裂缝宽度预测（图像像素：5px→8px→12px，对应实际：0.5mm→0.8mm→1.2mm）、在时序图像序列上叠加的裂缝长度增长曲线</li>
+</ul>
+</li>
+<li>状态与风险输出（工程应用核心）
+<ul>
+<li>具体形式：图像中裂缝是否贯通的二分类结果（如贯通区域标注）、失稳风险的图像热力图（高风险区域红色标注）、扩展阶段的图像标签（如 “稳定”“预警” 区域标注）</li>
+<li>实例：混凝土坝体图像上的裂缝贯通概率热力图、边坡图像中裂缝失稳高风险区域（像素坐标范围：x50-x150,y80-y200）标注</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>三、关键说明：</p>
+<ul>
+<li>输入需预处理：原始图像需先做裂缝分割（如 U-Net）、图像配准（时序图像对齐同一视角）、去噪增强，避免背景干扰预测精度；<br>
+输出需 “图像 - 物理对齐”：预测的像素坐标 / 尺寸，需通过相机标定、比例尺换算，转换为实际工程单位（如像素→mm/m），才能直接应用；<br>
+模型选型适配输入输出：静态轨迹预测用 CNN + 全连接层，动态时序预测用 ConvLSTM/Transformer，风险热力图预测用 U-Net 类分割模型。</li>
+</ul>
+</li>
+<li>
+<p><strong>四、解释静态预测</strong></p>
+<ul>
+<li>训练时，会给模型喂大量 “成对数据”：
+<ul>
+<li>输入：过去的原始裂缝图像（比如 1000 张不同场景的裂缝照片）；</li>
+<li>标签：这些裂缝后续的实际扩展结果（比如 “这张图里的裂缝，3 天后向东北方向延伸了 5cm”“那张图的裂缝，最终没扩展，稳定了”）。</li>
+</ul>
+</li>
+<li>模型在训练中，会自己总结规律：
+<ul>
+<li>比如 “裂缝长度＜2cm、宽度＜0.1mm、尖端圆钝 + 岩体纹理均匀 → 未来会缓慢扩展，沿纹理方向走”；</li>
+<li>再比如 “裂缝长度＞5cm、尖端尖锐 + 岩体有明显节理 → 未来会快速扩展，沿着节理贯通”。</li>
+</ul>
+</li>
+<li><strong>静态预测的标签具体形式（和预测目标一一对应，全是可量化结果）</strong>
+<ul>
+<li>轨迹类标签（对应 “扩展轨迹预测”）
+<ul>
+<li>形式：图像坐标系下的裂缝扩展路径坐标序列、实际工程坐标系的轨迹点集</li>
+<li>实例：像素坐标 [(20,30), (45,32), (70,35), (95,33)]（对应图像上的延伸路线）、实际坐标 [(2.0m,3.0m), (4.5m,3.2m), …]</li>
+<li>标注方式：人工在原始图像上用标注工具（如 LabelMe）勾勒未来轨迹，自动生成坐标序列</li>
+</ul>
+</li>
+<li>尺寸类标签（对应 “扩展规模 / 速度预测”）
+<ul>
+<li>形式：裂缝最终长度 / 宽度数值、特定时间点的尺寸数值</li>
+<li>实例：最终实际长度 5.2cm、7 天后实际宽度 0.8mm、扩展速度 0.3mm/h</li>
+<li>标注方式：用图像标尺测量实际尺寸，或现场实测（如用裂缝宽度计）后记录数值</li>
+</ul>
+</li>
+<li>状态类标签（对应 “失稳 / 贯通预测”）
+<ul>
+<li>形式：二分类标签（0/1）、风险等级标签（1-5 级）、贯通状态标签（0 = 未贯通，1 = 贯通）</li>
+<li>实例：“失稳风险 = 2 级”“是否贯通 = 0”“扩展阶段 = 稳定”</li>
+<li>标注方式：根据现场监测结果（如是否发生滑坡、裂缝是否贯通）人工标注</li>
+</ul>
+</li>
+<li>区域类标签（对应 “风险热力图 / 贯通区域预测”）
+<ul>
+<li>形式：图像掩码（高风险区域像素 = 1，其他 = 0）、贯通区域的像素范围</li>
+<li>实例：边坡图像中高风险区域的二值掩码图、CT 切片中贯通裂缝的像素坐标范围</li>
+<li>标注方式：人工在图像上框选风险区域 / 贯通区域，生成掩码文件</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 ]]></content>
       <categories>
-        <category>test</category>
+        <category>裂缝扩展预测</category>
       </categories>
       <tags>
-        <tag>test</tag>
+        <tag>Rock</tag>
+        <tag>PFM</tag>
+        <tag>训练数据生成</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>裂缝扩展</title>
+    <url>/2025/10/30/%E8%A3%82%E7%BC%9D%E6%89%A9%E5%B1%95%E9%A2%84%E6%B5%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="裂缝扩展预测输入输出：">裂缝扩展预测输入输出：</h2>
+<h3 id="非cv">非CV</h3>
+<ul>
+<li>一、核心输入：模型 “已知信息” 的类型与实例<br>
+输入数据需覆盖 “裂缝现状”“载体特性”“外部作用” 三类核心信息，常见类型如下：
+<ul>
+<li>裂缝几何与初始状态数据
+<ul>
+<li>具体输入：裂缝初始长度、宽度、深度、尖端坐标、走向（如与岩体节理的夹角）、是否贯通</li>
+<li>数据形式：数值（如长度 5cm、宽度 0.2mm）、坐标序列（如裂缝轮廓的 (x,y,z) 点集）、二值化图像（裂缝区域标记为 1，背景为 0）</li>
+</ul>
+</li>
+<li>岩土 / 结构力学参数数据
+<ul>
+<li>具体输入：弹性模量、抗拉强度、泊松比、断裂韧性（KIC）、岩体节理密度 / 间距、土体含水率</li>
+<li>数据形式：数值（如弹性模量 30GPa）、归一化参数（如相对含水率 0.6）、统计分布数据（如节理间距的均值 / 方差）</li>
+</ul>
+</li>
+<li>外部荷载与环境工况数据
+<ul>
+<li>具体输入：施加应力（拉 / 压 / 剪应力大小与方向）、荷载加载速率、温度变化、降雨量、施工扰动强度</li>
+<li>数据形式：时序数值（如每小时应力值序列）、恒定值（如均布压力 1MPa）、分级数值（如荷载等级 1-5 级）</li>
+</ul>
+</li>
+<li>监测时序数据（动态预测用）
+<ul>
+<li>具体输入：历史裂缝长度 / 宽度变化序列（如过去 7 天每天的测量值）、应力监测时序、位移监测数据（如裂缝尖端位移）</li>
+<li>数据形式：时间序列数组（如 [0.1mm, 0.15mm, 0.22mm]）、多维度时序矩阵（如同时包含应力 + 位移的时序）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>二、核心输出：模型 “预测结果” 的类型与实例<br>
+输出需是 “可直接应用的量化指标”，对应裂缝扩展的关键预测目标，常见类型如下：
+<ul>
+<li>扩展轨迹预测（最核心输出之一）
+<ul>
+<li>具体输出：裂缝未来延伸的坐标路径（如二维 (x,y) 或三维 (x,y,z) 序列）、扩展方向角（如与水平方向夹角 30°）</li>
+<li>应用场景：判断裂缝是否会贯通关键结构（如隧道衬砌、坝体防渗层）</li>
+</ul>
+</li>
+<li>扩展速度与时序预测
+<ul>
+<li>具体输出：单位时间裂缝长度 / 宽度增长率（如 0.3mm/h）、未来特定时间点的裂缝长度（如 72 小时后长度 8cm）、扩展阶段划分（缓慢扩展 / 快速失稳）</li>
+<li>数据形式：数值、时序数组（如未来 10 个时间步的长度预测值）、分类标签（如 “稳定”“预警”“失稳”）</li>
+</ul>
+</li>
+<li>扩展规模与极限状态预测
+<ul>
+<li>具体输出：裂缝最终稳定长度 / 宽度、是否会形成贯通裂缝（二分类：是 / 否）、极限荷载阈值（如应力达到 5MPa 时裂缝贯通）</li>
+<li>数据形式：数值、布尔值、阈值区间（如极限应力 4.5-5.2MPa）</li>
+</ul>
+</li>
+<li>失稳风险与概率预测
+<ul>
+<li>具体输出：裂缝导致岩土体 / 结构失稳的概率（如 35%）、风险等级（低 / 中 / 高）、失稳发生的时间窗口（如未来 24-48 小时）</li>
+<li>数据形式：概率值（0-1）、分类标签（3 类 / 5 类风险等级）、时间区间</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="cv">CV</h3>
+<ul>
+<li>
+<p>一、CV 场景下的核心输入（均为图像相关数据）<br>
+输入本质是 “记录裂缝当前状态 + 环境信息” 的图像或图像衍生特征，常见类型及实例：</p>
+<ul>
+<li>初始裂缝图像数据（<strong>静态预测</strong>核心输入）
+<ul>
+<li>具体形式：<strong>含裂缝的原始图像</strong>（如岩体表面 RGB 图、混凝土结构灰度图、CT 扫描切片图、无人机倾斜摄影图）、裂缝分割掩码（二值图：裂缝像素 = 1，背景 = 0）</li>
+<li>实例：256×256 像素的岩石表面 RGB 图、128×128 的 CT 切片灰度图、U-Net 分割后的裂缝掩码图</li>
+</ul>
+</li>
+<li>时序裂缝图像数据（<strong>动态预测</strong>必备输入）
+<ul>
+<li>具体形式：<strong>同一视角下的连续图像序列</strong>（如每隔 1 小时拍摄的隧道衬砌图像、加载试验中逐帧采集的岩样图像）</li>
+<li>实例：过去 5 天每天 10:00 拍摄的边坡裂缝图像序列（共 5 张）、岩石单轴压缩试验中每秒 1 帧的图像序列（共 100 帧）</li>
+</ul>
+</li>
+<li>多模态图像数据（提升预测精度）
+<ul>
+<li>具体形式：融合不同类型图像（如可见光 + 热成像图、RGB + 激光雷达点云渲染图、表面图像 + 内部 CT 切片图）</li>
+<li>实例：边坡裂缝的可见光图像 + 热成像图（识别隐蔽裂缝）、混凝土坝体的 RGB 图 + 雷达扫描成像图</li>
+</ul>
+</li>
+<li>图像提取的特征数据（轻量化输入）
+<ul>
+<li>具体形式：从图像中预处理提取的特征向量 / 矩阵（如裂缝边缘梯度特征、纹理特征、形态学参数（长度 / 宽度 / 走向）的图像编码）</li>
+<li>实例：用 CNN 提取的 256 维裂缝图像特征向量、基于霍夫变换提取的裂缝直线特征参数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>二、CV 场景下的核心输出（均为图像关联结果）<br>
+输出是 “在图像上可定位、可量化” 的裂缝扩展结果，直接对应工程需求，常见类型及实例：</p>
+<ul>
+<li>扩展轨迹输出（最核心）
+<ul>
+<li>具体形式：图像坐标系下的裂缝未来延伸路径（如二维像素坐标序列、图像中的折线 / 曲线）、扩展方向的图像标注（如箭头指示）</li>
+<li>实例：(x1,y1)→(x2,y2)→…→(xn,yn) 的像素坐标序列（对应图像上的裂缝延伸路线）、在原始图像上叠加的未来 30 天裂缝轨迹标注图</li>
+</ul>
+</li>
+<li>尺寸与时序输出（动态预测重点）
+<ul>
+<li>具体形式：图像中裂缝的长度 / 宽度增长值（像素单位或转换后的实际单位）、时序图像中每帧的裂缝尺寸预测值、图像上的尺寸变化标注</li>
+<li>实例：未来 7 天每天的裂缝宽度预测（图像像素：5px→8px→12px，对应实际：0.5mm→0.8mm→1.2mm）、在时序图像序列上叠加的裂缝长度增长曲线</li>
+</ul>
+</li>
+<li>状态与风险输出（工程应用核心）
+<ul>
+<li>具体形式：图像中裂缝是否贯通的二分类结果（如贯通区域标注）、失稳风险的图像热力图（高风险区域红色标注）、扩展阶段的图像标签（如 “稳定”“预警” 区域标注）</li>
+<li>实例：混凝土坝体图像上的裂缝贯通概率热力图、边坡图像中裂缝失稳高风险区域（像素坐标范围：x50-x150,y80-y200）标注</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>三、关键说明：</p>
+<ul>
+<li>输入需预处理：原始图像需先做裂缝分割（如 U-Net）、图像配准（时序图像对齐同一视角）、去噪增强，避免背景干扰预测精度；<br>
+输出需 “图像 - 物理对齐”：预测的像素坐标 / 尺寸，需通过相机标定、比例尺换算，转换为实际工程单位（如像素→mm/m），才能直接应用；<br>
+模型选型适配输入输出：静态轨迹预测用 CNN + 全连接层，动态时序预测用 ConvLSTM/Transformer，风险热力图预测用 U-Net 类分割模型。</li>
+</ul>
+</li>
+<li>
+<p><strong>四、解释静态预测</strong></p>
+<ul>
+<li>训练时，会给模型喂大量 “成对数据”：
+<ul>
+<li>输入：过去的原始裂缝图像（比如 1000 张不同场景的裂缝照片）；</li>
+<li>标签：这些裂缝后续的实际扩展结果（比如 “这张图里的裂缝，3 天后向东北方向延伸了 5cm”“那张图的裂缝，最终没扩展，稳定了”）。</li>
+</ul>
+</li>
+<li>模型在训练中，会自己总结规律：
+<ul>
+<li>比如 “裂缝长度＜2cm、宽度＜0.1mm、尖端圆钝 + 岩体纹理均匀 → 未来会缓慢扩展，沿纹理方向走”；</li>
+<li>再比如 “裂缝长度＞5cm、尖端尖锐 + 岩体有明显节理 → 未来会快速扩展，沿着节理贯通”。</li>
+</ul>
+</li>
+<li><strong>静态预测的标签具体形式（和预测目标一一对应，全是可量化结果）</strong>
+<ul>
+<li>轨迹类标签（对应 “扩展轨迹预测”）
+<ul>
+<li>形式：图像坐标系下的裂缝扩展路径坐标序列、实际工程坐标系的轨迹点集</li>
+<li>实例：像素坐标 [(20,30), (45,32), (70,35), (95,33)]（对应图像上的延伸路线）、实际坐标 [(2.0m,3.0m), (4.5m,3.2m), …]</li>
+<li>标注方式：人工在原始图像上用标注工具（如 LabelMe）勾勒未来轨迹，自动生成坐标序列</li>
+</ul>
+</li>
+<li>尺寸类标签（对应 “扩展规模 / 速度预测”）
+<ul>
+<li>形式：裂缝最终长度 / 宽度数值、特定时间点的尺寸数值</li>
+<li>实例：最终实际长度 5.2cm、7 天后实际宽度 0.8mm、扩展速度 0.3mm/h</li>
+<li>标注方式：用图像标尺测量实际尺寸，或现场实测（如用裂缝宽度计）后记录数值</li>
+</ul>
+</li>
+<li>状态类标签（对应 “失稳 / 贯通预测”）
+<ul>
+<li>形式：二分类标签（0/1）、风险等级标签（1-5 级）、贯通状态标签（0 = 未贯通，1 = 贯通）</li>
+<li>实例：“失稳风险 = 2 级”“是否贯通 = 0”“扩展阶段 = 稳定”</li>
+<li>标注方式：根据现场监测结果（如是否发生滑坡、裂缝是否贯通）人工标注</li>
+</ul>
+</li>
+<li>区域类标签（对应 “风险热力图 / 贯通区域预测”）
+<ul>
+<li>形式：图像掩码（高风险区域像素 = 1，其他 = 0）、贯通区域的像素范围</li>
+<li>实例：边坡图像中高风险区域的二值掩码图、CT 切片中贯通裂缝的像素坐标范围</li>
+<li>标注方式：人工在图像上框选风险区域 / 贯通区域，生成掩码文件</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>裂缝扩展预测输入输出</category>
+      </categories>
+      <tags>
+        <tag>Rock</tag>
+        <tag>Datasets</tag>
       </tags>
   </entry>
   <entry>
@@ -51,84 +403,65 @@
       </tags>
   </entry>
   <entry>
-    <title>学科交叉——岩土工程各方向参考</title>
-    <url>/2025/10/15/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E5%9C%9F%E5%B7%A5%E7%A8%8B%E5%90%84%E6%96%B9%E5%90%91%E5%8F%82%E8%80%83/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>利用基于虚拟相机的数据增强推进时空岩石裂缝预测</h1>
-<blockquote>
-<p>意义：预测未开挖区域的岩石裂缝是岩土工程项目中一个关键而又具有挑战性的方面。这项任务涉及使用已开挖岩石面的序列预测未开挖岩石面的裂缝映射序列，这非常适合时空深度学习技术。</p>
+    <title>研究团队与参考期刊</title>
+    <url>/2025/10/28/%E7%A0%94%E7%A9%B6%E5%9B%A2%E9%98%9F%E4%B8%8E%E5%8F%82%E8%80%83%E6%9C%9F%E5%88%8A/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="7e4bb85ce1cf91774e1c7d631aa946bd31d3c16ee26afb3416bf31a2fa273774">cfefb2acf26edfcfdff93258a3a03a06efffe0affc5e2d9ed8b72f1b6a5d5d74575ab2f6e5d28dab65c49d6d96cee94c814939543200e9d3d2b488b5ac326d3c20e763258f27cf37ba7f90b767eaa2ec69abb49020933e174e89bb2bfa42568fc4d8e67177d68d76cf53febe706e80fb6afdece9056dcbcacae1aa6013807746b471e364c3c9a55f8574667ba0d46a722ae31589a686b7793b77f5053545e214aa933bffbab741fc12fe1ef5dae87531e0e75595ebc5ce54111ffb50f520a0209e87e5810d7f9b6d9cff2ca925de801e95b6a6fd9a7a9fabc422d1ddea60edf1b60babd7686b24fb34156303dee105edf439d056e8010901abddeed4e4ddf106981439ccc2c5bebf4fee53fe68ec2e960c16bbc25610f0782fd0b4f5c9350eb011a8c12fcdcc7a62d8f4beb00746ecf0a08ac5144d6acea2d3c994ea63cb49fc0379a6b22269aaf4268b449a890b5cb2209a13e3eaf8a2e893ac59dea55ab6601eb77507861e4be8a1068102503defe626ea33f6218117e3785dc7adce796a6e8acf072f9afa800b3769311fb5a65482107370e6f5142dd1c14a8768e4977dc0686460ef78bf01c0a32e9e1a9dee075c9fd6b0be7cca5cf48f9b02e1e9a19ec639774da0a62df4440e13b01e05c979db9ba33eaa14cfecce440550192d9f0da6b61add98c441bf61483407d76e380e36d7e334f421914e6542cee233dee4c61162ceba56f8821a247412a7b8eaf0562350f75c508e73f596eba2f3de30400d37bf0d25bf8728c72867194c7869da7e15988f497156c79fb8be7445798d122539ee830cc4c9508715376f1581934fce9fffa85f27a9d3699ab71031fedfe3b6501dc52e65d7b4d3528bdf8b300de9b3de9ebb03e840e84860b421a8ebb16930c47986ed690771e26f1b2812472b787782e8083b9f9f2114c37a8628b3ad0e31d60b84c737d34d972a4aa05af5137a22b2a1f6863b554081b4a7b544455cfd5aadd8818591d73ae12e1fd31c2315c01ba649a28e6c3575df3ea1ede2c3c36f108f899376af34caff965c0d1a8ebc7eca9317dc7e74aee718b8297115c2e30cdf2bad654eae24cb86acea490212746f43829269afbb3c9636aa53c60b99f1507615838ce428aec319d09a0d623258a9e165531ece28880da914b7737dfea6aa0e06253b18145147cb9493333185bfaba03daf2f0e136670f67cb02b052ee5940a28b1707ee3be5e766ebd21bd3d9c9da11bd2188eb4a2cce655399190f4794b8281ff8647516c5b83c0356adac4ffb290a62484c1f31a113f37456c3b12128beb15e9482dbf65e99c0da64fb4d00584cb22ef550138dd8e623bfc9626940cca31ed993a753815635b4cdc08aff4cd80315b6ac72e0b1ef7576ff81ff277f9592c96c808342ca754f30dec3da0e59663f8dabc5acc49b7217f7108c875ed4ba2a173813c348eda9a98046b2a943d9cbf1d4a9009497b2d43880e211bc45cf6d5f7a3d48d21cc6e5e41864d4ab053cfa48edf8cda40890656aa095bcbe297b9e875c74ba00b215421ed4888acb459cb6eab53ea90573c966344a9044302beaec64a04764ca320e840ec8d298f6d823c67fbe529c756a41625ab5eecbd938ac288bde26d32801cf45fab435ea76717f34b1acd7ab4e3e8406819fca74c6501dfaa079262f74960a8028faca4dc6f98abee0f92949d2a73c2d77f70be4b43e8a1a82a03c717ce56e4bafc217d9b04f5aabb9af58b9ff552fc1b93db294a991b40f232c48c955272e6d906c1d4c141fb44ccaa0214090830278eb3c20f6274aad45855c43d6b120498a2b47685e4a468761cd1b93e4f71c034193baf84772b0210f1cb70ccdfcf17d291f4fdb74adb0787e40c53c8bad38e226e31b52735822a547857ff8ee6519b870f3e8454cb2818ad0cdec3cb54fb2d414e7bf03eeb122597e6775fd5c7f37a7dd35dea65bd198870d5729ff2c536225cb842eb69fd11d52182bdb0f344357cf4128bff8184d1b9441fedb84a2b2b380f13be7e0df4615c960718bf353cbd555500ede0847bacbd9f822b1f65458052e35d5ef9a7265d1af42121cf09d245aacddb2f1ed9d26c5e18de31b4631aae8e0747a7d94113763613252384665f81ee58e4628d78ac9fc92eca5c04df6ffb61dabb4c202cda5febd92dcbde331aa213088a730ffbf9e334e1623541dc9a55cdf90e0e82ae221a677c189d16e5993306668d001df24fc61e8ec3680025ea57f829b87d5deb1cd24de0fe27299fc5e247b7e385f1e6036c723bff4084e0fb6a84791378200eb3a95faf64730d73c59636c0ce6ec323e964a9bcd5734983581a738d1f2055cb95712e32f7624b1248c442c6a25ffd725037c8fa153b8abbf3b3545d2fc854dca73ae4c355d8594dfd5437e82e20e6e03e8d942b7670165e11f465c960db1ca10282f03658727dcbc66239bfdd8992a5f35ec9a6357b1e01c51cc3f88d9b76b9b0979eece1a4ed1d21669fdb121b2ad451a27cc13a58b026d22385607229dfeeab9c39eebca9d68294dd7b5d686acecc3924fc2fcf0d077ff953ab2e0b4b10644da7d45ab54a9cc426404089d551d244be3cec27160d667a902e4529f44d089bf86b1fc8dd2b650e838ede16014ffa836d5c7f51ea44245e45bed02ab4e1b251ee160043d2a6f3ffcae9b64145bbd421dbe195be908d2686692bbc817c75fd2916f1963d4dd0d4f93318e2958dfde0249e948a4ca3e8a9bc7bdaec8798d47ad791fb21aef42246376b4f69474b2db8a9de1bb3f36a1f2992ed3d546b28754dc77ca67b132bcc67f8d242a9b9f36cbbd6b576fe3b48dbc3274d3e5fbf8c9042a6accf341b2510267f5e2f6468d62e2d38de40c7b75cfcdfb1e999701629a7a6313954fafdc2ff2beb07ad2a72896a1fe59c15c92fde180e450ba9c3b65c6b70eeabb9199a90d09683efd8f666cc5e41b2e2f3d2452fbc57af3dd6de6a4707fe90f90aa66df79904e6b27470f03fa1deac3c4bbc64bbab3a59784473ced03e456fb782ef45b3fa3c178a217c7480a935b97611a1fcb527ad5e7206b7dfa623f9dce488b12837b43bc2a2121945a8bc8d4932a0b2ab2a90e5fc196195033017d419c0f335d4a068e15612639071555b569d0db3b4308e4067e0248da4505eb46b41c38ad78e4a3e5486897d449f41a9780e9fd6b10b27459184bc18cacce13c2aaa67ab2397145c9f0e1a3ef339fd141af7832fdbcdde6b57d149168b8fa8944d8bdd7d703edcfbff8977779a84308fa001810c177755cce143c52558c907588302b6764a37627c21da6e476155afbccc8d4debe816c8807e9ddb23a8006783033495dae6c05ff27bdf83d7da8b1dfa1806cfd33667868df1bd3baf04a612e9aa3855fe3606d4a32c0e72d7c9cc4ee010fac79be5319280d5bf3f304f976c2971e82f206554eb8977a91ef7207a99ed2968a8ee67a20f2bc5d7476709d1134bc1f01c53a5c0068633c5bb1508064dabc4426ed63f0025c83476481925b98313a5676732bcae0c896d564d77fe872ed8dcfaebc04ebf6005bd637a66b56ed468cc95406af6491fb2c811e7cae6632c10945fa188f789a6b8c235bff58f403fa99a10ccb23d97746f8e6a2ccd223f631ede800762545971366f8557c2d4e42901a06dfb86b762cc83840f55ad74596a79939c7c0b9050fac0e2b71d96206bec7d9916bae2314773d6dae980f3123f83cec4e24f38f7700f4aaaffb069a65346a1300465a1091fb24174a876df2493f79c0ea044770c692e2ae35681a8c86fcf97f7e24d9d9a8e2a13072ff4ea884e74503fc61afbbda2f703a67e4006ef45b10d71721beb555597610e773ceb8116e080ce60605bd8750c3058d4061d894dda51f361c21cfb81535806368df3746b369bca02e8c0528789b9a7703183c0066e4b47d52081f5a3a9ab414785a82eb1fafad058e591ffb5cc8d0d9edb5720c816e9a5f30c4ca64586ba2829883f40067f6f11d38d4d6a7517bfd94bc71760e105c8026b7342a8e74f6109d3d8359c5487f5aa22c90ba97c077e99c23a3b2fc42cad1d6e6e692ea67e821372d992d0fdf18f3abfe9ce2bbb5401e49d33e2730c5b67a18be08060bdc6468982ba1025439e034980d375a9eeb8c858f9c43f23ec05587e5f2ebf44ba7950261565f35665004b10a305af15b577a7c45ee34ca2d5399415c1c80bfd6c7f99be57062547c8abaf34ddaee48d664ca90f8c1a38d7b85428a72297d4cc4cf7cf19a731d33cd6a17611baa6415f7de4ee3f0124893893b5a921191e5fd794c558e964380bae1e6304397c93d6a3a88ceca4300f850c08559d768724b0d4022c8d793c576ac376f7ad38f8e49ba530478cbe5ceba66a5faa7574b75417fa3d9f718093aa1c5b1c8c91caf45fbbcecd6a42e0b187e3ec812afec21673b09b5a1885c64b68bde200b3526f99581bd01a9172a1ac51af5b2413e3c6651c70f7351dcdcfe6158c8e65c00561d9381a6e2ffbe4de2e1c37c98c92fcf07ab45cfdbadcad61dbaeb89d16a7f8f9e47ea9ef9a4475f13f2aebce00f0f46cfe602dd50cca5112029116fede3bd9326311be6b2e79b65730cd56010c46cb9956895763b6542db79c5819e650f66598476a5dd2c9fcc535a6cc66356a3c70b2cb52a9458e15c6ebcc58ce33ee5730ad3362bfa38fbfe5e27576d37194dc06b153c3420e26634357d2a6bbd8b15dfc2be1316be857ea7227ef681c8d0d0010017f72280d0593a8a13a661f03499026133f3bc9375c1f6c73d42fc1f9198203d6e45913ca69d285ffd8ea58341c4064501efe38e3e0a3eaa36b79c465a02fd29494081a17a04b52fa078f44302c60d9a4e60cb39009cf799609b004b54b6ccf9e2e39d3795b15d6a48b23d69c89efde3368cc607116ce621c784c96183b5952fe1329ae850da973ed7390d1d2bf1aeb0e5681e04bc89ed373b550e9b80d44869522d42b2d7d3eb8dbeaa278c5f2720a09e03bcb362af287f29d7f856202efd0f3925f0caba0015c0342d0f709ddaef0c0ff0a7dfc4577ca332359b49605fae24e9044ad9349a4671558197fbf241fd6b7dbb3c8327dd1a3542c29ccf573d9fe183eed7358e09462266a8152f53d30b122b04227785f70e3e3d2dbe3ff1885aceab30655ee88a33543166be0256d8059aee0bc877cc19199b84c4464a9c9e8bdb7576e9b3ce540b63c1d4a445de1632a79680a6946266c4f902c70495b5f50b34b4dbf3574151d05a866803ab65367b91edf8218d1b24652e91d3bd78b303ebd1e5f4429ed4847d4927fb220fb3b84b4a05f22546c54671d2f27b26978e24b7f7a24c3a17f1a1e8e291fa3631fa8a398f5eadf0a09c08d706f915daa71984027cfb102b6336b68a08daea5fa70a6830831a9791c2ddc3d1f5fb5f694d535a1b1ca79aa2da50fdc032edefd7d4436caadbb87658c42013d447e43dd682a7eda5b7e299a94ae06a46a35e73dfda368565d83efe4da710344a4906c410070d2e55cbf29dc1e63315da9861a01c97fb6b510cd0f7733e147c61b4e7329dca880923261653d92761637dff1920eb459206e21c230239cc2316300b3ea666fb4e640c1b3c72c5e2e020f1167ec2679d1ec45bd0fc3aaea76abf72d8e79b0ddfdafd90626601d52e566a6de97a34438e9aac8c8be9fca5df1e4c43373be411bef14ec006ce438b8a0315c5d1646898ca69c8a9f042519d7a800a8b6107a44341832add2a1e4f11b3862df722e</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>Learning</category>
+      </categories>
+      <tags>
+        <tag>Rock</tag>
+        <tag>CV</tag>
+        <tag>Team</tag>
+        <tag>Conference</tag>
+        <tag>Journal</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>声发射</title>
+    <url>/2025/10/21/%E5%A3%B0%E5%8F%91%E5%B0%84/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>声发射数据是指材料或结构在受力、变形或损伤过程中释放能量时产生的<strong>弹性波信号</strong>，以及对这些信号进行采集、处理后得到的各类信息的统称。</p>
 </blockquote>
-<p>Paper: <a href="https://www.sciencedirect.com/science/article/pii/S0886779825000380">Xie J, Chen B, Huang J, et al. Advancing spatial-temporal rock fracture prediction with virtual camera-based data augmentation[J]. Tunnelling and Underground Space Technology, 2025, 158: 106400.</a><br>
-Code: <a href="https://github.com/GEO-ATLAS/Rock-Camera">https://github.com/GEO-ATLAS/Rock-Camera</a><br>
-数据集是用生成的，这里的生成应该是根据物理参数随机生成（较为复杂）<br>
-基准：<a href="https://github.com/GEO-ATLAS/Rock-Camera">RockCaptures数据集</a></p>
-<p>原文译文如下：</p>
-<blockquote>
-<p>考虑到对岩石断裂数据库增强的广泛需求，本研究提供了一个开源的，基于Python的软件包“Rock-Camera”，可在GitHub上获得。它包括两个部分：第一种是能够基于任何现场裂缝分布创建DFN的改进的3D DFN生成器。第二种是基于VCT从DFN创建捕获的光生成器，这两个模块的组合形成了一个强大的工具，可以自由地生成任何所需的岩石表面照片数据集。</p>
-</blockquote>
-<p>数据集基准已整合成npy数据格式，原文预览如下:</p>
-<center> 
-<img src="https://share.note.youdao.com/yws/api/personal/file/WEBdcde30a6201d8950a022895028c0d6f2?method=download&shareKey=460dd7cd577f09063c024513275de6da" alt= '裂缝预测 ' width="800" />
-<p>未开挖区域裂缝预测，开挖区域裂缝数据预览</p>
-</center>
-<p><strong>结论：预测方向可以考虑，但该数据集属性复杂，行外人无法理解（例如为何裂缝线条像划痕，像直线裂缝，图中Rock mass区域岩块层次分明，这是什么岩石？），暂不考虑</strong></p>
-<h1>岩石三维表面裂纹扩展机理数值模拟研究</h1>
-<p>Paper: <a href="https://www.cgejournal.com/cn/article/pdf/preview/14211.pdf">梁正召, 李连崇, 唐世斌, 等. 岩石三维表面裂纹扩展机理数值模拟研究[J]. 岩土工程学报, 2011, 33(10): 1615-1622.</a></p>
-<h4 id="learn">Learn</h4>
 <ul>
-<li>
-<p>1.岩石裂纹也分多类，如：Ⅰ、Ⅱ、III 型裂纹（扩展模式？）；次生裂纹；壳体裂纹；翼型裂纹。二维裂纹、三维裂纹。</p>
+<li>声发射数据主要包含两类关键信息，分别对应信号本身特征和采集环境参数。
 <ul>
-<li>Think: 裂纹分类在这篇论文没有说明，不同学者对裂纹的定义似乎也有歧义。</li>
-<li>Q: 那么是否可以做裂纹分类，做分类的意义是？</li>
+<li>信号特征参数：是数据的核心部分，用于描述弹性波的属性。
+<ul>
+<li><strong>幅度</strong>：指信号的最大振动幅值，反映能量释放的强弱。</li>
+<li><strong>计数</strong>：指信号超过设定阈值的次数，可体现信号的活跃程度。</li>
+<li><strong>持续时间</strong>：指信号从起始到结束的时间长度，与损伤类型相关。</li>
+<li><strong>能量</strong>：通过信号积分计算得出，直接对应材料释放的能量大小。</li>
 </ul>
 </li>
-<li>
-<p>2.在岩体力学中，裂隙岩体内部裂隙的<strong>产状、走向以及分布</strong>通常决定着岩体变形与强度</p>
+<li>采集关键参数：用于追溯数据的采集背景，保证数据的可追溯性和有效性。
 <ul>
-<li>因此计算机做裂隙的形成演化预测具备一定的意义</li>
-</ul>
-</li>
-<li>
-<p>3.裂纹形成的二维研究（more）、三维研究，常用<strong>数值计算方法</strong>模拟非均匀性岩石中的三维裂纹扩展过程。</p>
-<ul>
-<li>这说明地质学中有自己的裂纹演化模拟。如何区别出通过AI训练<em>推演</em>、<em>预测</em>裂纹形成过程？</li>
-</ul>
-</li>
-<li>
-<p>4.由于岩石的不透明性给内置三维裂纹的扩展研究带来了极大困难。为了便于观测，许多学者采用玻璃、树脂等透明均匀特性的相似材料来<strong>模拟三维裂纹的扩展机理</strong>。然而，由于岩石内部非均匀性的存在，三维裂纹的扩展机理与模式与均匀材料相差甚远。为了观测内部裂纹扩展问题，很多学者不得不尝试<strong>CT技术、声发射技术或者红外热像技术</strong>来观测分析内部微裂隙的扩展过程。</p>
-<ul>
-<li><strong>观测分析内部微裂隙的扩展过程</strong>，学者们想要的是观测试验样本的裂隙扩展过程，从而分析扩展机理。</li>
-<li>但<strong>观测困难！！！！</strong></li>
-<li><strong>因此</strong>AI算法预测，可以基于一定的样本训练后，只用（输入裂隙扩展前和扩展后的图像样本对），模拟出扩展过程，提高<strong>观测效率！！！</strong></li>
+<li>采集时间：记录信号产生的具体时刻，便于分析损伤发展的时序。</li>
+<li>传感器位置：标记接收信号的传感器在被检测对象上的坐标，确定损伤位置。</li>
+<li>阈值设定：记录采集时设定的信号触发阈值，影响数据的采集范围。</li>
 </ul>
 </li>
 </ul>
-<p><strong>结论：</strong></p>
-<ul>
-<li>1.收集不同岩石裂纹数据集，可发展<strong>裂纹分类</strong>方向，但做分类的意义还需进一步思考。</li>
-<li>2.利用AI算法预测裂纹扩展，可解决裂纹扩展过程观测困难的问题。</li>
-</ul>
-<h1>基于声发射和DIC特征的层状复合岩石力学损伤试验与模型研究</h1>
-<p>Paper: <a href="https://onlinelibrary.wiley.com/doi/full/10.1155/2022/6568588">Qi X, Yang Z, Wang S, et al. Mechanical damage test and model study of layered composite rock based on acoustic emission and DIC characteristics[J]. Shock and Vibration, 2022, 2022(1): 6568588.</a></p>
-<blockquote>
-<p>Abstract:<br>
-为了研究层状复合岩石的力学损伤特征，以深层致密储层砂岩、泥岩为研究对象，通过相似材料模型试验制备了层状复合类岩石，进行了单轴压缩试验，并辅以声发射（声发射）系统和DIC（数字图像相关）系统，获得了层状复合岩石的强度、弹性模量等物理力学参数。声发射振铃计数与岩石损伤的对应规律将层状复合岩石在单轴载荷作用下的损伤过程分为<strong>初始损伤、稳定损伤发展和损伤加速</strong>3个阶段。<br>
-通过对<strong>DIC系统应变云图</strong>的分析，揭示了层状复合岩石在单轴条件下的变形特征主要为拉剪滑移损伤，基于声发射的内部损伤演化特征和DIC的表面损伤演化特征，建立了基于双损伤因子表征的层状复合岩石损伤本构模型，合理地揭示了层状复合岩石在单轴压缩条件下内部结构发展和外部裂纹萌生、扩展、贯通的损伤演化机理。</p>
-</blockquote>
-<h3 id="none"></h3>
-<h3 id="learn">Learn</h3>
-<ul>
-<li>相关研究方向和术语：破裂过程中的能量耗散和裂纹特征；力学损伤模型；类材料（材料获取困难，故制作相似材料代替研究）；应变场（？）；DIC视应变分析；损伤演化方程；岩石表观或内部损伤演化、机理；单轴压缩条件；《工程岩体试验方法标准》</li>
-<li>声发射：</li>
-<li>DIC(Digital Image Correlation)</li>
+</li>
 </ul>
 ]]></content>
       <categories>
         <category>学科交叉</category>
       </categories>
       <tags>
-        <tag>Rock</tag>
-        <tag>Datasets</tag>
+        <tag>人工智能</tag>
+        <tag>声发射</tag>
       </tags>
   </entry>
   <entry>
@@ -360,7 +693,7 @@ Wechat：<a href="https://mp.weixin.qq.com/s/tINfape4U6RHgFov9d1oog">前沿速�
     <title>学科交叉——岩石裂缝形成演化</title>
     <url>/2025/10/16/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E8%A3%82%E7%BC%9D%E5%BD%A2%E6%88%90%E6%BC%94%E5%8C%96/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="0800db64bf6579ce2e3af30abb41b85f6561889fa8b96cbfc6dfb620bbf6f548">cfefb2acf26edfcfdff93258a3a03a06efffe0affc5e2d9ed8b72f1b6a5d5d74575ab2f6e5d28dab65c49d6d96cee94c814939543200e9d3d2b488b5ac326d3c20e763258f27cf37ba7f90b767eaa2ec69abb49020933e174e89bb2bfa42568fc4d8e67177d68d76cf53febe706e80fb6afdece9056dcbcacae1aa6013807746b471e364c3c9a55f8574667ba0d46a722ae31589a686b7793b77f5053545e214aa933bffbab741fc12fe1ef5dae87531e0e75595ebc5ce54111ffb50f520a0209e87e5810d7f9b6d9cff2ca925de801e0a973d7fcc89ef17166956ca0c559be2859ec532fb90a0c3b5104abeabd303667adec6a94b5efd133747996de2432f987158f8d04d227f5aafceeea80b9298adbbee502480e4f216720543d4f8083d7d4cf7fe0cd766229accf91f3f262a1b6d57d1ff549b43df97f0b8bbd46cf17041cc57f3e608db8ab8e211dea988420394ae045d3f52b13c9a2be33177d6c07e97a83a3c305f92a52d17b6634ba557e6ec90a2d885bc3744dfed05844177671f61370ed83fe8126cf4edb11db23f65cb554583e015cc0df48bc02463baf03123f578a9432a9f9a5b8e6eab3628bbbd9d65d657cd620a0b4dd775a4ee59d953298f120601a2c58b5ee356b5a672bcf5fbcdc1d0aa82623d9ccf4789365eb20abf4d815f2504db707fb48e90ca99f3159f79032d170ad3e2a38f4bbdf193f7e9ff8e7ece7a528cfc24b58039ce0eb1201377519ad9f57f2b9ada4e3bd17e2e841e6cd663e205da4561755c3b9428f3bc19531a8e91d8d27fa79b672e88ea2799d1c810f0b636d316b4c1a8e8bb59ba3d8584aadf23fa916ce995f39fdc112066a70a9b28d941eb462dcbaa7a89eca8862146919aaf74fe8a922763167feab3edea9651f5c640ffabd9e5c8449d099b51e052f460a8bc0384c2a7262b3247ca12fc1e128bbf8b4fb4d374d4d7537d6a42e3ff426fe1ca3f30b03f906722f5ab564bbaca0055979cbd0cf403d3bae08bffeabac20b1a61e8c2cedd4468e4d82460ff07bfb6f1336868fedbe13afe2db31f52f1f2207f63a94cff15f3652e604d2135cedf72bdaaefcf675daddc2d01957832f37d915759141d11d0d81ce1894d141fc1c16b86e9ae71bdcf4eb65f81e5d38e9ebc40eb05ca9c954fe258bfc070d81374412eea58230e02bab01ff50c5042955b2f57e2f1cb4eb99d1df2fbef35349b15393214357967f203d1018284bfb01b9725020ca9730297d0592f974d72c207ebe4a34ff897956788ee5e07b4f3eae92487a79b8ccf08c98ba7ee1497e04e8877b49199132f6830674883c929d3b429c4660543756d6105a0f0e9320c2a323cb18cc5bf47efbc76746c4d2dba6af4b2e3bf58ced0fcdca4fea0f9f067757a0673186ebdd1c6a7d67584d69a6f637685dbe8ec75ca92b83319392e785bf0565ce54f0eae9a1af367e6ef771edc3fadf2973728d6ff4d39614c937233646e92ef68ffd5a09ca166321ef39335428a6f5cde42f7f68ef497a46ed9c2e9d9015c89986edeaccd8a161e9ba0b98bf6eb561f656ccc7a99583858db3dce4822749e807f81075bfa07fd5f5d7413db61fdeef7b23582ed680c7bad19b691345d7275165053ccc1b23b0691f33dddfe7d208604e2328491b040868108cf1f465652d5f792e92e1aaead3d158a43ed7d357f0e14bb400ca5d451a305e5a5eb534ded8823bb5c4e2b9f7ca8435eb030ee7f5226817bb705214968d5eaf47c1e13dc89424fff152427d5d75f6ecfa97162335e81803b285e8fcf933c6482a50cead636219666b35d64db641cead3c812cb55025acbd687b3451f1fcdf55e56ac0e9b73dec54e0e54d45209b67f16b48012bad337506f8e0e8aa8259d6ec1dfacd8adc3eb8fe9a2569ebb984525b8a618ff6a5a94f6e7a63a48e5780d253c74c215baa705470c79008a1c26a00d28c9a0b5eb54335fd567960d08e8b3034e08cbac9681fb6e50ce8622e7b727545fd4f1bac1d0fb5b45dce2eb05373be74db1e678adeaf0a6317875b58d3ac4d8eb8d7799e6c504f04e41fb44a6c475fafa66e510f63474cf6a4c7ca86e7bd8bda1570b8897e31da2bd29641abb43764aab9a65afe882fe5278874cb44af1b9b205d5409f4ca5011e323f807e2bf67bac9f5ff37ce9394c5f5ef57461555f8fb6ac03db679c3192302dccf154ae968228e6da24cb8bb07f81f292ffaa5143085cccc57eed4b846c05a2ccce90a4d60c978441c2bb823e719b85d4a06148a241a27571795f75fbe714f35e7cf4f6f5bfb89a16bfc318c3c7d7d226f8c735e6b7dc024ad9846c2ab20e9b564d5c07b9171b64a18f182ece61acb89842f2839b278e037bd0b216654340655c6f38ad1b6c1462f368a4cf74be9188c0c796d0fbdef2620be57bb236f6edce56edbc8898dc0d4057b736d991183b2db7e588c7b763b50daa23b6ec83ab15f62d595d23dcd99b2bbd96936d1193a7939c6e85b3e607257a2b1f04ffba3aad78f5bbc25150cdd00a46e7934b11797448edac8012e47568881879480161f091b14a8f276897d5226c6a8eeabd9cf460180645d6747a37f2126e0f233a92ca0da001cab11686f9c7d2feab82b2c59675e0b3548455817f6988089fa471c2dd1b0b8195a69410e4db12f34ec0926a9465f64e47da8c2cd0b93fd1f1e658291970246f632401d8e494a19bd87a91abaf3fdc2237405021c3f9a4fc94709d9b3a01b1816bfce3358bd600a6684bd1ded17e93152ee4518c10417d6837cb411f9f6ab46024423f243a6fdda51b15c2d27683e691133955fe9e6f7b61da84c5fbd28fef70fb03bc34555471b095ffc4a71c609da7f8ad5d55e0c6badfb81e386076da1ed7c369159cde2aac7f72c0320e410e3b</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="44fd18c6c7e7c7e93606862d00b0a42afcdd386fe579e1d3c66d814ebf6a2dd7">cfefb2acf26edfcfdff93258a3a03a06efffe0affc5e2d9ed8b72f1b6a5d5d74575ab2f6e5d28dab65c49d6d96cee94c814939543200e9d3d2b488b5ac326d3c20e763258f27cf37ba7f90b767eaa2ec69abb49020933e174e89bb2bfa42568fc4d8e67177d68d76cf53febe706e80fb6afdece9056dcbcacae1aa6013807746b471e364c3c9a55f8574667ba0d46a722ae31589a686b7793b77f5053545e214aa933bffbab741fc12fe1ef5dae87531e0e75595ebc5ce54111ffb50f520a0209e87e5810d7f9b6d9cff2ca925de801e0a973d7fcc89ef17166956ca0c559be2859ec532fb90a0c3b5104abeabd303667adec6a94b5efd133747996de2432f987158f8d04d227f5aafceeea80b9298adbbee502480e4f216720543d4f8083d7d4cf7fe0cd766229accf91f3f262a1b6d57d1ff549b43df97f0b8bbd46cf17041cc57f3e608db8ab8e211dea988420394ae045d3f52b13c9a2be33177d6c07e97a83a3c305f92a52d17b6634ba557e6ec90a2d885bc3744dfed05844177671f61370ed83fe8126cf4edb11db23f65cb554583e015cc0df48bc02463baf03123f578a9432a9f9a5b8e6eab3628bbbd9d65d657cd620a0b4dd775a4ee59d953298f120601a2c58b5ee356b5a672bcf5fbcdc1d0aa82623d9ccf4789365eb20abf4d815f2504db707fb48e90ca99f3159f79032d170ad3e2a38f4bbdf193f7e9ff8e7ece7a528cfc24b58039ce0eb1201377519ad9f57f2b9ada4e3bd17e2e841e6cd663e205da4561755c3b9428f3bc19531a8e91d8d27fa79b672e88ea2799d1c810f0b636d316b4c1a8e8bb59ba3d8584aadf23fa916ce995f39fdc112066a70a9b28d941eb462dcbaa7a89eca8862146919aaf74fe8a922763167feab3edea9651f5c640ffabd9e5c8449d099b51e052f460a8bc0384c2a7262b3247ca12fc1e128bbf8b4fb4d374d4d7537d6a42e3ff426fe1ca3f30b03f906722f5ab564bbaca0055979cbd0cf403d3bae08bffeabac20b1a61e8c2cedd4468e4d82460ff07bfb6f1336868fedbe13afe2db31f52f1f2207f63a94cff15f3652e604d2135cedf72bdaaefcf675daddc2d01957832f37d915759141d11d0d81ce1894d141fc1c16b86e9ae71bdcf4eb65f81e5d38e9ebc40eb05ca9c954fe258bfc070d81374412eea58230e02bab01ff50c5042955b2f57e2f1cb4eb99d1df2fbef35349b15393214357967f203d1018284bfb01b9725020ca9730297d0592f974d72c207ebe4a34ff897956788ee5e07b4f3eae92487a79b8ccf08c98ba7ee1497e04e8877b49199132f6830674883c929d3b429c4660543756d6105a0f0e9320c2a323cb18cc5bf47efbc76746c4d2dba6af4b2e3bf58ced0fcdca4fea0f9f067757a0673186ebdd1c6a7d67584d69a6f637685dbe8ec75ca92b83319392e785bf0565ce54f0eae9a1af367e6ef771edc3fadf2973728d6ff4d39614c937233646e92ef68ffd5a09ca166321ef39335428a6f5cde42f7f68ef497a46ed9c2e9d9015c89986edeaccd8a161e9ba0b98bf6eb561f656ccc7a99583858db3dce4822749e807f81075bfa07fd5f5d7413db61fdeef7b23582ed680c7bad19b691345d7275165053ccc1b23b0691f33dddfe7d208604e2328491b040868108cf1f465652d5f792e92e1aaead3d158a43ed7d357f0e14bb400ca5d451a305e5a5eb534ded8823bb5c4e2b9f7ca8435eb030ee7f5226817bb705214968d5eaf47c1e13dc89424fff152427d5d75f6ecfa97162335e81803b285e8fcf933c6482a50cead636219666b35d64db641cead3c812cb55025acbd687b3451f1fcdf55e56ac0e9b73dec54e0e54d45209b67f16b48012bad337506f8e0e8aa8259d6ec1dfacd8adc3eb8fe9a2569ebb984525b8a618ff6a5a94f6e7a63a48e5780d253c74c215baa705470c79008a1c26a00d28c9a0b5eb54335fd567960d08e8b3034e08cbac9681fb6e50ce8622e7b727545fd4f1bac1d0fb5b45dce2eb05373be74db1e678adeaf0a6317875b58d3ac4d8eb8d7799e6c504f04e41fb44a6c475fafa66e510f63474cf6a4c7ca86e7bd8bda1570b8897e31da2bd29641abb43764aab9a65afe882fe5278874cb44af1b9b205d5409f4ca5011e323f807e2bf67bac9f5ff37ce9394c5f5ef57461555f8fb6ac03db679c3192302dccf154ae968228e6da24cb8bb07f81f292ffaa5143085cccc57eed4b846c05a2ccce90a4d60c978441c2bb823e719b85d4a06148a241a27571795f75fbe714f35e7cf4f6f5bfb89a16bfc318c3c7d7d226f8c735e6b7dc024ad9846c2ab20e9b564d5c07b9171b64a18f182ece61acb89842f2839b278e037bd0b216654340655c6f38ad1b6c1462f368a4cf74be9188c0c796d0fbdef2620be57bb236f6edce56edbc8898dc0d4057b736d991183b2db7e588c7b763b50daa23b6ec83ab15f62d595d23dcd99b2bbd96936d1193a7939c6e85b3e607257a2b1f04ffba3aad78f5bbc25150cdd00a46e7934b11797448edac8012e47568881879480161f091b14a8f276897d5226c6a8eeabd9cf460180645d6747a37f2126e0f233a92ca0da001cab11686f9c7d2feab82b2c59675e0b3548455817f6988089fa471c2dd1b0b8195a69410e4db12f34ec0926a9465f64e47da8c2cd0b93fd1f1e658291970246f632401d8e494a19bd87a91abaf3fdc2237405021c3f9a4fc94709d9b3a01b1816bfce3358bd600a6684bd1ded17e93152ee4518c10417d6837cb411f9f6ab46024423f243a6fdda51b15c2d27683e691133955fe9e6f7b61da84c5fbd28fef70fb03bc34555471b095ffc4a71c609da7f8ad5d55e0c6badfb81e386076da1ef48f3b986c86088eaf6f611142b53f140bcee1abcf45f46b7fd90f0670b4dfd9ecf8fb8f26764a750832f5721c9f6e999726a44b347a18132434f65afdac9e5a30e4315cba43c14d7a28b16807d6fa1bfafdad5b34f62ff9671a6bab676748cc20682a33364d3e663bdb511fe25f41c500ad0691ae9700f5e9a896ff1955c46289c04c4dea76a37719d0b31b049f8fa4544f138c1e4a924c63e75978b1db906633bfbd688680db9d467fe6c8bc29246763334b9c95c06b4a4d52b6cc63fb7fd0326ee832c7d411acfbe0cb771bd9d8f05dbf5cb1a2f4c9dee65886980df6293d73680cc05b5f7deb017bbccad356c6de62f0abfa9e84922c5a7cd8e7ac31a9dd64490fe8048a0ef0dfafcf53b7b68cccc7d596f114db457e6295638ae95f28f45960908335a5c700f5cbe130c1b8f5a70b2936355e9045848fa9f999f22ad192ef2dedbbdfaa7c4d81bc3350ea2ebbef271740c3631f4624bb597f4d84fd48d48652d26ac3c00e2b20ab7a06c164c42cfe389d75b2df6524a4995db92a3d089ae2263ad0140bc32522c4f9b5e29104ab70d3acc2f3b3a7c4ced472dec5ca2d6bd7d2f99c6e34cc725ae0c44e45f9489118294edc371d08f6ad9773dbce03a64d585481953867e504b585bf4f05a87ca0a3eb3b45170b0b95e30c7055b3f428661624415536cc34206b22535a35e01401249e5eb3ff2641a3b234a200f7883260396c2faabd707e83b524387acf9a6909c10c6e56726b48742d97e6712935c32a019fca633e3ae72ad40d74b5a071b0589669c2a849df93208b0b3e0b6d47254492ecd1994b8bc3c6135c11cdaa35b360141cd5f2b7d14ebf32a67fb73a115d6ed6dbe0f060006655b28532f325deb2a0ab673056de1aa27cbed77e350833224474b57a732037f60070cbc8ecede48f5616ef444d1ca30ad5bf7ad090a7ddecf663e8caae47ead1c1f53378df1a4ac1e40f8eed2ccb229665c67b7046d4ff4854af9ec617968b73770058ebfd6e8df2e08631d6834df13a71c90ed304c339a338d5a252451f2d992fb0a0a02b1a981671e954929f796477cfa37e7f49b86acf673bd701f86859adafb0aeffc9041c2c2da43495feee3d54a8365e39e8c351d5e6dc6350fa7825507f3eb93f1e74cac447683f0a7cc82223f445e60cc3e5e5cf84ed4c79c83fa6c5913fe34ef6004fdbd2a4e4daf491c573d47c4793562149d51786ba133efb8d26792f81f9609a66fd05c86b4cd4e5f57a5698c3f3268af37539a0ea42ebe430f938e860a3ff139e6e29c3a3d6cac65408c7364fb8d98f0fdeb45bc8a276802db7d45eb9391393adc312c865608ee75486809e4d96ded07b8c317c479050b06457a2835e34004129b6552293269873384fc08f48a7e9d298ca95ff5daec8e8bae6ce2d573fcfb83eea4536e7cec6431f00e129704a24e65ede9f4f14f4aecc85d83a16d2ff35d785ddc68d23a7dea088212dff8f1b9348d87549812ec9b732fe96a80bc22f59ebe36c39070be40da37cf52151693a628c1964547d91bf7fef61739cac64b4d22e27615203ef45370ede4bed5c31b8c71787acca2ea90c3c85c5df9f16c9be4e63976d1412337046b087ca9d6719efc3ce265857344b4551cac4643f623b263032252b6f6c10af66dd43f35edc07487dadbad2c0262b399642aaf03d15a42278cacbcd4320262f21203aba48ffd8156c4fe65b2029c809aa50513973e3ab025888d2f484d758b8614e5209d2d1d4d691f477daf75039cbcc296fd6b267da7cc07deb1e04006ee3fbb6d570aed800764b3965c61e9d705b27cab8081e574cd240c67d0eaac71da1202921647b713fee3987ce91c00b26267db74bbddc04235f5f7e4534abff8547a60c2e5b51c19803bb61f6ed33bf0aef980dfb9933b39695e40e3a33075ba3e1b5f5c624971d17789aea8f08bb260ee102471519bd89824c7b185782f9df353da854aa16fe084336bc37035103cd060b4e65399f3f177492fa7ee904bef4f8e35fe168c6e78f1e204c2d3ab99f703dcf21ac39f942cacc64d76b3cf29722c0658171fbbee9caf418b0ea827145599e74925f578d565a5ac346196e4d2a1def21a641309728c15869b600208963d61f9d28bca79c7be99c95e9e1d4dce65af50f303fcfc630d9a34a1b34ffc289b861f44c53ef9091bf66f83bd481a1a5f4e3515c57493f903ab57c034157053f48e6ee128dd9eb5dce580187c28a9af0070c6ae2adc31c76c8f5e9e8e0e8c39e38d7cd94de3dfe13e62099870ee1c2ef73940674af34152deeaaa764adb45a87fcf3b4223a8a0be6e93745bb6db43bdf9c190824517a4a57cdfcaa3e77244be3867c84835e654b0b670d162fb4be9569dfc4fe6708378ff6ba3166d4674be22698c04b771414f863aa79498b057a13b57bf4e60b5ad217cd68fc8f65f872c5973e5794152a86570a345f61d95c890968c677aa9c94522256ef0d1e367451ed954a3f1ec69e4af0fb7d6ab6ad0836925de44ff4b03ce63a6ef33bb8447aa7bd22535edc5e4ee53013021d080c31b3af9c2cf793bdb944e853ffc4d49424e83b77e1ba0c75cead956d9ee4928fbd8c2f53285a7ab7c42220f0fd09697fd93480d4c3ead100853dd5c3b75f2cb6ae14e3641586d7a8f801348e35561f72a56026cab83568f4a49adb7d52dc0f4aef1f05822f1756c412466d9a71a1b651b19ae161dc89dec062d517838893bdcaee75dc1e8341ec09e0cc6ebba7e0d5c9bccf7807b06edf677a1f2dfb212ae758b2f3d9aaf0fee07b7685d0092aeff74bd53eb83d2a74534ecb58b51eb4f60a36cee888d34434d9538d36e5141995b8b48a4da5e7acc806befb33a148a987d8efab117cc14a1ad95382e4c22e02e941276839b2df6341b8844561f5d7eb44551c8e0113ee2680136c3cc43787b69ddb6a0dd73b199b92e1b65faa83ad06c02cb03cdeb1ebcb47db9b07598b3883ab0fc593914f7a4894497f30287e40332549f0259060bc9d11f249d489a1c28875394e18b34d71e45e721ffdb50e384fe0c92c5d2c7eec3868e50df22fcec48476c113cae0902bddc2bd6d857217c45f164f63f19d5d1228b575777e1d4678b74c1c69d503439a2aa09af8e3f46167ef51dbba99fc53d0bc1b0fda2d90665d75d18dbd9c13b05bc71c7ab0931baf2fa684228d9d73386390b5024138e6a9db224982b0721ba0eb31abb035da918129e59c31430cf8356a3fb0c9ae8802e4cb18adcf6e52b77f9a36e614a71b680975a6b8d886282a42e5ff2e4d7e0c48455c8622cd65024d7b8c94e552fbe1a378c59d5b0373b058ba11b0be038468402597a88e97c9829bb78b2ec4042722fde85755a2eb7fff4202b3622605def61908f2ef2665e5496ac1772d378aea245e9ef5db923197b1015a6566e701603b86483aa4f75c25119e4b9f4b5bcf3abe641ef5510be508208682982ca8f630c7f9623a7ced7638c148dae0389fcd18d59b9242715b400ab704c29ef9b2111f64ddabc755ed66f71214ee9f6e8598cf21cdd29a17c36eb674f71c2e6676c0a4f008086e54762d218659c3019992a08a36caf24ec13ecaeb93a90935a9a8ff8c0bfff27fb0afb297f578a7db07c0d374e28a5f149666c1ae08ed41ab7b82050cd56c1382c8f527efc1b87c14011d736ef2e65c038b48591985d782327421a5d544fc5bf52880369332072d9ab2d87e6d47fbe7e7775d92bc66fbc60d1097f6198d83450e34455d20aa1f6b5f1f8c97f09c5a30c6e1c723c5c9c084569aa4b2aabd832e9823873ac2b80eba4d1152c4fb61fcd70953967e026b7bd19fcc911fba4b43a1954c2897b264f91f04e47517cf71b6235992b7aec99d46cfba06d77d678b2a1977ca8261eee6929b76a0ad8c9822e9b7df6acc202f14fadea846fabc4ee080d11ea892cf0662b5303fe482fd826425bdfd43fdb280b039b4ba994f404a7c2c0b3402452600a70202572e2dec1bc03984ddab4027ceab6b1ef2243c168db269dd4270d205fafcb94fdc713c0e5762f19ad5121ac5a5644f46f5a2bee9cdb91bda62c3be3e5a0d3b9acf775d3369e8ea0625319c787968d80af17dac6f17456b91860001e00996cf7c33c430f4c9105941e3654d26733c95b2dc1d93cb0042ba4abbf25e758be9c54b7b2332153726e9f1f1fd7908cc758f0855f5be270236f38f04e53a3ee76ace65ccc9604f97d63f84550061f3ba121a55c13dec8234af7be2a03ee8fb3859def869684c11826e13e37d7afb311c620ae7816797de64b0796baaefd37a9260be7d21252f5a56ec75398813424fc453d3b5b57c7cdd5efe83bfb11dbe95f3dea16936bd5349f2e1cc3a60c58a01f7a6b3562eec1a962d719dd97c8b50dccfcb13525df4e97fe67a5190ba751af91879d68ebc09a99f1f91f18459f423c14e68d10ba0f7764d77a4b72e95c54ad8c04d2c464cecda6c5cd9b1e6de12ad395f7a20995fc831b65c14c3c979f905581817a26262240b84179316c32c39e503bbff0e76ccd9e787a4d9f9f9687f11a09674fbd48b59b71f0912d5f595f35bbe31404e00624ee604fa291216d186d7cb6da1216577557a55971f6a0e537a3d1765ff1fe6f12169f332f9fa04f602f7114f73ea62b53e651b833a0cf4b64d508ebf3316e1bb12195289a269670b9ae5d9d4fa9facad2a84de21bca1b7a20ca0a6f542e86a7a67bbc1f1080b7b5ff9757aac4c6921e4e842564800f4f04d7d6a775755130fe154d5b08c911730813d68ebcb48988a9c077fa0d3d9c376ab84fd34979d68aee8e68dfb753f9c47078fd2adc774959ba2</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -380,29 +713,105 @@ Wechat：<a href="https://mp.weixin.qq.com/s/tINfape4U6RHgFov9d1oog">前沿速�
       </tags>
   </entry>
   <entry>
-    <title>研究团队与参考期刊</title>
-    <url>/2025/10/28/%E7%A0%94%E7%A9%B6%E5%9B%A2%E9%98%9F%E4%B8%8E%E5%8F%82%E8%80%83%E6%9C%9F%E5%88%8A/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="7e4bb85ce1cf91774e1c7d631aa946bd31d3c16ee26afb3416bf31a2fa273774">cfefb2acf26edfcfdff93258a3a03a06efffe0affc5e2d9ed8b72f1b6a5d5d74575ab2f6e5d28dab65c49d6d96cee94c814939543200e9d3d2b488b5ac326d3c20e763258f27cf37ba7f90b767eaa2ec69abb49020933e174e89bb2bfa42568fc4d8e67177d68d76cf53febe706e80fb6afdece9056dcbcacae1aa6013807746b471e364c3c9a55f8574667ba0d46a722ae31589a686b7793b77f5053545e214aa933bffbab741fc12fe1ef5dae87531e0e75595ebc5ce54111ffb50f520a0209e87e5810d7f9b6d9cff2ca925de801e95b6a6fd9a7a9fabc422d1ddea60edf1b60babd7686b24fb34156303dee105edf439d056e8010901abddeed4e4ddf106981439ccc2c5bebf4fee53fe68ec2e960c16bbc25610f0782fd0b4f5c9350eb011a8c12fcdcc7a62d8f4beb00746ecf0a08ac5144d6acea2d3c994ea63cb49fc0379a6b22269aaf4268b449a890b5cb2209a13e3eaf8a2e893ac59dea55ab6601eb77507861e4be8a1068102503defe626ea33f6218117e3785dc7adce796a6e8acf072f9afa800b3769311fb5a65482107370e6f5142dd1c14a8768e4977dc0686460ef78bf01c0a32e9e1a9dee075c9fd6b0be7cca5cf48f9b02e1e9a19ec639774da0a62df4440e13b01e05c979db9ba33eaa14cfecce440550192d9f0da6b61add98c441bf61483407d76e380e36d7e334f421914e6542cee233dee4c61162ceba56f8821a247412a7b8eaf0562350f75c508e73f596eba2f3de30400d37bf0d25bf8728c72867194c7869da7e15988f497156c79fb8be7445798d122539ee830cc4c9508715376f1581934fce9fffa85f27a9d3699ab71031fedfe3b6501dc52e65d7b4d3528bdf8b300de9b3de9ebb03e840e84860b421a8ebb16930c47986ed690771e26f1b2812472b787782e8083b9f9f2114c37a8628b3ad0e31d60b84c737d34d972a4aa05af5137a22b2a1f6863b554081b4a7b544455cfd5aadd8818591d73ae12e1fd31c2315c01ba649a28e6c3575df3ea1ede2c3c36f108f899376af34caff965c0d1a8ebc7eca9317dc7e74aee718b8297115c2e30cdf2bad654eae24cb86acea490212746f43829269afbb3c9636aa53c60b99f1507615838ce428aec319d09a0d623258a9e165531ece28880da914b7737dfea6aa0e06253b18145147cb9493333185bfaba03daf2f0e136670f67cb02b052ee5940a28b1707ee3be5e766ebd21bd3d9c9da11bd2188eb4a2cce655399190f4794b8281ff8647516c5b83c0356adac4ffb290a62484c1f31a113f37456c3b12128beb15e9482dbf65e99c0da64fb4d00584cb22ef550138dd8e623bfc9626940cca31ed993a753815635b4cdc08aff4cd80315b6ac72e0b1ef7576ff81ff277f9592c96c808342ca754f30dec3da0e59663f8dabc5acc49b7217f7108c875ed4ba2a173813c348eda9a98046b2a943d9cbf1d4a9009497b2d43880e211bc45cf6d5f7a3d48d21cc6e5e41864d4ab053cfa48edf8cda40890656aa095bcbe297b9e875c74ba00b215421ed4888acb459cb6eab53ea90573c966344a9044302beaec64a04764ca320e840ec8d298f6d823c67fbe529c756a41625ab5eecbd938ac288bde26d32801cf45fab435ea76717f34b1acd7ab4e3e8406819fca74c6501dfaa079262f74960a8028faca4dc6f98abee0f92949d2a73c2d77f70be4b43e8a1a82a03c717ce56e4bafc217d9b04f5aabb9af58b9ff552fc1b93db294a991b40f232c48c955272e6d906c1d4c141fb44ccaa0214090830278eb3c20f6274aad45855c43d6b120498a2b47685e4a468761cd1b93e4f71c034193baf84772b0210f1cb70ccdfcf17d291f4fdb74adb0787e40c53c8bad38e226e31b52735822a547857ff8ee6519b870f3e8454cb2818ad0cdec3cb54fb2d414e7bf03eeb122597e6775fd5c7f37a7dd35dea65bd198870d5729ff2c536225cb842eb69fd11d52182bdb0f344357cf4128bff8184d1b9441fedb84a2b2b380f13be7e0df4615c960718bf353cbd555500ede0847bacbd9f822b1f65458052e35d5ef9a7265d1af42121cf09d245aacddb2f1ed9d26c5e18de31b4631aae8e0747a7d94113763613252384665f81ee58e4628d78ac9fc92eca5c04df6ffb61dabb4c202cda5febd92dcbde331aa213088a730ffbf9e334e1623541dc9a55cdf90e0e82ae221a677c189d16e5993306668d001df24fc61e8ec3680025ea57f829b87d5deb1cd24de0fe27299fc5e247b7e385f1e6036c723bff4084e0fb6a84791378200eb3a95faf64730d73c59636c0ce6ec323e964a9bcd5734983581a738d1f2055cb95712e32f7624b1248c442c6a25ffd725037c8fa153b8abbf3b3545d2fc854dca73ae4c355d8594dfd5437e82e20e6e03e8d942b7670165e11f465c960db1ca10282f03658727dcbc66239bfdd8992a5f35ec9a6357b1e01c51cc3f88d9b76b9b0979eece1a4ed1d21669fdb121b2ad451a27cc13a58b026d22385607229dfeeab9c39eebca9d68294dd7b5d686acecc3924fc2fcf0d077ff953ab2e0b4b10644da7d45ab54a9cc426404089d551d244be3cec27160d667a902e4529f44d089bf86b1fc8dd2b650e838ede16014ffa836d5c7f51ea44245e45bed02ab4e1b251ee160043d2a6f3ffcae9b64145bbd421dbe195be908d2686692bbc817c75fd2916f1963d4dd0d4f93318e2958dfde0249e948a4ca3e8a9bc7bdaec8798d47ad791fb21aef42246376b4f69474b2db8a9de1bb3f36a1f2992ed3d546b28754dc77ca67b132bcc67f8d242a9b9f36cbbd6b576fe3b48dbc3274d3e5fbf8c9042a6accf341b2510267f5e2f6468d62e2d38de40c7b75cfcdfb1e999701629a7a6313954fafdc2ff2beb07ad2a72896a1fe59c15c92fde180e450ba9c3b65c6b70eeabb9199a90d09683efd8f666cc5e41b2e2f3d2452fbc57af3dd6de6a4707fe90f90aa66df79904e6b27470f03fa1deac3c4bbc64bbab3a59784473ced03e456fb782ef45b3fa3c178a217c7480a935b97611a1fcb527ad5e7206b7dfa623f9dce488b12837b43bc2a2121945a8bc8d4932a0b2ab2a90e5fc196195033017d419c0f335d4a068e15612639071555b569d0db3b4308e4067e0248da4505eb46b41c38ad78e4a3e5486897d449f41a9780e9fd6b10b27459184bc18cacce13c2aaa67ab2397145c9f0e1a3ef339fd141af7832fdbcdde6b57d149168b8fa8944d8bdd7d703edcfbff8977779a84308fa001810c177755cce143c52558c907588302b6764a37627c21da6e476155afbccc8d4debe816c8807e9ddb23a8006783033495dae6c05ff27bdf83d7da8b1dfa1806cfd33667868df1bd3baf04a612e9aa3855fe3606d4a32c0e72d7c9cc4ee010fac79be5319280d5bf3f304f976c2971e82f206554eb8977a91ef7207a99ed2968a8ee67a20f2bc5d7476709d1134bc1f01c53a5c0068633c5bb1508064dabc4426ed63f0025c83476481925b98313a5676732bcae0c896d564d77fe872ed8dcfaebc04ebf6005bd637a66b56ed468cc95406af6491fb2c811e7cae6632c10945fa188f789a6b8c235bff58f403fa99a10ccb23d97746f8e6a2ccd223f631ede800762545971366f8557c2d4e42901a06dfb86b762cc83840f55ad74596a79939c7c0b9050fac0e2b71d96206bec7d9916bae2314773d6dae980f3123f83cec4e24f38f7700f4aaaffb069a65346a1300465a1091fb24174a876df2493f79c0ea044770c692e2ae35681a8c86fcf97f7e24d9d9a8e2a13072ff4ea884e74503fc61afbbda2f703a67e4006ef45b10d71721beb555597610e773ceb8116e080ce60605bd8750c3058d4061d894dda51f361c21cfb81535806368df3746b369bca02e8c0528789b9a7703183c0066e4b47d52081f5a3a9ab414785a82eb1fafad058e591ffb5cc8d0d9edb5720c816e9a5f30c4ca64586ba2829883f40067f6f11d38d4d6a7517bfd94bc71760e105c8026b7342a8e74f6109d3d8359c5487f5aa22c90ba97c077e99c23a3b2fc42cad1d6e6e692ea67e821372d992d0fdf18f3abfe9ce2bbb5401e49d33e2730c5b67a18be08060bdc6468982ba1025439e034980d375a9eeb8c858f9c43f23ec05587e5f2ebf44ba7950261565f35665004b10a305af15b577a7c45ee34ca2d5399415c1c80bfd6c7f99be57062547c8abaf34ddaee48d664ca90f8c1a38d7b85428a72297d4cc4cf7cf19a731d33cd6a17611baa6415f7de4ee3f0124893893b5a921191e5fd794c558e964380bae1e6304397c93d6a3a88ceca4300f850c08559d768724b0d4022c8d793c576ac376f7ad38f8e49ba530478cbe5ceba66a5faa7574b75417fa3d9f718093aa1c5b1c8c91caf45fbbcecd6a42e0b187e3ec812afec21673b09b5a1885c64b68bde200b3526f99581bd01a9172a1ac51af5b2413e3c6651c70f7351dcdcfe6158c8e65c00561d9381a6e2ffbe4de2e1c37c98c92fcf07ab45cfdbadcad61dbaeb89d16a7f8f9e47ea9ef9a4475f13f2aebce00f0f46cfe602dd50cca5112029116fede3bd9326311be6b2e79b65730cd56010c46cb9956895763b6542db79c5819e650f66598476a5dd2c9fcc535a6cc66356a3c70b2cb52a9458e15c6ebcc58ce33ee5730ad3362bfa38fbfe5e27576d37194dc06b153c3420e26634357d2a6bbd8b15dfc2be1316be857ea7227ef681c8d0d0010017f72280d0593a8a13a661f03499026133f3bc9375c1f6c73d42fc1f9198203d6e45913ca69d285ffd8ea58341c4064501efe38e3e0a3eaa36b79c465a02fd29494081a17a04b52fa078f44302c60d9a4e60cb39009cf799609b004b54b6ccf9e2e39d3795b15d6a48b23d69c89efde3368cc607116ce621c784c96183b5952fe1329ae850da973ed7390d1d2bf1aeb0e5681e04bc89ed373b550e9b80d44869522d42b2d7d3eb8dbeaa278c5f2720a09e03bcb362af287f29d7f856202efd0f3925f0caba0015c0342d0f709ddaef0c0ff0a7dfc4577ca332359b49605fae24e9044ad9349a4671558197fbf241fd6b7dbb3c8327dd1a3542c29ccf573d9fe183eed7358e09462266a8152f53d30b122b04227785f70e3e3d2dbe3ff1885aceab30655ee88a33543166be0256d8059aee0bc877cc19199b84c4464a9c9e8bdb7576e9b3ce540b63c1d4a445de1632a79680a6946266c4f902c70495b5f50b34b4dbf3574151d05a866803ab65367b91edf8218d1b24652e91d3bd78b303ebd1e5f4429ed4847d4927fb220fb3b84b4a05f22546c54671d2f27b26978e24b7f7a24c3a17f1a1e8e291fa3631fa8a398f5eadf0a09c08d706f915daa71984027cfb102b6336b68a08daea5fa70a6830831a9791c2ddc3d1f5fb5f694d535a1b1ca79aa2da50fdc032edefd7d4436caadbb87658c42013d447e43dd682a7eda5b7e299a94ae06a46a35e73dfda368565d83efe4da710344a4906c410070d2e55cbf29dc1e63315da9861a01c97fb6b510cd0f7733e147c61b4e7329dca880923261653d92761637dff1920eb459206e21c230239cc2316300b3ea666fb4e640c1b3c72c5e2e020f1167ec2679d1ec45bd0fc3aaea76abf72d8e79b0ddfdafd90626601d52e566a6de97a34438e9aac8c8be9fca5df1e4c43373be411bef14ec006ce438b8a0315c5d1646898ca69c8a9f042519d7a800a8b6107a44341832add2a1e4f11b3862df722e</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    <title>学科交叉——岩土工程各方向参考</title>
+    <url>/2025/10/15/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E5%9C%9F%E5%B7%A5%E7%A8%8B%E5%90%84%E6%96%B9%E5%90%91%E5%8F%82%E8%80%83/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>利用基于虚拟相机的数据增强推进时空岩石裂缝预测</h1>
+<blockquote>
+<p>意义：预测未开挖区域的岩石裂缝是岩土工程项目中一个关键而又具有挑战性的方面。这项任务涉及使用已开挖岩石面的序列预测未开挖岩石面的裂缝映射序列，这非常适合时空深度学习技术。</p>
+</blockquote>
+<p>Paper: <a href="https://www.sciencedirect.com/science/article/pii/S0886779825000380">Xie J, Chen B, Huang J, et al. Advancing spatial-temporal rock fracture prediction with virtual camera-based data augmentation[J]. Tunnelling and Underground Space Technology, 2025, 158: 106400.</a><br>
+Code: <a href="https://github.com/GEO-ATLAS/Rock-Camera">https://github.com/GEO-ATLAS/Rock-Camera</a><br>
+数据集是用生成的，这里的生成应该是根据物理参数随机生成（较为复杂）<br>
+基准：<a href="https://github.com/GEO-ATLAS/Rock-Camera">RockCaptures数据集</a></p>
+<p>原文译文如下：</p>
+<blockquote>
+<p>考虑到对岩石断裂数据库增强的广泛需求，本研究提供了一个开源的，基于Python的软件包“Rock-Camera”，可在GitHub上获得。它包括两个部分：第一种是能够基于任何现场裂缝分布创建DFN的改进的3D DFN生成器。第二种是基于VCT从DFN创建捕获的光生成器，这两个模块的组合形成了一个强大的工具，可以自由地生成任何所需的岩石表面照片数据集。</p>
+</blockquote>
+<p>数据集基准已整合成npy数据格式，原文预览如下:</p>
+<center> 
+<img src="https://share.note.youdao.com/yws/api/personal/file/WEBdcde30a6201d8950a022895028c0d6f2?method=download&shareKey=460dd7cd577f09063c024513275de6da" alt= '裂缝预测 ' width="800" />
+<p>未开挖区域裂缝预测，开挖区域裂缝数据预览</p>
+</center>
+<p><strong>结论：预测方向可以考虑，但该数据集属性复杂，行外人无法理解（例如为何裂缝线条像划痕，像直线裂缝，图中Rock mass区域岩块层次分明，这是什么岩石？），暂不考虑</strong></p>
+<h1>岩石三维表面裂纹扩展机理数值模拟研究</h1>
+<p>Paper: <a href="https://www.cgejournal.com/cn/article/pdf/preview/14211.pdf">梁正召, 李连崇, 唐世斌, 等. 岩石三维表面裂纹扩展机理数值模拟研究[J]. 岩土工程学报, 2011, 33(10): 1615-1622.</a></p>
+<h4 id="learn">Learn</h4>
+<ul>
+<li>
+<p>1.岩石裂纹也分多类，如：Ⅰ、Ⅱ、III 型裂纹（扩展模式？）；次生裂纹；壳体裂纹；翼型裂纹。二维裂纹、三维裂纹。</p>
+<ul>
+<li>Think: 裂纹分类在这篇论文没有说明，不同学者对裂纹的定义似乎也有歧义。</li>
+<li>Q: 那么是否可以做裂纹分类，做分类的意义是？</li>
+</ul>
+</li>
+<li>
+<p>2.在岩体力学中，裂隙岩体内部裂隙的<strong>产状、走向以及分布</strong>通常决定着岩体变形与强度</p>
+<ul>
+<li>因此计算机做裂隙的形成演化预测具备一定的意义</li>
+</ul>
+</li>
+<li>
+<p>3.裂纹形成的二维研究（more）、三维研究，常用<strong>数值计算方法</strong>模拟非均匀性岩石中的三维裂纹扩展过程。</p>
+<ul>
+<li>这说明地质学中有自己的裂纹演化模拟。如何区别出通过AI训练<em>推演</em>、<em>预测</em>裂纹形成过程？</li>
+</ul>
+</li>
+<li>
+<p>4.由于岩石的不透明性给内置三维裂纹的扩展研究带来了极大困难。为了便于观测，许多学者采用玻璃、树脂等透明均匀特性的相似材料来<strong>模拟三维裂纹的扩展机理</strong>。然而，由于岩石内部非均匀性的存在，三维裂纹的扩展机理与模式与均匀材料相差甚远。为了观测内部裂纹扩展问题，很多学者不得不尝试<strong>CT技术、声发射技术或者红外热像技术</strong>来观测分析内部微裂隙的扩展过程。</p>
+<ul>
+<li><strong>观测分析内部微裂隙的扩展过程</strong>，学者们想要的是观测试验样本的裂隙扩展过程，从而分析扩展机理。</li>
+<li>但<strong>观测困难！！！！</strong></li>
+<li><strong>因此</strong>AI算法预测，可以基于一定的样本训练后，只用（输入裂隙扩展前和扩展后的图像样本对），模拟出扩展过程，提高<strong>观测效率！！！</strong></li>
+</ul>
+</li>
+</ul>
+<p><strong>结论：</strong></p>
+<ul>
+<li>1.收集不同岩石裂纹数据集，可发展<strong>裂纹分类</strong>方向，但做分类的意义还需进一步思考。</li>
+<li>2.利用AI算法预测裂纹扩展，可解决裂纹扩展过程观测困难的问题。</li>
+</ul>
+<h1>基于声发射和DIC特征的层状复合岩石力学损伤试验与模型研究</h1>
+<p>Paper: <a href="https://onlinelibrary.wiley.com/doi/full/10.1155/2022/6568588">Qi X, Yang Z, Wang S, et al. Mechanical damage test and model study of layered composite rock based on acoustic emission and DIC characteristics[J]. Shock and Vibration, 2022, 2022(1): 6568588.</a></p>
+<blockquote>
+<p>Abstract:<br>
+为了研究层状复合岩石的力学损伤特征，以深层致密储层砂岩、泥岩为研究对象，通过相似材料模型试验制备了层状复合类岩石，进行了单轴压缩试验，并辅以声发射（声发射）系统和DIC（数字图像相关）系统，获得了层状复合岩石的强度、弹性模量等物理力学参数。声发射振铃计数与岩石损伤的对应规律将层状复合岩石在单轴载荷作用下的损伤过程分为<strong>初始损伤、稳定损伤发展和损伤加速</strong>3个阶段。<br>
+通过对<strong>DIC系统应变云图</strong>的分析，揭示了层状复合岩石在单轴条件下的变形特征主要为拉剪滑移损伤，基于声发射的内部损伤演化特征和DIC的表面损伤演化特征，建立了基于双损伤因子表征的层状复合岩石损伤本构模型，合理地揭示了层状复合岩石在单轴压缩条件下内部结构发展和外部裂纹萌生、扩展、贯通的损伤演化机理。</p>
+</blockquote>
+<h3 id="none"></h3>
+<h3 id="learn">Learn</h3>
+<ul>
+<li>相关研究方向和术语：破裂过程中的能量耗散和裂纹特征；力学损伤模型；类材料（材料获取困难，故制作相似材料代替研究）；应变场（？）；DIC视应变分析；损伤演化方程；岩石表观或内部损伤演化、机理；单轴压缩条件；《工程岩体试验方法标准》</li>
+<li>声发射：</li>
+<li>DIC(Digital Image Correlation)</li>
+</ul>
+]]></content>
       <categories>
-        <category>Learning</category>
+        <category>学科交叉</category>
       </categories>
       <tags>
         <tag>Rock</tag>
-        <tag>CV</tag>
-        <tag>Team</tag>
-        <tag>Conference</tag>
-        <tag>Journal</tag>
+        <tag>Datasets</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学科交叉——岩石相关数据下载</title>
+    <url>/2025/10/15/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>数据集网站</h1>
+<p><a href="https://digitalporousmedia.org/published-datasets/">TACC网站</a>拥有大量的相关数据集，小于2GB可随意下载，大于2GB暂时无法下载，需要有注册账号权限，目前还未研究彻底获取方式。</p>
+<p><strong>关于CT数据和论文关键词推荐：coal CT vein</strong><br>
+<strong>关于裂缝演化形成过程关键词推荐：Rock; DIC</strong></p>
+<h2 id="cv-图像数据">CV（图像数据）</h2>
+<p>Paper: <a href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/2017WR021032">Suzuki A, Watanabe N, Li K, et al. Fracture network created by 3‐D printer and its validation using CT images[J]. Water Resources Research, 2017, 53(7): 6330-6339.</a></p>
+<p>数据集：<a href="https://digitalporousmedia.org/published-datasets/tapis/projects/drp.project.published/drp.project.published.DRP-213/Artificial%20fracture%20network/">Artificial fracture network</a></p>
+<p>简介： 3D打印和CT扫描数据</p>
+<p>目的：了解<strong>裂隙介质中的流动机制</strong>对于地质科学研究和地质开发行业至关重要。本研究使用3D打印的裂隙网络来<strong>控制样品内部裂隙分布</strong>的性质。通过使用X射线CT扫描仪研究了3D打印机创建样品的准确性和适当性。CT扫描图像表明，3D打印机可以控制样品内部的裂隙分布。D打印机能够复制复杂的三-裂缝网络的三维空间分布，印刷后使用正己烷是一种有效的除蜡后处理方法，局部渗透率由立方定律得到，并用于计算整体平均值，渗透率的实验值介于算术平均值和几何平均值之间的数值结果，这是与传统的研究是一致的。这种方法的基础上3-D打印的裂缝网络可以帮助<strong>验证现有的流动建模和数值方法</strong>。</p>
+]]></content>
+      <categories>
+        <category>学科交叉</category>
+      </categories>
+      <tags>
+        <tag>Rock</tag>
+        <tag>Datasets</tag>
       </tags>
   </entry>
   <entry>
@@ -485,60 +894,28 @@ Yes</p>
       </tags>
   </entry>
   <entry>
-    <title>学科交叉——岩石相关数据下载</title>
-    <url>/2025/10/15/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1>数据集网站</h1>
-<p><a href="https://digitalporousmedia.org/published-datasets/">TACC网站</a>拥有大量的相关数据集，小于2GB可随意下载，大于2GB暂时无法下载，需要有注册账号权限，目前还未研究彻底获取方式。</p>
-<p><strong>关于CT数据和论文关键词推荐：coal CT vein</strong><br>
-<strong>关于裂缝演化形成过程关键词推荐：Rock; DIC</strong></p>
-<h2 id="cv-图像数据">CV（图像数据）</h2>
-<p>Paper: <a href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/2017WR021032">Suzuki A, Watanabe N, Li K, et al. Fracture network created by 3‐D printer and its validation using CT images[J]. Water Resources Research, 2017, 53(7): 6330-6339.</a></p>
-<p>数据集：<a href="https://digitalporousmedia.org/published-datasets/tapis/projects/drp.project.published/drp.project.published.DRP-213/Artificial%20fracture%20network/">Artificial fracture network</a></p>
-<p>简介： 3D打印和CT扫描数据</p>
-<p>目的：了解<strong>裂隙介质中的流动机制</strong>对于地质科学研究和地质开发行业至关重要。本研究使用3D打印的裂隙网络来<strong>控制样品内部裂隙分布</strong>的性质。通过使用X射线CT扫描仪研究了3D打印机创建样品的准确性和适当性。CT扫描图像表明，3D打印机可以控制样品内部的裂隙分布。D打印机能够复制复杂的三-裂缝网络的三维空间分布，印刷后使用正己烷是一种有效的除蜡后处理方法，局部渗透率由立方定律得到，并用于计算整体平均值，渗透率的实验值介于算术平均值和几何平均值之间的数值结果，这是与传统的研究是一致的。这种方法的基础上3-D打印的裂缝网络可以帮助<strong>验证现有的流动建模和数值方法</strong>。</p>
+    <title>Hello World</title>
+    <url>/2025/10/14/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
       <categories>
-        <category>学科交叉</category>
+        <category>test</category>
       </categories>
       <tags>
-        <tag>Rock</tag>
-        <tag>Datasets</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>声发射</title>
-    <url>/2025/10/21/%E5%A3%B0%E5%8F%91%E5%B0%84/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
-<p>声发射数据是指材料或结构在受力、变形或损伤过程中释放能量时产生的<strong>弹性波信号</strong>，以及对这些信号进行采集、处理后得到的各类信息的统称。</p>
-</blockquote>
-<ul>
-<li>声发射数据主要包含两类关键信息，分别对应信号本身特征和采集环境参数。
-<ul>
-<li>信号特征参数：是数据的核心部分，用于描述弹性波的属性。
-<ul>
-<li><strong>幅度</strong>：指信号的最大振动幅值，反映能量释放的强弱。</li>
-<li><strong>计数</strong>：指信号超过设定阈值的次数，可体现信号的活跃程度。</li>
-<li><strong>持续时间</strong>：指信号从起始到结束的时间长度，与损伤类型相关。</li>
-<li><strong>能量</strong>：通过信号积分计算得出，直接对应材料释放的能量大小。</li>
-</ul>
-</li>
-<li>采集关键参数：用于追溯数据的采集背景，保证数据的可追溯性和有效性。
-<ul>
-<li>采集时间：记录信号产生的具体时刻，便于分析损伤发展的时序。</li>
-<li>传感器位置：标记接收信号的传感器在被检测对象上的坐标，确定损伤位置。</li>
-<li>阈值设定：记录采集时设定的信号触发阈值，影响数据的采集范围。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>学科交叉</category>
-      </categories>
-      <tags>
-        <tag>人工智能</tag>
-        <tag>声发射</tag>
+        <tag>test</tag>
       </tags>
   </entry>
 </search>

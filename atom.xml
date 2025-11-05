@@ -6,7 +6,7 @@
   <link href="https://blog.rgpetrichor.eu.org/atom.xml" rel="self"/>
   
   <link href="https://blog.rgpetrichor.eu.org/"/>
-  <updated>2025-11-03T07:49:31.098Z</updated>
+  <updated>2025-11-04T09:21:50.791Z</updated>
   <id>https://blog.rgpetrichor.eu.org/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PFM相场模型</title>
+    <link href="https://blog.rgpetrichor.eu.org/2025/11/02/PFM%E7%9B%B8%E5%9C%BA%E6%A8%A1%E5%9E%8B/"/>
+    <id>https://blog.rgpetrichor.eu.org/2025/11/02/PFM%E7%9B%B8%E5%9C%BA%E6%A8%A1%E5%9E%8B/</id>
+    <published>2025-11-02T02:52:00.000Z</published>
+    <updated>2025-11-04T09:21:50.791Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;&#92;assets&#92;css&#92;APlayer.min.css&quot;&gt;&lt;script src=&quot;&#92;assets&#92;js&#92;APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="裂缝扩展预测" scheme="https://blog.rgpetrichor.eu.org/categories/%E8%A3%82%E7%BC%9D%E6%89%A9%E5%B1%95%E9%A2%84%E6%B5%8B/"/>
+    
+    
+    <category term="Rock" scheme="https://blog.rgpetrichor.eu.org/tags/Rock/"/>
+    
+    <category term="PFM" scheme="https://blog.rgpetrichor.eu.org/tags/PFM/"/>
+    
+    <category term="训练数据生成" scheme="https://blog.rgpetrichor.eu.org/tags/%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E7%94%9F%E6%88%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>裂缝扩展</title>
+    <link href="https://blog.rgpetrichor.eu.org/2025/10/30/%E8%A3%82%E7%BC%9D%E6%89%A9%E5%B1%95%E9%A2%84%E6%B5%8B/"/>
+    <id>https://blog.rgpetrichor.eu.org/2025/10/30/%E8%A3%82%E7%BC%9D%E6%89%A9%E5%B1%95%E9%A2%84%E6%B5%8B/</id>
+    <published>2025-10-30T02:52:00.000Z</published>
+    <updated>2025-11-04T09:21:32.277Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;&#92;assets&#92;css&#92;APlayer.min.css&quot;&gt;&lt;script src=&quot;&#92;assets&#92;js&#92;APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="裂缝扩展预测输入输出" scheme="https://blog.rgpetrichor.eu.org/categories/%E8%A3%82%E7%BC%9D%E6%89%A9%E5%B1%95%E9%A2%84%E6%B5%8B%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/"/>
+    
+    
+    <category term="Rock" scheme="https://blog.rgpetrichor.eu.org/tags/Rock/"/>
+    
+    <category term="Datasets" scheme="https://blog.rgpetrichor.eu.org/tags/Datasets/"/>
+    
+  </entry>
   
   <entry>
     <title>前沿论文</title>
@@ -129,7 +185,7 @@
     <link href="https://blog.rgpetrichor.eu.org/2025/10/16/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E8%A3%82%E7%BC%9D%E5%BD%A2%E6%88%90%E6%BC%94%E5%8C%96/"/>
     <id>https://blog.rgpetrichor.eu.org/2025/10/16/%E5%AD%A6%E7%A7%91%E4%BA%A4%E5%8F%89%E2%80%94%E2%80%94%E5%B2%A9%E7%9F%B3%E8%A3%82%E7%BC%9D%E5%BD%A2%E6%88%90%E6%BC%94%E5%8C%96/</id>
     <published>2025-10-16T02:52:00.000Z</published>
-    <updated>2025-10-18T08:32:06.996Z</updated>
+    <updated>2025-11-04T08:38:20.461Z</updated>
     
     
     <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
